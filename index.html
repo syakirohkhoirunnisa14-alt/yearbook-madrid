@@ -1,130 +1,212 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Madrid — Painted Memories</title>
+  <title>Painted Memories — Madrid Class</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <nav class="navbar">
-    <a href="#" class="nav-brand">Madrid</a>
-    <ul class="nav-links">
-      <li><a href="#people">People</a></li>
-      <li><a href="#gallery">Gallery</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#wishes">Wishes</a></li>
-    </ul>
-  </nav>
+  <!-- 1. WATERCOLOR LOADING SCREEN -->
+  <div class="loader-screen" id="loader-screen">
+    <div class="loader-content">
+      <div class="watercolor-stroke-wrapper">
+        <svg class="watercolor-svg" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <linearGradient id="brushGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#CFE8FF" />
+              <stop offset="50%" stop-color="#E8DFFF" />
+              <stop offset="100%" stop-color="#FFB2A6" />
+            </linearGradient>
+            <filter id="watercolor-blur">
+              <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
+              <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" />
+            </filter>
+          </defs>
+          <path class="brush-path" filter="url(#watercolor-blur)" 
+                d="M 20,60 Q 70,20 150,65 T 280,50" 
+                fill="none" stroke="url(#brushGrad)" stroke-width="32" stroke-linecap="round"/>
+        </svg>
+        <h1 class="loader-title">Painted Memories</h1>
+      </div>
+      <div class="loader-text-wrapper">
+        <span class="loader-text">Loading</span>
+        <span class="dots-animated"><span>.</span><span>.</span><span>.</span></span>
+      </div>
+    </div>
+  </div>
 
-  <!-- HERO SECTION (FULL SCREEN + PARALLAX) -->
-  <section class="hero" id="hero">
-    <!-- Foto Background Kelas (Ganti hero-bg.jpg dengan file fotomu) -->
-    <div class="hero-bg" id="hero-bg" style="background-image: url('hero-bg.jpg');"></div>
-    <div class="hero-overlay"></div>
+  <!-- 2. NAVIGATION BAR -->
+  <header class="navbar-header" id="navbar">
+    <div class="navbar-container">
+      <a href="#hero" class="navbar-logo">
+        MADRID<span>.</span>
+      </a>
 
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#wishwall" class="nav-link">Wish Wall</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- 3. HERO SECTION -->
+  <section class="section hero-section" id="hero">
     <div class="hero-content">
+      <span class="hero-subtitle">Class Of Madrid</span>
       <h1 class="hero-title">Painted Memories</h1>
-
-      <div class="hero-subtitle">
-        <span>Sofia</span>
-        <span class="arrow">↓</span>
-        <span>Latvia</span>
-        <span class="arrow">↓</span>
-        <span class="active">Madrid</span>
-      </div>
-
-      <p class="hero-tagline">
-        Every memory added a color.<br>
-        Together they became our masterpiece.
-      </p>
-
-      <a href="#people" class="glass-btn">Begin Our Journey</a>
-    </div>
-
-    <!-- Scroll Indicator Animation -->
-    <div class="scroll-indicator">
-      <div class="mouse">
-        <div class="wheel"></div>
-      </div>
+      <p class="hero-description">A digital sanctuary preserving our shared journey through years of growth, laughter, and unbreakable bonds.</p>
     </div>
   </section>
 
-  <section class="section" id="people">
-    <h2 class="section-title">Class Members</h2>
-    <p class="section-subtitle">33 stories woven into three unforgettable years. Click any profile to view details.</p>
-    
-    <div class="carousel-wrapper">
-      <div class="people-grid" id="members-carousel">
+  <!-- 4. TIMELINE SECTION -->
+  <section class="section timeline-section" id="timeline">
+    <div class="section-header-center">
+      <h2 class="section-title">The Journey</h2>
+      <p class="section-subtitle">A vertical chronicle of how our story unfolded through the years.</p>
+    </div>
+
+    <div class="timeline-wrapper">
+      <div class="timeline-line-bg">
+        <div class="timeline-line-progress" id="timeline-progress"></div>
+      </div>
+
+      <!-- NODE 1: 2023 -->
+      <div class="timeline-node" data-chapter="2023">
+        <div class="node-year">2023</div>
+        <div class="node-arrow">↓</div>
+      </div>
+
+      <!-- CHAPTER 1: SOFIA -->
+      <div class="timeline-card-wrapper" data-chapter="sofia">
+        <div class="timeline-node-dot"></div>
+        <div class="timeline-card">
+          <span class="chapter-badge">Chapter I</span>
+          <h3>SOFIA</h3>
+          <p class="chapter-period">2023 — 2024</p>
+          <p class="chapter-desc">
+            The foundation of our togetherness. Under guidance, we stepped into a new world as strangers and slowly wove our first shared memories.
+          </p>
         </div>
-    </div>
-  </section>
+      </div>
 
-  <section class="section" id="gallery">
-    <h2 class="section-title">The Three Chapters</h2>
-    <p class="section-subtitle">A visual anthology of our high school journey.</p>
+      <!-- NODE 2: 2024 -->
+      <div class="timeline-node" data-chapter="2024">
+        <div class="node-arrow">↓</div>
+        <div class="node-year">2024</div>
+        <div class="node-arrow">↓</div>
+      </div>
 
-    <div class="gallery-block">
-      <div class="gallery-header">
-        <h3>Class X — Sofia</h3>
-        <span class="gallery-year">2023 — 2024</span>
+      <!-- CHAPTER 2: LATVIA -->
+      <div class="timeline-card-wrapper" data-chapter="latvia">
+        <div class="timeline-node-dot"></div>
+        <div class="timeline-card">
+          <span class="chapter-badge">Chapter II</span>
+          <h3>LATVIA</h3>
+          <p class="chapter-period">2024 — 2025</p>
+          <p class="chapter-desc">
+            Where friendship matured into an unshakeable bond. A year full of laughter, challenges, and unforgettable moments together.
+          </p>
+        </div>
       </div>
-      <div class="editorial-gallery-grid">
-        <div class="gallery-item"><img src="sofia1.jpg" alt="Sofia 1"></div>
-        <div class="gallery-item"><img src="sofia2.jpg" alt="Sofia 2"></div>
-        <div class="gallery-item"><img src="sofia3.jpg" alt="Sofia 3"></div>
-      </div>
-    </div>
 
-    <div class="gallery-block">
-      <div class="gallery-header">
-        <h3>Class XI — Latvia</h3>
-        <span class="gallery-year">2024 — 2025</span>
+      <!-- NODE 3: 2025 -->
+      <div class="timeline-node" data-chapter="2025">
+        <div class="node-arrow">↓</div>
+        <div class="node-year">2025</div>
+        <div class="node-arrow">↓</div>
       </div>
-      <div class="editorial-gallery-grid">
-        <div class="gallery-item"><img src="latvia1.jpg" alt="Latvia 1"></div>
-        <div class="gallery-item"><img src="latvia2.jpg" alt="Latvia 2"></div>
-        <div class="gallery-item"><img src="latvia3.jpg" alt="Latvia 3"></div>
-      </div>
-    </div>
 
-    <div class="gallery-block">
-      <div class="gallery-header">
-        <h3>Class XII — Madrid</h3>
-        <span class="gallery-year">2025 — 2026</span>
-      </div>
-      <div class="editorial-gallery-grid">
-        <div class="gallery-item"><img src="madrid1.jpg" alt="Madrid 1"></div>
-        <div class="gallery-item"><img src="madrid2.jpg" alt="Madrid 2"></div>
-        <div class="gallery-item"><img src="madrid3.jpg" alt="Madrid 3"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="timeline">
-    <h2 class="section-title">Our Timeline</h2>
-    <p class="section-subtitle">How we evolved from individual steps into one shared story.</p>
-
-    <div class="timeline-container">
-      <div class="timeline-card">
-        <div class="year">2023–2024</div>
-        <h4>The Beginning: X Sofia</h4>
-        <p>Guided by Zah Eed, we took our first steps together, discovering friendships and creating our foundation.</p>
-      </div>
-      <div class="timeline-card">
-        <div class="year">2024–2025</div>
-        <h4>The Bond: XI Latvia</h4>
-        <p>Continuing under Zah Eed's guidance, our bonds deepened through laughter, growth, and shared dreams.</p>
-      </div>
-      <div class="timeline-card">
-        <div class="year">2025–2026</div>
-        <h4>The Legacy: XII Madrid</h4>
-        <p>Led by Zah Iput, we reach our final chapter. Ready to part ways physically, but forever united in memory.</p>
+      <!-- CHAPTER 3: MADRID -->
+      <div class="timeline-card-wrapper" data-chapter="madrid">
+        <div class="timeline-node-dot"></div>
+        <div class="timeline-card">
+          <span class="chapter-badge">Chapter III</span>
+          <h3>MADRID</h3>
+          <p class="chapter-period">2025 — 2026</p>
+          <p class="chapter-desc">
+            Our final masterpiece. Reaching the peak of our journey, ready to venture into the world while holding on to our painted memories.
+          </p>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- 5. WISH WALL SECTION -->
+  <section class="section wishwall-section" id="wishwall">
+    <div class="section-header-center">
+      <h2 class="section-title">Wish Wall</h2>
+      <p class="section-subtitle">Hopes, dreams, and quiet whispers for our time in Madrid.</p>
+    </div>
+
+    <div class="hearts-container" id="hearts-container" aria-hidden="true"></div>
+
+    <div class="wish-marquee-container">
+      <div class="wish-track" id="wish-track">
+        <!-- Wish cards rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- WISH EXPAND MODAL -->
+  <div class="wish-modal" id="wish-modal" aria-hidden="true">
+    <div class="wish-modal-backdrop" id="wish-modal-backdrop"></div>
+    <div class="wish-modal-card" id="wish-modal-card">
+      <button class="wish-modal-close" id="wish-modal-close" aria-label="Close">&times;</button>
+      <div class="wish-modal-content">
+        <span class="wish-quote-icon">“</span>
+        <p class="wish-modal-text" id="wish-modal-text">-</p>
+        <div class="wish-modal-author">
+          <div class="wish-avatar-mini" id="wish-modal-avatar"></div>
+          <div>
+            <h4 id="wish-modal-name">-</h4>
+            <span id="wish-modal-role">Madrid Class Member</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6. FLOATING MUSIC BUTTON -->
+  <div class="music-player-widget">
+    <iframe 
+      id="spotify-player"
+      src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator&theme=0" 
+      width="100%" 
+      height="80" 
+      frameborder="0" 
+      allowfullscreen="" 
+      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+      loading="lazy"
+      class="spotify-embed-hidden">
+    </iframe>
+
+    <button class="music-float-btn" id="music-toggle-btn" aria-label="Toggle Music">
+      <div class="vinyl-disc" id="vinyl-disc">
+        <div class="vinyl-center-hole"></div>
+      </div>
+      <span class="music-icon" id="music-icon">🎵</span>
+    </button>
+  </div>
+
+  <!-- Main JavaScript File -->
   <script src="script.js"></script>
 </body>
 </html>
