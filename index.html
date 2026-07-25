@@ -186,6 +186,79 @@
             </div>
         </div>
     </div>
+    <!-- GALLERY SECTION -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Captured Moments</span>
+                <h2 class="section-title">Our Visual Anthology</h2>
+                <p class="section-desc">Kumpulan momen dan tawa yang terekam dalam perjalanan 3 tahun kita.</p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All Memories</button>
+                <button class="filter-btn" data-filter="sofia">SOFIA (X)</button>
+                <button class="filter-btn" data-filter="latvia">LATVIA (XI)</button>
+                <button class="filter-btn" data-filter="madrid">MADRID (XII)</button>
+            </div>
+
+            <!-- Masonry Gallery Grid -->
+            <div class="gallery-masonry" id="galleryGrid">
+                <!-- Sample Gallery Items (Bisa ditambahkan/disesuaikan nanti) -->
+                <div class="gallery-item" data-category="sofia">
+                    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=800&auto=format&fit=crop" alt="Awal Mula Kebersamaan" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">SOFIA</span>
+                        <h4 class="gallery-caption">Hari Pertama Masuk</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="latvia">
+                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?q=80&w=800&auto=format&fit=crop" alt="Project Bersama" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">LATVIA</span>
+                        <h4 class="gallery-caption">Classmeet & Festival</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="madrid">
+                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=800&auto=format&fit=crop" alt="Foto Bersama XII Madrid" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">MADRID</span>
+                        <h4 class="gallery-caption">Foto Angkatan Terakhir</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="sofia">
+                    <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?q=80&w=800&auto=format&fit=crop" alt="Makan Malam Asrama" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">SOFIA</span>
+                        <h4 class="gallery-caption">Suasana Kebersamaan Malam</h4>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="madrid">
+                    <img src="https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?q=80&w=800&auto=format&fit=crop" alt="Kelulusan" loading="lazy">
+                    <div class="gallery-overlay">
+                        <span class="gallery-tag">MADRID</span>
+                        <h4 class="gallery-caption">Menuju Masa Depan</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LIGHTBOX MODAL (Full Image Viewer) -->
+    <div id="lightboxModal" class="lightbox-overlay">
+        <button class="lightbox-close" id="lightboxClose">&times;</button>
+        <button class="lightbox-prev" id="lightboxPrev">&#10094;</button>
+        <button class="lightbox-next" id="lightboxNext">&#10095;</button>
+        <div class="lightbox-content">
+            <img src="" id="lightboxImg" alt="Enlarged photo">
+            <p id="lightboxCaption" class="lightbox-caption"></p>
+        </div>
+    </div>
     <!-- Main JavaScript -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
