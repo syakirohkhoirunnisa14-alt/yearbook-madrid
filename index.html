@@ -18,13 +18,36 @@
     </ul>
   </nav>
 
-  <section class="hero">
-    <p class="hero-tagline">Digital Yearbook — 2023–2026</p>
-    <h1>Painted <i>Memories</i></h1>
-    <div class="hero-journey">
-      <span>X Sofia</span> •
-      <span>XI Latvia</span> •
-      <span class="active">XII Madrid</span>
+  <!-- HERO SECTION (FULL SCREEN + PARALLAX) -->
+  <section class="hero" id="hero">
+    <!-- Foto Background Kelas (Ganti hero-bg.jpg dengan file fotomu) -->
+    <div class="hero-bg" id="hero-bg" style="background-image: url('hero-bg.jpg');"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1 class="hero-title">Painted Memories</h1>
+
+      <div class="hero-subtitle">
+        <span>Sofia</span>
+        <span class="arrow">↓</span>
+        <span>Latvia</span>
+        <span class="arrow">↓</span>
+        <span class="active">Madrid</span>
+      </div>
+
+      <p class="hero-tagline">
+        Every memory added a color.<br>
+        Together they became our masterpiece.
+      </p>
+
+      <a href="#people" class="glass-btn">Begin Our Journey</a>
+    </div>
+
+    <!-- Scroll Indicator Animation -->
+    <div class="scroll-indicator">
+      <div class="mouse">
+        <div class="wheel"></div>
+      </div>
     </div>
   </section>
 
