@@ -1,0 +1,359 @@
+/* ==========================================
+   THEME: PAINTED MEMORIES (PASTEL ELEGANT)
+   ========================================== */
+
+:root {
+  --bg-color: #FAF7F2;          /* Soft Warm Cream */
+  --card-bg: #FFFFFF;
+  --text-primary: #2C3E50;     /* Slate Dark */
+  --text-secondary: #64748B;   /* Slate Muted */
+  --accent-pink: #F8EDEB;      /* Pastel Pink */
+  --accent-blue: #E2ECE9;      /* Pastel Mint Blue */
+  --accent-peach: #FCD5CE;     /* Pastel Peach */
+  --accent-purple: #E8E8E4;    /* Soft Lavender/Gray */
+  --primary-color: #7B8FA1;    /* Dusky Blue */
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
+  --radius: 16px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  line-height: 1.6;
+  padding-bottom: 80px;
+}
+
+/* HERO SECTION */
+.hero {
+  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-blue) 100%);
+  padding: 60px 20px;
+  text-align: center;
+  border-bottom: 2px dashed var(--accent-peach);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.badge {
+  display: inline-block;
+  background-color: #FFFFFF;
+  color: var(--primary-color);
+  padding: 6px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 16px;
+  box-shadow: var(--shadow-sm);
+}
+
+.hero h1 {
+  font-size: 2.8rem;
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+}
+
+/* LAYOUT & CONTAINER */
+.container {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section-header {
+  margin-bottom: 24px;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  color: var(--text-primary);
+}
+
+.section-header p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+}
+
+/* CAROUSEL / HORIZONTAL SCROLL */
+.carousel-wrapper {
+  position: relative;
+}
+
+.carousel {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 12px 4px 20px 4px;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+/* Sembunyikan scrollbar tapi tetap bisa di-scroll */
+.carousel::-webkit-scrollbar {
+  height: 6px;
+}
+.carousel::-webkit-scrollbar-thumb {
+  background: var(--accent-peach);
+  border-radius: 10px;
+}
+
+/* CARD ANGGOTA */
+.member-card {
+  flex: 0 0 200px;
+  scroll-snap-align: start;
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  padding: 12px;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-md);
+}
+
+.member-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.member-card h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.member-card p {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* GALERI KENANGAN */
+.gallery-block {
+  margin-bottom: 30px;
+}
+
+.gallery-block h3 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+  color: var(--primary-color);
+}
+
+.photo-card {
+  flex: 0 0 280px;
+  scroll-snap-align: start;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+}
+
+.photo-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+/* VIDEO GRID */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  position: relative;
+  padding-bottom: 56.25%; /* Ratio 16:9 */
+  height: 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: #000;
+}
+
+.video-card iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* TIMELINE */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-left: 3px solid var(--accent-peach);
+  padding-left: 20px;
+  margin-left: 10px;
+}
+
+.timeline-item {
+  position: relative;
+  background: var(--card-bg);
+  padding: 16px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -28px;
+  top: 20px;
+  width: 12px;
+  height: 12px;
+  background: var(--accent-peach);
+  border-radius: 50%;
+}
+
+.timeline-date {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+/* HARAPAN (WISHES GRID) */
+.wishes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.wish-card {
+  background: var(--card-bg);
+  padding: 16px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  border-top: 4px solid var(--accent-blue);
+}
+
+.wish-card h4 {
+  font-size: 0.95rem;
+  margin-bottom: 6px;
+}
+
+.wish-card p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* MODAL POP-UP DETAIL */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(5px);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  width: 100%;
+  max-width: 500px;
+  border-radius: 20px;
+  padding: 24px;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  animation: popup 0.3s ease;
+}
+
+@keyframes popup {
+  from { transform: scale(0.9); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+.modal-close {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: none; border: none;
+  font-size: 1.5rem; cursor: pointer;
+  color: var(--text-secondary);
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-body img {
+  width: 140px; height: 140px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 16px;
+  border: 4px solid var(--accent-pink);
+}
+
+.quote-box {
+  background: var(--bg-color);
+  padding: 12px;
+  border-radius: 12px;
+  margin: 16px 0;
+  font-family: 'Caveat', cursive;
+  font-size: 1.3rem;
+  color: var(--text-primary);
+}
+
+/* FLOATING MUSIC BUTTON */
+.music-floating-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 50px;
+  height: 50px;
+  background-color: var(--card-bg);
+  color: var(--text-primary);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3rem;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  z-index: 999;
+  border: 2px solid var(--accent-peach);
+  transition: transform 0.2s ease;
+}
+
+.music-floating-btn:hover {
+  transform: scale(1.1);
+}
+
+.music-floating-btn.playing {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
