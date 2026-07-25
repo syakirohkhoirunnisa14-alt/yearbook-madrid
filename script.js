@@ -203,7 +203,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let currentImgIndex = 0;
     let visibleGalleryItems = Array.from(galleryItems);
 
-    // Gallery Filter Logic
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
@@ -224,7 +223,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Lightbox Controls
     function updateLightbox(index) {
         if (visibleGalleryItems.length === 0) return;
         currentImgIndex = (index + visibleGalleryItems.length) % visibleGalleryItems.length;
@@ -261,6 +259,55 @@ document.addEventListener('DOMContentLoaded', () => {
     if (lightboxModal) {
         lightboxModal.addEventListener('click', (e) => {
             if (e.target === lightboxModal) closeLightbox();
+        });
+    }
+
+    // 8. Wish Wall Form Handler
+    const wishForm = document.getElementById('wishForm');
+    const wishesFeed = document.getElementById('wishesFeed');
+
+    if (wishForm && wishesFeed) {
+        wishForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const sender = document.getElementById('wishSender').value.trim();
+            const message = document.getElementById('wishMessage').value.trim();
+
+            if (sender && message) {
+                const newCard = document.createElement('div');
+                newCard.className = 'wish-card';
+                newCard.innerHTML = `
+                    <div class="wish-header">
+                        <span class="wish-author">${sender}</span>
+                        <span class="wish-date">Baru saja</span>
+                    </div>
+                    <p class="wish-text">"${message}"</p>
+                `;
+
+                wishesFeed.prepend(newCard);
+                wishForm.reset();
+            }
+        });
+    }
+
+    // 9. Floating Background Music Player
+    const musicBtn = document.getElementById('musicBtn');
+    const bgAudio = document.getElementById('bgAudio');
+    let isPlaying = false;
+
+    if (musicBtn && bgAudio) {
+        musicBtn.addEventListener('click', () => {
+            if (isPlaying) {
+                bgAudio.pause();
+                musicBtn.classList.remove('playing');
+                isPlaying = false;
+            } else {
+                bgAudio.play().then(() => {
+                    musicBtn.classList.add('playing');
+                    isPlaying = true;
+                }).catch(err => {
+                    console.log("Audio playback blocked by browser:", err);
+                });
+            }
         });
     }
 });
