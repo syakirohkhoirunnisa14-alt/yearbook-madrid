@@ -2,9 +2,9 @@
 const sofiaPhotos = [
   { src: "sofia1.jpeg", caption: "Hari pertama sekilah guyss🥰" },
   { src: "sofia6.jpeg", caption: "Ini pas projek pertama ga sih??" },
-  { src: "sofia3.jpeg", caption: "Ini foto-foto gabut" }
-  { src: "sofia5.jpeg", caption: "Kunjed pertama kitaa😍" }
-  { src: "sofia2.jpeg", caption: "Gw lupa ini kapan🙄" }
+  { src: "sofia3.jpeg", caption: "Ini foto-foto gabut" },
+  { src: "sofia5.jpeg", caption: "Kunjed pertama kitaa😍" },
+  { src: "sofia2.jpeg", caption: "Gw lupa ini kapan🙄" },
   { src: "sofia4.jpeg", caption: "Sama zah Aya😭" }
 ];
 
