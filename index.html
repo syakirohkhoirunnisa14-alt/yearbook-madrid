@@ -156,6 +156,36 @@
             </div>
         </div>
     </section>
+    <!-- PEOPLE SECTION -->
+    <section id="people" class="people-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Class Members</span>
+                <h2 class="section-title">The Masterpieces Behind Madrid</h2>
+                <p class="section-desc">Klik foto untuk melihat profil lengkap dan kenangan mereka.</p>
+            </div>
+
+            <!-- Filter & Search (Optional for easy navigation) -->
+            <div class="people-controls">
+                <input type="text" id="searchStudent" placeholder="Cari nama teman..." class="search-input">
+            </div>
+
+            <!-- Student Grid Container -->
+            <div class="people-grid" id="peopleGrid">
+                <!-- Grid item akan di-render otomatis dari JS data -->
+            </div>
+        </div>
+    </section>
+
+    <!-- PROFILE MODAL (iOS Style Glassmorphism) -->
+    <div id="profileModal" class="modal-overlay">
+        <div class="modal-card">
+            <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+            <div class="modal-body" id="modalBody">
+                <!-- Content will be dynamically inserted via JavaScript -->
+            </div>
+        </div>
+    </div>
     <!-- Main JavaScript -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
