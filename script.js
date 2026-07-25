@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   initNavbarEffects();
+  initMembersSection();
   initTimelineScrollEffects();
   initWishWall();
   initWishModalEvents();
@@ -50,7 +51,56 @@ function initNavbarEffects() {
   }
 }
 
-// 3. TIMELINE SCROLL PROGRESS & HIGHLIGHTS
+// 3. MEMBERS SECTION & MODAL (LAMA)
+const membersData = [
+  { name: "Sofia Member", quote: "Dream big, shine bright.", photo: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80", bio: "Always finding joy in little moments." },
+  { name: "Latvia Friend", quote: "Memories last forever.", photo: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=500&q=80", bio: "Passionate about art and design." },
+  { name: "Madrid Student", quote: "Together we thrive.", photo: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=500&q=80", bio: "Living life one adventure at a time." }
+];
+
+function initMembersSection() {
+  const grid = document.getElementById("members-grid");
+  if (!grid) return;
+
+  grid.innerHTML = "";
+  membersData.forEach((member) => {
+    const card = document.createElement("div");
+    card.className = "member-card";
+    card.innerHTML = `
+      <img class="member-photo" src="${member.photo}" alt="${member.name}" loading="lazy">
+      <h3 class="member-name">${member.name}</h3>
+      <p class="member-quote">“${member.quote}”</p>
+    `;
+    card.addEventListener("click", () => openMemberModal(member));
+    grid.appendChild(card);
+  });
+
+  const modal = document.getElementById("member-modal");
+  const backdrop = document.getElementById("member-modal-backdrop");
+  const closeBtn = document.getElementById("member-modal-close");
+
+  const closeModal = () => modal && modal.classList.remove("active");
+
+  if (closeBtn) closeBtn.addEventListener("click", closeModal);
+  if (backdrop) backdrop.addEventListener("click", closeModal);
+}
+
+function openMemberModal(member) {
+  const modal = document.getElementById("member-modal");
+  const body = document.getElementById("member-modal-body");
+  if (!modal || !body) return;
+
+  body.innerHTML = `
+    <img src="${member.photo}" alt="${member.name}" style="width:100%; height:260px; object-fit:cover; border-radius:16px; margin-bottom:20px;">
+    <h2 style="font-family:'Cormorant Garamond', serif; font-size:2.2rem; margin-bottom:8px;">${member.name}</h2>
+    <p style="font-style:italic; color:var(--text-secondary); margin-bottom:16px;">“${member.quote}”</p>
+    <p style="font-size:0.95rem;">${member.bio}</p>
+  `;
+
+  modal.classList.add("active");
+}
+
+// 4. TIMELINE SCROLL PROGRESS & HIGHLIGHTS
 function initTimelineScrollEffects() {
   const progressLine = document.getElementById("timeline-progress");
   const timelineWrapper = document.querySelector(".timeline-wrapper");
@@ -83,7 +133,7 @@ function initTimelineScrollEffects() {
   yearNodes.forEach((node) => observer.observe(node));
 }
 
-// 4. WISH WALL & MARQUEE
+// 5. WISH WALL & MARQUEE
 const pastelCardBgs = [
   "linear-gradient(135deg, #FFF9F5 0%, #FFEFE8 100%)",
   "linear-gradient(135deg, #F5F9FF 0%, #EBF3FF 100%)",
@@ -129,9 +179,7 @@ function initWishModalEvents() {
   const backdrop = document.getElementById("wish-modal-backdrop");
   const closeBtn = document.getElementById("wish-modal-close");
 
-  const closeModal = () => {
-    if (modal) modal.classList.remove("active");
-  };
+  const closeModal = () => modal && modal.classList.remove("active");
 
   if (closeBtn) closeBtn.addEventListener("click", closeModal);
   if (backdrop) backdrop.addEventListener("click", closeModal);
@@ -164,7 +212,7 @@ function startFloatingHearts() {
   }, 2500);
 }
 
-// 5. FLOATING MUSIC PLAYER
+// 6. FLOATING MUSIC PLAYER
 function initMusicPlayer() {
   const musicWidget = document.querySelector(".music-player-widget");
   const musicBtn = document.getElementById("music-toggle-btn");
@@ -187,9 +235,9 @@ function initMusicPlayer() {
   });
 }
 
-// 6. RIPPLE & SCROLL REVEAL
+// 7. RIPPLE & SCROLL REVEAL
 function initRippleEffect() {
-  document.querySelectorAll(".btn, .music-float-btn, .wish-card").forEach((btn) => {
+  document.querySelectorAll(".btn, .music-float-btn, .wish-card, .member-card").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       const rect = this.getBoundingClientRect();
       const circle = document.createElement("span");
