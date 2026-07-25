@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yearbook Madrid - Painted Memories</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="hero">
+    <div class="hero-content">
+      <span class="badge">🎨 Painted Memories</span>
+      <h1>Yearbook Class of Madrid</h1>
+      <p class="subtitle">Perjalanan 3 Tahun: <strong>X Sofia</strong> (2023-2024) ➔ <strong>XI Latvia</strong> (2024-2025) ➔ <strong>XII Madrid</strong> (2025-2026)</p>
+    </div>
+  </header>
+
+  <section class="container">
+    <div class="section-header">
+      <h2>✨ Anggota Kelas (33 Members)</h2>
+      <p>Geser ke samping untuk melihat foto. Klik pada foto untuk melihat detail profil!</p>
+    </div>
+    
+    <div class="carousel-wrapper">
+      <div class="carousel" id="members-carousel">
+        </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <h2>📸 Galeri Kenangan Kelas</h2>
+    </div>
+
+    <div class="gallery-block">
+      <h3>Class of X Sofia (2023 - 2024)</h3>
+      <div class="carousel" id="gallery-sofia">
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500" alt="Sofia 1"></div>
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500" alt="Sofia 2"></div>
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500" alt="Sofia 3"></div>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3>Class of XI Latvia (2024 - 2025)</h3>
+      <div class="carousel" id="gallery-latvia">
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?w=500" alt="Latvia 1"></div>
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=500" alt="Latvia 2"></div>
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?w=500" alt="Latvia 3"></div>
+      </div>
+    </div>
+
+    <div class="gallery-block">
+      <h3>Class of XII Madrid (2025 - 2026)</h3>
+      <div class="carousel" id="gallery-madrid">
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=500" alt="Madrid 1"></div>
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500" alt="Madrid 2"></div>
+        <div class="photo-card"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=500" alt="Madrid 3"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <h2>🎬 Video Kompilasi Kenangan</h2>
+    </div>
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/o3f4lJ96aM0" title="Video 1" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/4vaRWogBwVo" title="Video 2" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/lYPWcfJohT0" title="Video 3" allowfullscreen></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <h2>⏳ Timeline Perjalanan 3 Tahun</h2>
+    </div>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">2023 - 2024</div>
+        <div class="timeline-content">
+          <h4>Awal Pertemuan di Kelas X Sofia</h4>
+          <p>Masa-masa perkenalan, membentuk keluarga baru bersama Wali Kelas Zah Eed.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2024 - 2025</div>
+        <div class="timeline-content">
+          <h4>Masa Kebersamaan di Kelas XI Latvia</h4>
+          <p>Makin kompak, banyak momen tawa dan perjuangan bersama Zah Eed.</p>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2025 - 2026</div>
+        <div class="timeline-content">
+          <h4>Puncak Perjuangan di Kelas XII Madrid</h4>
+          <p>Tahun terakhir bersama Wali Kelas Zah Iput. Menyiapkan masa depan dan mengukir kenangan manis tak terupakan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="section-header">
+      <h2>💌 Harapan Untuk Kelas Madrid</h2>
+    </div>
+    <div class="wishes-grid" id="wishes-grid">
+      </div>
+  </section>
+
+  <div class="modal" id="profile-modal">
+    <div class="modal-content">
+      <button class="modal-close" id="modal-close">&times;</button>
+      <div class="modal-body">
+        <img src="" alt="Profil" id="modal-img">
+        <div class="modal-info">
+          <span class="badge" id="modal-role">Siswa</span>
+          <h2 id="modal-name">Nama Anggota</h2>
+          <div class="quote-box">
+            <p id="modal-quote">"Quote di sini..."</p>
+          </div>
+          <h3>Harapan:</h3>
+          <p id="modal-harapan">Harapan di sini...</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="music-floating-btn" id="music-btn" title="Putar / Hentikan Musik">
+    🎵
+  </div>
+  <audio id="bg-music" loop>
+    <source src="https://open.spotify.com/track/1VIkPMOnWl3Xmc1aSpjbWN?si=d92fb523e3c84e34" type="audio/mpeg">
+  </audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
