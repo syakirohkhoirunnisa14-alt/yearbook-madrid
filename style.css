@@ -1,381 +1,377 @@
-/* ==========================================
-   THEME: PAINTED MEMORIES (PASTEL MULTICOLOR)
-   ========================================== */
+/* ============================================================
+   THEME: PAINTED MEMORIES (EDITORIAL + APPLE AESTHETIC)
+   Class Journey: X Sofia -> XI Latvia -> XII Madrid
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Poppins:wght@300;400;500;600&display=swap');
 
 :root {
-  /* Palette Warna Pastel yang Kamu Pilih */
-  --peach: #FFD6C9;
-  --butter-yellow: #FFF1B8;
-  --baby-blue: #D6ECFF;
-  --mint: #D8F3DC;
-  --lavender: #E8D9FF;
-  --soft-coral: #F8C8C8;
-  --cream: #FFFDF8;
+  /* Palette Warna Resmi */
+  --color-cream: #FFFDF8;
+  --color-sky-blue: #CFE8FF;
+  --color-sage: #D9EFD8;
+  --color-lavender: #E8DFFF;
+  --color-peach: #FFD8C7;
+  --color-butter: #FFF2BF;
+  --color-coral: #FFB2A6;
   
-  /* Background & Teks Utama */
-  --bg-color: var(--cream);
+  /* Neutral Premium Palette */
+  --text-primary: #1D1D1F;     /* Apple Deep Charcoal */
+  --text-secondary: #6E6E73;   /* Apple Muted Gray */
+  --text-light: #86868B;
+  
+  /* Glassmorphism & UI Element */
+  --glass-bg: rgba(255, 253, 248, 0.72);
+  --glass-border: rgba(255, 255, 255, 0.8);
   --card-bg: #FFFFFF;
-  --text-primary: #2D3748;
-  --text-secondary: #718096;
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
-  --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --radius: 18px;
+  
+  /* Shadows & Radius */
+  --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.03);
+  --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.07);
+  --radius-lg: 28px;
+  --radius-md: 18px;
+  --radius-sm: 12px;
+  
+  /* Transitions */
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Base Reset */
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
 }
 
 body {
-  background-color: var(--bg-color);
+  background-color: var(--color-cream);
   color: var(--text-primary);
-  line-height: 1.6;
-  padding-bottom: 80px;
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  padding-bottom: 120px;
 }
 
-/* HERO SECTION - Kombinasi Gradiasi Warna Warm Pastel */
-.hero {
-  background: linear-gradient(135deg, var(--peach) 0%, var(--lavender) 50%, var(--baby-blue) 100%);
-  padding: 60px 20px;
-  text-align: center;
-  border-bottom: 3px dashed var(--soft-coral);
+/* Typography Headings */
+h1, h2, h3, h4, .font-editorial {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
 }
 
-.hero-content {
-  max-width: 800px;
-  margin: 0 auto;
+/* ============================================================
+   NAVBAR (Floating Glassmorphism)
+   ============================================================ */
+.navbar {
+  position: fixed;
+  top: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 48px);
+  max-width: 900px;
+  background: var(--glass-bg);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  padding: 12px 28px;
+  border-radius: 40px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: var(--shadow-soft);
 }
 
-.badge {
-  display: inline-block;
-  background-color: var(--butter-yellow);
-  color: #4A5568;
-  padding: 8px 18px;
-  border-radius: 20px;
-  font-size: 0.9rem;
+.nav-brand {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.35rem;
   font-weight: 700;
-  margin-bottom: 16px;
-  box-shadow: var(--shadow-sm);
+  letter-spacing: 0.05em;
+  color: var(--text-primary);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 24px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.3s var(--transition-smooth);
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+}
+
+/* ============================================================
+   HERO SECTION (Editorial Magazine Style)
+   ============================================================ */
+.hero {
+  min-height: 90vh;
+  padding: 160px 24px 80px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  background: radial-gradient(circle at 50% 20%, var(--color-sky-blue) 0%, transparent 60%),
+              radial-gradient(circle at 80% 80%, var(--color-lavender) 0%, transparent 50%),
+              radial-gradient(circle at 20% 70%, var(--color-peach) 0%, transparent 50%);
+}
+
+.hero-tagline {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.25em;
+  color: var(--text-secondary);
+  margin-bottom: 20px;
+  font-weight: 600;
 }
 
 .hero h1 {
-  font-size: 2.8rem;
-  color: var(--text-primary);
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.subtitle {
-  color: #4A5568;
-  font-size: 1.05rem;
-}
-
-/* LAYOUT & CONTAINER */
-.container {
-  max-width: 1100px;
-  margin: 40px auto;
-  padding: 0 20px;
-}
-
-.section-header {
+  font-size: clamp(3.2rem, 8vw, 6.5rem);
+  line-height: 1.05;
   margin-bottom: 24px;
+  font-weight: 400;
 }
 
-.section-header h2 {
-  font-size: 1.8rem;
-  color: var(--text-primary);
-}
-
-.section-header p {
+.hero h1 i {
+  font-style: italic;
+  font-weight: 300;
   color: var(--text-secondary);
-  font-size: 0.95rem;
 }
 
-/* CAROUSEL / HORIZONTAL SCROLL */
-.carousel-wrapper {
-  position: relative;
+.hero-journey {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+  padding: 8px 24px;
+  border-radius: 30px;
+  border: 1px solid var(--glass-border);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  box-shadow: var(--shadow-soft);
 }
 
-.carousel {
-  display: flex;
-  gap: 16px;
-  overflow-x: auto;
-  padding: 12px 4px 20px 4px;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-}
-
-/* Scrollbar Warna Mint */
-.carousel::-webkit-scrollbar {
-  height: 8px;
-}
-.carousel::-webkit-scrollbar-thumb {
-  background: var(--mint);
-  border-radius: 10px;
-}
-
-/* CARD ANGGOTA DENGAN BORDER WARNA-WARNI ADESTETIK */
-.member-card {
-  flex: 0 0 200px;
-  scroll-snap-align: start;
-  background: var(--card-bg);
-  border-radius: var(--radius);
-  padding: 12px;
-  box-shadow: var(--shadow-sm);
-  cursor: pointer;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 3px solid var(--baby-blue);
-}
-
-/* Variasi Warna Border Card Beragam Secara Otomatis */
-.member-card:nth-child(6n+1) { border-color: var(--peach); }
-.member-card:nth-child(6n+2) { border-color: var(--butter-yellow); }
-.member-card:nth-child(6n+3) { border-color: var(--baby-blue); }
-.member-card:nth-child(6n+4) { border-color: var(--mint); }
-.member-card:nth-child(6n+5) { border-color: var(--lavender); }
-.member-card:nth-child(6n+6) { border-color: var(--soft-coral); }
-
-.member-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-md);
-}
-
-.member-card img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  border-radius: 12px;
-  margin-bottom: 10px;
-}
-
-.member-card h3 {
-  font-size: 1rem;
+.hero-journey span.active {
   color: var(--text-primary);
+  font-weight: 600;
 }
 
-.member-card p {
+/* ============================================================
+   SECTION CONTAINERS
+   ============================================================ */
+.section {
+  max-width: 1200px;
+  margin: 120px auto 0 auto;
+  padding: 0 24px;
+}
+
+.section-title {
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin-bottom: 48px;
+  max-width: 550px;
+}
+
+/* ============================================================
+   PEOPLE SECTION (Cards Grid & Horizontal Scroll)
+   ============================================================ */
+.carousel-wrapper {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 30px;
+  margin: 0 -24px;
+  padding-left: 24px;
+  padding-right: 24px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+  display: none; /* Hide Scrollbar for Editorial Look */
+}
+
+.people-grid {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+}
+
+.person-card {
+  scroll-snap-align: start;
+  width: 280px;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  box-shadow: var(--shadow-soft);
+  transition: all 0.5s var(--transition-smooth);
+  cursor: pointer;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.person-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+.person-image-wrapper {
+  width: 100%;
+  height: 340px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  margin-bottom: 16px;
+  background-color: var(--color-lavender);
+}
+
+.person-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.7s var(--transition-smooth);
+}
+
+.person-card:hover .person-image-wrapper img {
+  transform: scale(1.05);
+}
+
+.person-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 2px;
+}
+
+.person-info p {
   font-size: 0.8rem;
   color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
-/* GALERI KENANGAN */
+/* ============================================================
+   GALLERY SECTION (Editorial Layout)
+   ============================================================ */
 .gallery-block {
-  margin-bottom: 35px;
-  padding: 20px;
-  border-radius: 20px;
-  background: var(--card-bg);
-  box-shadow: var(--shadow-sm);
+  margin-bottom: 80px;
 }
 
-.gallery-block:nth-child(1) { border-top: 5px solid var(--peach); }
-.gallery-block:nth-child(2) { border-top: 5px solid var(--mint); }
-.gallery-block:nth-child(3) { border-top: 5px solid var(--lavender); }
-
-.gallery-block h3 {
-  font-size: 1.25rem;
-  margin-bottom: 14px;
-  color: var(--text-primary);
+.gallery-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 24px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  padding-bottom: 12px;
 }
 
-.photo-card {
-  flex: 0 0 280px;
-  scroll-snap-align: start;
-  border-radius: 14px;
+.gallery-header h3 {
+  font-size: 2rem;
+}
+
+.gallery-year {
+  font-family: 'Poppins', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  letter-spacing: 0.1em;
+}
+
+.editorial-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+.gallery-item {
+  position: relative;
+  border-radius: var(--radius-md);
   overflow: hidden;
-  box-shadow: var(--shadow-sm);
+  height: 320px;
+  box-shadow: var(--shadow-soft);
 }
 
-.photo-card img {
+.gallery-item img {
   width: 100%;
-  height: 200px;
+  height: 100%;
   object-fit: cover;
-  display: block;
+  transition: transform 0.6s var(--transition-smooth);
 }
 
-/* VIDEO GRID */
-.video-grid {
+.gallery-item:hover img {
+  transform: scale(1.04);
+}
+
+/* ============================================================
+   TIMELINE SECTION
+   ============================================================ */
+.timeline-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 32px;
+  margin-top: 40px;
 }
 
-.video-card {
-  position: relative;
-  padding-bottom: 56.25%;
-  height: 0;
-  border-radius: var(--radius);
-  overflow: hidden;
-  box-shadow: var(--shadow-sm);
-  background: #000;
-  border: 3px solid var(--soft-coral);
+.timeline-card {
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
 }
 
-/* TIMELINE DENGAN GARIS SOFT CORAL */
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  border-left: 4px solid var(--soft-coral);
-  padding-left: 20px;
-  margin-left: 10px;
-}
-
-.timeline-item {
-  position: relative;
-  background: var(--card-bg);
-  padding: 18px 22px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -28px;
-  top: 22px;
-  width: 14px;
-  height: 14px;
-  background: var(--butter-yellow);
-  border: 3px solid var(--soft-coral);
-  border-radius: 50%;
-}
-
-.timeline-date {
-  font-size: 0.85rem;
-  font-weight: 700;
+.timeline-card .year {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.5rem;
   color: var(--text-primary);
+  margin-bottom: 8px;
 }
 
-/* HARAPAN (CARD UCAPAN WARNA-WARNI) */
-.wishes-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
+.timeline-card h4 {
+  font-size: 1.2rem;
+  margin-bottom: 12px;
 }
 
-.wish-card {
-  background: var(--card-bg);
-  padding: 18px;
-  border-radius: var(--radius);
-  box-shadow: var(--shadow-sm);
-}
-
-/* Background Card Harapan Selang-seling */
-.wish-card:nth-child(5n+1) { background-color: var(--peach); }
-.wish-card:nth-child(5n+2) { background-color: var(--butter-yellow); }
-.wish-card:nth-child(5n+3) { background-color: var(--baby-blue); }
-.wish-card:nth-child(5n+4) { background-color: var(--mint); }
-.wish-card:nth-child(5n+5) { background-color: var(--lavender); }
-
-.wish-card h4 {
-  font-size: 1rem;
-  margin-bottom: 6px;
-  color: var(--text-primary);
-}
-
-.wish-card p {
-  font-size: 0.88rem;
-  color: #4A5568;
-  font-style: italic;
-}
-
-/* MODAL POP-UP DETAIL */
-.modal {
-  display: none;
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(6px);
-  z-index: 1000;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-}
-
-.modal.active {
-  display: flex;
-}
-
-.modal-content {
-  background: var(--card-bg);
-  width: 100%;
-  max-width: 500px;
-  border-radius: 24px;
-  padding: 28px;
-  position: relative;
-  box-shadow: var(--shadow-md);
-  animation: popup 0.3s ease;
-  border: 4px solid var(--lavender);
-}
-
-@keyframes popup {
-  from { transform: scale(0.9); opacity: 0; }
-  to { transform: scale(1); opacity: 1; }
-}
-
-.modal-close {
-  position: absolute;
-  top: 16px; right: 16px;
-  background: none; border: none;
-  font-size: 1.5rem; cursor: pointer;
+.timeline-card p {
+  font-size: 0.9rem;
   color: var(--text-secondary);
 }
 
-.modal-body {
-  text-align: center;
-}
-
-.modal-body img {
-  width: 140px; height: 140px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 16px;
-  border: 4px solid var(--soft-coral);
-}
-
-.quote-box {
-  background: var(--butter-yellow);
-  padding: 14px;
-  border-radius: 14px;
-  margin: 16px 0;
-  font-family: 'Caveat', cursive;
-  font-size: 1.4rem;
-  color: var(--text-primary);
-}
-
-/* FLOATING MUSIC BUTTON */
-.music-floating-btn {
-  position: fixed;
-  bottom: 24px;
-  right: 24px;
-  width: 55px;
-  height: 55px;
-  background-color: var(--butter-yellow);
-  color: var(--text-primary);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.4rem;
-  box-shadow: var(--shadow-md);
-  cursor: pointer;
-  z-index: 999;
-  border: 3px solid var(--peach);
-  transition: transform 0.2s ease;
-}
-
-.music-floating-btn:hover {
-  transform: scale(1.1);
-}
-
-.music-floating-btn.playing {
-  animation: spin 3s linear infinite;
-}
-
-@keyframes spin {
-  100% { transform: rotate(360deg); }
+/* Responsive Fixes */
+@media (max-width: 768px) {
+  .navbar {
+    top: 16px;
+    padding: 10px 20px;
+  }
+  .nav-links {
+    display: none; /* Can be toggled with hamburger if needed */
+  }
+  .hero {
+    padding-top: 140px;
+  }
+  .person-card {
+    width: 240px;
+  }
+  .person-image-wrapper {
+    height: 280px;
+  }
 }
