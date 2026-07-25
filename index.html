@@ -1,282 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Painted Memories — Madrid Class</title>
-  
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400;1,600&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  
-  <!-- Main Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAINTED MEMORIES — Digital Yearbook</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-  <!-- 1. WATERCOLOR LOADING SCREEN -->
-  <div class="loader-screen" id="loader-screen">
-    <div class="loader-content">
-      <div class="watercolor-stroke-wrapper">
-        <svg class="watercolor-svg" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg">
-          <defs>
-            <linearGradient id="brushGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" stop-color="#CFE8FF" />
-              <stop offset="50%" stop-color="#E8DFFF" />
-              <stop offset="100%" stop-color="#FFB2A6" />
-            </linearGradient>
-            <filter id="watercolor-blur">
-              <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise" />
-              <feDisplacementMap in="SourceGraphic" in2="noise" scale="12" xChannelSelector="R" yChannelSelector="G" />
-            </filter>
-          </defs>
-          <path class="brush-path" filter="url(#watercolor-blur)" 
-                d="M 20,60 Q 70,20 150,65 T 280,50" 
-                fill="none" stroke="url(#brushGrad)" stroke-width="32" stroke-linecap="round"/>
-        </svg>
-        <h1 class="loader-title">Painted Memories</h1>
-      </div>
-      <div class="loader-text-wrapper">
-        <span class="loader-text">Loading</span>
-        <span class="dots-animated"><span>.</span><span>.</span><span>.</span></span>
-      </div>
-    </div>
-  </div>
-
-  <!-- 2. NAVIGATION BAR -->
-  <header class="navbar-header" id="navbar">
-    <div class="navbar-container">
-      <a href="#hero" class="navbar-logo">
-        MADRID<span>.</span>
-      </a>
-
-      <nav class="nav-menu" id="nav-menu">
-        <ul class="nav-list">
-          <li><a href="#hero" class="nav-link active">Home</a></li>
-          <li><a href="#members" class="nav-link">Members</a></li>
-          <li><a href="#timeline" class="nav-link">Timeline</a></li>
-          <li><a href="#gallery" class="nav-link">Gallery</a></li>
-          <li><a href="#videos" class="nav-link">Videos</a></li>
-          <li><a href="#wishwall" class="nav-link">Wish Wall</a></li>
-        </ul>
-      </nav>
-
-      <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle menu">
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-        <span class="hamburger-line"></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- 3. HERO SECTION -->
-  <section class="section hero-section" id="hero">
-    <div class="hero-content">
-      <span class="hero-subtitle">Class Of Madrid</span>
-      <h1 class="hero-title">Painted Memories</h1>
-      <p class="hero-description">A digital sanctuary preserving our shared journey through years of growth, laughter, and unbreakable bonds.</p>
-    </div>
-  </section>
-
-  <!-- 4. MEMBERS SECTION (LAMA + RETRIEVED) -->
-  <section class="section members-section" id="members">
-    <div class="section-header-center">
-      <h2 class="section-title">Class Members</h2>
-      <p class="section-subtitle">The faces and hearts behind our story.</p>
-    </div>
-    
-    <div class="members-grid" id="members-grid">
-      <!-- Member Cards Will Be Rendered Dynamically -->
-    </div>
-  </section>
-
-  <!-- 5. TIMELINE SECTION -->
-  <section class="section timeline-section" id="timeline">
-    <div class="section-header-center">
-      <h2 class="section-title">The Journey</h2>
-      <p class="section-subtitle">A vertical chronicle of how our story unfolded through the years.</p>
-    </div>
-
-    <div class="timeline-wrapper">
-      <div class="timeline-line-bg">
-        <div class="timeline-line-progress" id="timeline-progress"></div>
-      </div>
-
-      <!-- NODE 1: 2023 -->
-      <div class="timeline-node" data-chapter="2023">
-        <div class="node-year">2023</div>
-        <div class="node-arrow">↓</div>
-      </div>
-
-      <!-- CHAPTER 1: SOFIA -->
-      <div class="timeline-card-wrapper" data-chapter="sofia">
-        <div class="timeline-node-dot"></div>
-        <div class="timeline-card">
-          <span class="chapter-badge">Chapter I</span>
-          <h3>SOFIA</h3>
-          <p class="chapter-period">2023 — 2024</p>
-          <p class="chapter-desc">
-            The foundation of our togetherness. Under guidance, we stepped into a new world as strangers and slowly wove our first shared memories.
-          </p>
+    <!-- LOADING SCREEN -->
+    <div id="loading-screen" class="loading-screen">
+        <div class="brush-container">
+            <div class="brush-stroke stroke-1"></div>
+            <div class="brush-stroke stroke-2"></div>
+            <div class="brush-stroke stroke-3"></div>
         </div>
-      </div>
-
-      <!-- NODE 2: 2024 -->
-      <div class="timeline-node" data-chapter="2024">
-        <div class="node-arrow">↓</div>
-        <div class="node-year">2024</div>
-        <div class="node-arrow">↓</div>
-      </div>
-
-      <!-- CHAPTER 2: LATVIA -->
-      <div class="timeline-card-wrapper" data-chapter="latvia">
-        <div class="timeline-node-dot"></div>
-        <div class="timeline-card">
-          <span class="chapter-badge">Chapter II</span>
-          <h3>LATVIA</h3>
-          <p class="chapter-period">2024 — 2025</p>
-          <p class="chapter-desc">
-            Where friendship matured into an unshakeable bond. A year full of laughter, challenges, and unforgettable moments together.
-          </p>
+        <div class="loading-content">
+            <h1 class="loading-title">Painted Memories</h1>
+            <p class="loading-subtitle">Loading memories...</p>
         </div>
-      </div>
+    </div>
 
-      <!-- NODE 3: 2025 -->
-      <div class="timeline-node" data-chapter="2025">
-        <div class="node-arrow">↓</div>
-        <div class="node-year">2025</div>
-        <div class="node-arrow">↓</div>
-      </div>
+    <!-- HERO SECTION -->
+    <section id="hero" class="hero-section">
+        <div class="hero-bg-parallax" id="heroBg"></div>
+        <div class="hero-overlay"></div>
 
-      <!-- CHAPTER 3: MADRID -->
-      <div class="timeline-card-wrapper" data-chapter="madrid">
-        <div class="timeline-node-dot"></div>
-        <div class="timeline-card">
-          <span class="chapter-badge">Chapter III</span>
-          <h3>MADRID</h3>
-          <p class="chapter-period">2025 — 2026</p>
-          <p class="chapter-desc">
-            Our final masterpiece. Reaching the peak of our journey, ready to venture into the world while holding on to our painted memories.
-          </p>
+        <div class="hero-container">
+            <span class="hero-badge" data-aos="fade-down">Class Journey 2023–2026</span>
+            <h1 class="hero-title" data-aos="fade-up">PAINTED MEMORIES</h1>
+            
+            <div class="hero-chapters" data-aos="fade-up" data-aos-delay="100">
+                <span class="chapter-item">SOFIA <small>(2023–2024)</small></span>
+                <span class="chapter-arrow">↓</span>
+                <span class="chapter-item">LATVIA <small>(2024–2025)</small></span>
+                <span class="chapter-arrow">↓</span>
+                <span class="chapter-item">MADRID <small>(2025–2026)</small></span>
+            </div>
+
+            <p class="hero-tagline" data-aos="fade-up" data-aos-delay="200">
+                Every memory added a color.<br>Together they became our masterpiece.
+            </p>
+
+            <div class="hero-cta" data-aos="fade-up" data-aos-delay="300">
+                <a href="#timeline" class="btn-glass">
+                    <span>Begin Our Journey</span>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 13l5 5 5-5M12 6v12"/></svg>
+                </a>
+            </div>
         </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- 6. GALLERY SECTION (LAMA + RETRIEVED) -->
-  <section class="section gallery-section" id="gallery">
-    <div class="section-header-center">
-      <h2 class="section-title">Photo Gallery</h2>
-      <p class="section-subtitle">Captured moments frozen in time.</p>
-    </div>
-
-    <div class="gallery-grid" id="gallery-grid">
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Memory 1" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Memory 2" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Memory 3" loading="lazy">
-      </div>
-      <div class="gallery-item">
-        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Memory 4" loading="lazy">
-      </div>
-    </div>
-  </section>
-
-  <!-- 7. VIDEOS SECTION (LAMA + RETRIEVED) -->
-  <section class="section videos-section" id="videos">
-    <div class="section-header-center">
-      <h2 class="section-title">Video Archives</h2>
-      <p class="section-subtitle">Moving pictures of our shared adventures.</p>
-    </div>
-
-    <div class="videos-grid">
-      <div class="video-card">
-        <div class="video-thumb-wrapper">
-          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Class Video" loading="lazy">
-          <button class="play-btn-overlay" aria-label="Play Video">▶</button>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll Down</span>
         </div>
-        <div class="video-info">
-          <h3>Class Journey Aftermovie</h3>
-          <p>A compilation of our highlights from start to finish.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- 8. WISH WALL SECTION -->
-  <section class="section wishwall-section" id="wishwall">
-    <div class="section-header-center">
-      <h2 class="section-title">Wish Wall</h2>
-      <p class="section-subtitle">Hopes, dreams, and quiet whispers for our time in Madrid.</p>
-    </div>
-
-    <div class="hearts-container" id="hearts-container" aria-hidden="true"></div>
-
-    <div class="wish-marquee-container">
-      <div class="wish-track" id="wish-track">
-        <!-- Wish cards rendered dynamically -->
-      </div>
-    </div>
-  </section>
-
-  <!-- MEMBER DETAIL MODAL (LAMA + RETRIEVED) -->
-  <div class="member-modal" id="member-modal" aria-hidden="true">
-    <div class="member-modal-backdrop" id="member-modal-backdrop"></div>
-    <div class="member-modal-card">
-      <button class="modal-close-btn" id="member-modal-close" aria-label="Close">&times;</button>
-      <div class="member-modal-body" id="member-modal-body">
-        <!-- Populated dynamically via script -->
-      </div>
-    </div>
-  </div>
-
-  <!-- WISH EXPAND MODAL -->
-  <div class="wish-modal" id="wish-modal" aria-hidden="true">
-    <div class="wish-modal-backdrop" id="wish-modal-backdrop"></div>
-    <div class="wish-modal-card" id="wish-modal-card">
-      <button class="wish-modal-close" id="wish-modal-close" aria-label="Close">&times;</button>
-      <div class="wish-modal-content">
-        <span class="wish-quote-icon">“</span>
-        <p class="wish-modal-text" id="wish-modal-text">-</p>
-        <div class="wish-modal-author">
-          <div class="wish-avatar-mini" id="wish-modal-avatar"></div>
-          <div>
-            <h4 id="wish-modal-name">-</h4>
-            <span id="wish-modal-role">Madrid Class Member</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- 9. FLOATING MUSIC BUTTON -->
-  <div class="music-player-widget">
-    <iframe 
-      id="spotify-player"
-      src="https://open.spotify.com/embed/track/4cOdK2wGLETKBW3PvgPWqT?utm_source=generator&theme=0" 
-      width="100%" 
-      height="80" 
-      frameborder="0" 
-      allowfullscreen="" 
-      allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
-      loading="lazy"
-      class="spotify-embed-hidden">
-    </iframe>
-
-    <button class="music-float-btn" id="music-toggle-btn" aria-label="Toggle Music">
-      <div class="vinyl-disc" id="vinyl-disc">
-        <div class="vinyl-center-hole"></div>
-      </div>
-      <span class="music-icon" id="music-icon">🎵</span>
-    </button>
-  </div>
-
-  <!-- Main JavaScript File -->
-  <script src="script.js"></script>
+    <!-- Main JavaScript -->
+    <script src="js/data.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
