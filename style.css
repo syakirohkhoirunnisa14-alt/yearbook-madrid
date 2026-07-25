@@ -330,7 +330,101 @@ body {
 }
 
 /* ============================================================
-   4. TIMELINE SECTION
+   4. MEMBERS GRID & MODAL (LAMA)
+   ============================================================ */
+
+.members-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 28px;
+}
+
+.member-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-md);
+  padding: 20px;
+  text-align: center;
+  box-shadow: var(--shadow-soft);
+  cursor: pointer;
+  transition: transform 0.4s var(--transition-smooth), box-shadow 0.4s var(--transition-smooth);
+}
+
+.member-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.07);
+}
+
+.member-photo {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  margin-bottom: 16px;
+}
+
+.member-name {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.member-quote {
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+/* MEMBER MODAL */
+.member-modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  z-index: 2500;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.member-modal.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.member-modal-backdrop {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(15, 18, 28, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+.member-modal-card {
+  position: relative;
+  z-index: 2;
+  width: 90%; max-width: 500px;
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.modal-close-btn {
+  position: absolute;
+  top: 16px; right: 16px;
+  background: rgba(0, 0, 0, 0.05);
+  border: none;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ============================================================
+   5. TIMELINE SECTION
    ============================================================ */
 
 .timeline-wrapper {
@@ -470,7 +564,82 @@ body {
 }
 
 /* ============================================================
-   5. WISH WALL SECTION
+   6. GALLERY & VIDEOS GRID (LAMA)
+   ============================================================ */
+
+.gallery-grid {
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  height: 240px;
+}
+
+.gallery-item img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s var(--ease-apple);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+.videos-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.video-card {
+  background: #FFFFFF;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+}
+
+.video-thumb-wrapper {
+  position: relative;
+  height: 360px;
+}
+
+.video-thumb-wrapper img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.play-btn-overlay {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  border: none;
+  font-size: 1.4rem;
+  color: var(--text-primary);
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.play-btn-overlay:hover {
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+.video-info {
+  padding: 24px 32px;
+}
+
+/* ============================================================
+   7. WISH WALL SECTION
    ============================================================ */
 
 .wishwall-section {
@@ -643,7 +812,7 @@ body {
 }
 
 /* ============================================================
-   6. FLOATING MUSIC BUTTON
+   8. FLOATING MUSIC BUTTON & ANIMATIONS
    ============================================================ */
 
 .music-player-widget {
