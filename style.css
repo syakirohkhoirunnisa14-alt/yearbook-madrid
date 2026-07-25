@@ -326,14 +326,14 @@ body {
   color: var(--dark-text);
 }
 
-/* Fullscreen Lightbox */
+/* Fullscreen Lightbox - Updated */
 .lightbox {
   display: none;
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(30, 20, 25, 0.88);
-  backdrop-filter: blur(8px);
+  background: rgba(30, 20, 25, 0.92);
+  backdrop-filter: blur(10px);
   z-index: 3000;
   flex-direction: column;
   justify-content: center;
@@ -345,6 +345,7 @@ body {
   max-height: 75vh;
   border-radius: 12px;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+  transition: opacity 0.3s ease; /* Transisi halus saat ganti gambar */
 }
 
 .lightbox-caption {
@@ -352,14 +353,54 @@ body {
   margin-top: 15px;
   font-size: 15px;
   font-weight: 500;
+  text-align: center;
+  padding: 0 20px;
 }
 
 .lightbox-close {
   position: absolute;
   top: 20px; right: 30px;
   color: white;
-  font-size: 36px;
+  font-size: 42px;
   cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+}
+.lightbox-close:hover { opacity: 1; }
+
+/* Lightbox Panah (Prev/Next) */
+.lightbox-prev, .lightbox-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 30px;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0.8;
+  transition: all 0.2s;
+  z-index: 3001;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Responsif untuk Mobile - Panah mengecil */
+@media (max-width: 768px) {
+  .lightbox-prev, .lightbox-next {
+    font-size: 20px;
+    padding: 10px;
+  }
+  .lightbox-prev { left: 10px; }
+  .lightbox-next { right: 10px; }
 }
 
 /* Timeline Section */
