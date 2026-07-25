@@ -189,4 +189,78 @@ document.addEventListener('DOMContentLoaded', () => {
             if (e.target === modalOverlay) closeModal();
         });
     }
+
+    // 7. Gallery Filter & Lightbox Viewer
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    const lightboxModal = document.getElementById('lightboxModal');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    const lightboxPrev = document.getElementById('lightboxPrev');
+    const lightboxNext = document.getElementById('lightboxNext');
+
+    let currentImgIndex = 0;
+    let visibleGalleryItems = Array.from(galleryItems);
+
+    // Gallery Filter Logic
+    filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+            visibleGalleryItems = [];
+
+            galleryItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+                if (filterValue === 'all' || category === filterValue) {
+                    item.style.display = 'block';
+                    visibleGalleryItems.push(item);
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Lightbox Controls
+    function updateLightbox(index) {
+        if (visibleGalleryItems.length === 0) return;
+        currentImgIndex = (index + visibleGalleryItems.length) % visibleGalleryItems.length;
+        const item = visibleGalleryItems[currentImgIndex];
+        const img = item.querySelector('img');
+        const caption = item.querySelector('.gallery-caption');
+
+        lightboxImg.src = img.src;
+        lightboxCaption.innerText = caption ? caption.innerText : '';
+    }
+
+    galleryItems.forEach(item => {
+        item.addEventListener('click', () => {
+            currentImgIndex = visibleGalleryItems.indexOf(item);
+            updateLightbox(currentImgIndex);
+            if (lightboxModal) {
+                lightboxModal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    function closeLightbox() {
+        if (lightboxModal) {
+            lightboxModal.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
+    if (lightboxPrev) lightboxPrev.addEventListener('click', () => updateLightbox(currentImgIndex - 1));
+    if (lightboxNext) lightboxNext.addEventListener('click', () => updateLightbox(currentImgIndex + 1));
+
+    if (lightboxModal) {
+        lightboxModal.addEventListener('click', (e) => {
+            if (e.target === lightboxModal) closeLightbox();
+        });
+    }
 });
