@@ -1,20 +1,25 @@
 /* ==========================================
-   THEME: PAINTED MEMORIES (PASTEL ELEGANT)
+   THEME: PAINTED MEMORIES (PASTEL MULTICOLOR)
    ========================================== */
 
 :root {
-  --bg-color: #FAF7F2;          /* Soft Warm Cream */
+  /* Palette Warna Pastel yang Kamu Pilih */
+  --peach: #FFD6C9;
+  --butter-yellow: #FFF1B8;
+  --baby-blue: #D6ECFF;
+  --mint: #D8F3DC;
+  --lavender: #E8D9FF;
+  --soft-coral: #F8C8C8;
+  --cream: #FFFDF8;
+  
+  /* Background & Teks Utama */
+  --bg-color: var(--cream);
   --card-bg: #FFFFFF;
-  --text-primary: #2C3E50;     /* Slate Dark */
-  --text-secondary: #64748B;   /* Slate Muted */
-  --accent-pink: #F8EDEB;      /* Pastel Pink */
-  --accent-blue: #E2ECE9;      /* Pastel Mint Blue */
-  --accent-peach: #FCD5CE;     /* Pastel Peach */
-  --accent-purple: #E8E8E4;    /* Soft Lavender/Gray */
-  --primary-color: #7B8FA1;    /* Dusky Blue */
-  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.05);
+  --text-primary: #2D3748;
+  --text-secondary: #718096;
+  --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.04);
   --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.08);
-  --radius: 16px;
+  --radius: 18px;
 }
 
 * {
@@ -31,12 +36,12 @@ body {
   padding-bottom: 80px;
 }
 
-/* HERO SECTION */
+/* HERO SECTION - Kombinasi Gradiasi Warna Warm Pastel */
 .hero {
-  background: linear-gradient(135deg, var(--accent-pink) 0%, var(--accent-blue) 100%);
+  background: linear-gradient(135deg, var(--peach) 0%, var(--lavender) 50%, var(--baby-blue) 100%);
   padding: 60px 20px;
   text-align: center;
-  border-bottom: 2px dashed var(--accent-peach);
+  border-bottom: 3px dashed var(--soft-coral);
 }
 
 .hero-content {
@@ -46,12 +51,12 @@ body {
 
 .badge {
   display: inline-block;
-  background-color: #FFFFFF;
-  color: var(--primary-color);
-  padding: 6px 16px;
+  background-color: var(--butter-yellow);
+  color: #4A5568;
+  padding: 8px 18px;
   border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
+  font-size: 0.9rem;
+  font-weight: 700;
   margin-bottom: 16px;
   box-shadow: var(--shadow-sm);
 }
@@ -64,7 +69,7 @@ body {
 }
 
 .subtitle {
-  color: var(--text-secondary);
+  color: #4A5568;
   font-size: 1.05rem;
 }
 
@@ -103,16 +108,16 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Sembunyikan scrollbar tapi tetap bisa di-scroll */
+/* Scrollbar Warna Mint */
 .carousel::-webkit-scrollbar {
-  height: 6px;
+  height: 8px;
 }
 .carousel::-webkit-scrollbar-thumb {
-  background: var(--accent-peach);
+  background: var(--mint);
   border-radius: 10px;
 }
 
-/* CARD ANGGOTA */
+/* CARD ANGGOTA DENGAN BORDER WARNA-WARNI ADESTETIK */
 .member-card {
   flex: 0 0 200px;
   scroll-snap-align: start;
@@ -122,8 +127,16 @@ body {
   box-shadow: var(--shadow-sm);
   cursor: pointer;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
-  border: 1px solid rgba(0,0,0,0.03);
+  border: 3px solid var(--baby-blue);
 }
+
+/* Variasi Warna Border Card Beragam Secara Otomatis */
+.member-card:nth-child(6n+1) { border-color: var(--peach); }
+.member-card:nth-child(6n+2) { border-color: var(--butter-yellow); }
+.member-card:nth-child(6n+3) { border-color: var(--baby-blue); }
+.member-card:nth-child(6n+4) { border-color: var(--mint); }
+.member-card:nth-child(6n+5) { border-color: var(--lavender); }
+.member-card:nth-child(6n+6) { border-color: var(--soft-coral); }
 
 .member-card:hover {
   transform: translateY(-6px);
@@ -150,19 +163,27 @@ body {
 
 /* GALERI KENANGAN */
 .gallery-block {
-  margin-bottom: 30px;
+  margin-bottom: 35px;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--card-bg);
+  box-shadow: var(--shadow-sm);
 }
 
+.gallery-block:nth-child(1) { border-top: 5px solid var(--peach); }
+.gallery-block:nth-child(2) { border-top: 5px solid var(--mint); }
+.gallery-block:nth-child(3) { border-top: 5px solid var(--lavender); }
+
 .gallery-block h3 {
-  font-size: 1.2rem;
-  margin-bottom: 12px;
-  color: var(--primary-color);
+  font-size: 1.25rem;
+  margin-bottom: 14px;
+  color: var(--text-primary);
 }
 
 .photo-card {
   flex: 0 0 280px;
   scroll-snap-align: start;
-  border-radius: var(--radius);
+  border-radius: 14px;
   overflow: hidden;
   box-shadow: var(--shadow-sm);
 }
@@ -183,29 +204,21 @@ body {
 
 .video-card {
   position: relative;
-  padding-bottom: 56.25%; /* Ratio 16:9 */
+  padding-bottom: 56.25%;
   height: 0;
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-sm);
   background: #000;
+  border: 3px solid var(--soft-coral);
 }
 
-.video-card iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* TIMELINE */
+/* TIMELINE DENGAN GARIS SOFT CORAL */
 .timeline {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border-left: 3px solid var(--accent-peach);
+  border-left: 4px solid var(--soft-coral);
   padding-left: 20px;
   margin-left: 10px;
 }
@@ -213,7 +226,7 @@ body {
 .timeline-item {
   position: relative;
   background: var(--card-bg);
-  padding: 16px 20px;
+  padding: 18px 22px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
 }
@@ -222,20 +235,21 @@ body {
   content: '';
   position: absolute;
   left: -28px;
-  top: 20px;
-  width: 12px;
-  height: 12px;
-  background: var(--accent-peach);
+  top: 22px;
+  width: 14px;
+  height: 14px;
+  background: var(--butter-yellow);
+  border: 3px solid var(--soft-coral);
   border-radius: 50%;
 }
 
 .timeline-date {
   font-size: 0.85rem;
   font-weight: 700;
-  color: var(--primary-color);
+  color: var(--text-primary);
 }
 
-/* HARAPAN (WISHES GRID) */
+/* HARAPAN (CARD UCAPAN WARNA-WARNI) */
 .wishes-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -244,20 +258,27 @@ body {
 
 .wish-card {
   background: var(--card-bg);
-  padding: 16px;
+  padding: 18px;
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  border-top: 4px solid var(--accent-blue);
 }
 
+/* Background Card Harapan Selang-seling */
+.wish-card:nth-child(5n+1) { background-color: var(--peach); }
+.wish-card:nth-child(5n+2) { background-color: var(--butter-yellow); }
+.wish-card:nth-child(5n+3) { background-color: var(--baby-blue); }
+.wish-card:nth-child(5n+4) { background-color: var(--mint); }
+.wish-card:nth-child(5n+5) { background-color: var(--lavender); }
+
 .wish-card h4 {
-  font-size: 0.95rem;
+  font-size: 1rem;
   margin-bottom: 6px;
+  color: var(--text-primary);
 }
 
 .wish-card p {
-  font-size: 0.85rem;
-  color: var(--text-secondary);
+  font-size: 0.88rem;
+  color: #4A5568;
   font-style: italic;
 }
 
@@ -268,7 +289,7 @@ body {
   top: 0; left: 0;
   width: 100%; height: 100%;
   background: rgba(0, 0, 0, 0.4);
-  backdrop-filter: blur(5px);
+  backdrop-filter: blur(6px);
   z-index: 1000;
   justify-content: center;
   align-items: center;
@@ -283,11 +304,12 @@ body {
   background: var(--card-bg);
   width: 100%;
   max-width: 500px;
-  border-radius: 20px;
-  padding: 24px;
+  border-radius: 24px;
+  padding: 28px;
   position: relative;
   box-shadow: var(--shadow-md);
   animation: popup 0.3s ease;
+  border: 4px solid var(--lavender);
 }
 
 @keyframes popup {
@@ -312,16 +334,16 @@ body {
   border-radius: 50%;
   object-fit: cover;
   margin-bottom: 16px;
-  border: 4px solid var(--accent-pink);
+  border: 4px solid var(--soft-coral);
 }
 
 .quote-box {
-  background: var(--bg-color);
-  padding: 12px;
-  border-radius: 12px;
+  background: var(--butter-yellow);
+  padding: 14px;
+  border-radius: 14px;
   margin: 16px 0;
   font-family: 'Caveat', cursive;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: var(--text-primary);
 }
 
@@ -330,19 +352,19 @@ body {
   position: fixed;
   bottom: 24px;
   right: 24px;
-  width: 50px;
-  height: 50px;
-  background-color: var(--card-bg);
+  width: 55px;
+  height: 55px;
+  background-color: var(--butter-yellow);
   color: var(--text-primary);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   box-shadow: var(--shadow-md);
   cursor: pointer;
   z-index: 999;
-  border: 2px solid var(--accent-peach);
+  border: 3px solid var(--peach);
   transition: transform 0.2s ease;
 }
 
