@@ -1,24 +1,17 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // 1. Loading Screen Handler
+    
+    // 1. Loading Screen Fix (Auto Close Maksimal 1.5 detik)
     const loadingScreen = document.getElementById('loading-screen');
-    window.addEventListener('load', () => {
-        setTimeout(() => {
-            if (loadingScreen) {
-                loadingScreen.classList.add('fade-out');
-            }
-        }, 1200);
-    });
-
-    // 2. Hero Parallax Effect
-    const heroBg = document.getElementById('heroBg');
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        if (heroBg && scrolled < window.innerHeight) {
-            heroBg.style.transform = `translate3d(0, ${scrolled * 0.35}px, 0)`;
+    const hideLoading = () => {
+        if (loadingScreen) {
+            loadingScreen.classList.add('fade-out');
         }
-    });
+    };
+    
+    window.addEventListener('load', hideLoading);
+    setTimeout(hideLoading, 1500); // Cadangan otomatis hilang jika internet lambat
 
-    // 3. Navbar Scroll & Blur Effect
+    // 2. Navbar Scroll
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -28,25 +21,14 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Mobile Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-    }
-
-    // 4. Memory Counter Animation
+    // 3. Counter Animation
     const counters = document.querySelectorAll('.counter-number');
     let animated = false;
-
     const animateCounters = () => {
         counters.forEach(counter => {
             const target = +counter.getAttribute('data-target');
             let count = 0;
-            const speed = target / 30;
-
+            const speed = target / 25;
             const updateCount = () => {
                 count += speed;
                 if (count < target) {
@@ -70,35 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 5. Timeline Scroll Progress & Active Chapter
-    const timelineProgress = document.getElementById('timelineProgress');
-    const timelineCards = document.querySelectorAll('.timeline-card');
-
-    window.addEventListener('scroll', () => {
-        const timelineSection = document.getElementById('timeline');
-        if (!timelineSection) return;
-
-        const rect = timelineSection.getBoundingClientRect();
-        const sectionHeight = rect.height;
-        const visibleHeight = window.innerHeight - rect.top;
-
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            let percentage = (visibleHeight / (sectionHeight + window.innerHeight)) * 100;
-            percentage = Math.max(0, Math.min(100, percentage));
-            if (timelineProgress) timelineProgress.style.height = `${percentage}%`;
-        }
-
-        timelineCards.forEach(card => {
-            const cardTop = card.getBoundingClientRect().top;
-            if (cardTop < window.innerHeight * 0.75) {
-                card.classList.add('active');
-            } else {
-                card.classList.remove('active');
-            }
-        });
-    });
-
-    // 6. Render People Grid & Search Filter
+    // 4. People Grid & Modal
     const peopleGrid = document.getElementById('peopleGrid');
     const searchInput = document.getElementById('searchStudent');
     const modalOverlay = document.getElementById('profileModal');
@@ -108,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderPeople(data) {
         if (!peopleGrid) return;
         peopleGrid.innerHTML = '';
-
-        if (data.length === 0) {
+        if (!data || data.length === 0) {
             peopleGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Nama tidak ditemukan...</p>`;
             return;
         }
@@ -119,7 +72,7 @@ document.addEventListener('DOMContentLoaded', () => {
             card.className = 'person-card';
             card.innerHTML = `
                 <div class="avatar-wrapper">
-                    <img src="${person.photo}" alt="${person.name}" class="avatar-img" loading="lazy">
+                    <img src="${person.photo}" alt="${person.name}" loading="lazy">
                 </div>
                 <h3 class="person-name">${person.name}</h3>
                 <span class="person-nickname">"${person.nickname}"</span>
@@ -147,75 +100,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function openModal(person) {
         if (!modalOverlay || !modalBody) return;
-
         modalBody.innerHTML = `
-            <div class="modal-header-profile">
-                <div class="modal-avatar-wrapper">
-                    <img src="${person.photo}" alt="${person.name}" class="modal-avatar-img">
-                </div>
-                <h2 class="modal-name">${person.name}</h2>
-                <p class="modal-quote">"${person.quote || 'No quote provided.'}"</p>
+            <div style="text-align:center;">
+                <img src="${person.photo}" style="width:110px; height:110px; border-radius:50%; object-fit:cover; margin-bottom:10px;">
+                <h2>${person.name}</h2>
+                <p style="font-style:italic; color:var(--coral); margin-bottom:15px;">"${person.quote || 'No quote'}"</p>
             </div>
-            <div class="modal-details">
-                <div class="detail-item">
-                    <span class="detail-label">Tempat, Tanggal Lahir</span>
-                    <span class="detail-val">${person.ttl || '-'}</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Hobi</span>
-                    <span class="detail-val">${person.hobi || '-'}</span>
-                </div>
-                <div class="detail-item">
-                    <span class="detail-label">Pesan & Kesan</span>
-                    <span class="detail-val">${person.pesan || '-'}</span>
-                </div>
+            <div style="text-align:left; font-size:0.9rem; line-height:1.6;">
+                <p><strong>TTL:</strong> ${person.ttl || '-'}</p>
+                <p><strong>Hobi:</strong> ${person.hobi || '-'}</p>
+                <p><strong>Pesan & Kesan:</strong> ${person.pesan || '-'}</p>
             </div>
         `;
-
         modalOverlay.classList.add('active');
-        document.body.style.overflow = 'hidden';
     }
 
-    function closeModal() {
-        if (modalOverlay) {
-            modalOverlay.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalClose) modalClose.addEventListener('click', () => modalOverlay.classList.remove('active'));
     if (modalOverlay) {
         modalOverlay.addEventListener('click', (e) => {
-            if (e.target === modalOverlay) closeModal();
+            if (e.target === modalOverlay) modalOverlay.classList.remove('active');
         });
     }
 
-    // 7. Gallery Filter & Lightbox Viewer
+    // 5. Gallery Filter & Lightbox
     const filterBtns = document.querySelectorAll('.filter-btn');
     const galleryItems = document.querySelectorAll('.gallery-item');
     const lightboxModal = document.getElementById('lightboxModal');
     const lightboxImg = document.getElementById('lightboxImg');
     const lightboxCaption = document.getElementById('lightboxCaption');
-    const lightboxClose = document.getElementById('lightboxClose');
-    const lightboxPrev = document.getElementById('lightboxPrev');
-    const lightboxNext = document.getElementById('lightboxNext');
-
-    let currentImgIndex = 0;
-    let visibleGalleryItems = Array.from(galleryItems);
 
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             filterBtns.forEach(b => b.classList.remove('active'));
             btn.classList.add('active');
-
             const filterValue = btn.getAttribute('data-filter');
-            visibleGalleryItems = [];
 
             galleryItems.forEach(item => {
                 const category = item.getAttribute('data-category');
                 if (filterValue === 'all' || category === filterValue) {
                     item.style.display = 'block';
-                    visibleGalleryItems.push(item);
                 } else {
                     item.style.display = 'none';
                 }
@@ -223,73 +146,49 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    function updateLightbox(index) {
-        if (visibleGalleryItems.length === 0) return;
-        currentImgIndex = (index + visibleGalleryItems.length) % visibleGalleryItems.length;
-        const item = visibleGalleryItems[currentImgIndex];
-        const img = item.querySelector('img');
-        const caption = item.querySelector('.gallery-caption');
-
-        lightboxImg.src = img.src;
-        lightboxCaption.innerText = caption ? caption.innerText : '';
-    }
-
     galleryItems.forEach(item => {
         item.addEventListener('click', () => {
-            currentImgIndex = visibleGalleryItems.indexOf(item);
-            updateLightbox(currentImgIndex);
-            if (lightboxModal) {
-                lightboxModal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            }
+            const img = item.querySelector('img');
+            const caption = item.querySelector('.gallery-caption');
+            lightboxImg.src = img.src;
+            lightboxCaption.innerText = caption ? caption.innerText : '';
+            lightboxModal.classList.add('active');
         });
     });
 
-    function closeLightbox() {
-        if (lightboxModal) {
-            lightboxModal.classList.remove('active');
-            document.body.style.overflow = 'auto';
-        }
-    }
-
-    if (lightboxClose) lightboxClose.addEventListener('click', closeLightbox);
-    if (lightboxPrev) lightboxPrev.addEventListener('click', () => updateLightbox(currentImgIndex - 1));
-    if (lightboxNext) lightboxNext.addEventListener('click', () => updateLightbox(currentImgIndex + 1));
-
+    document.getElementById('lightboxClose')?.addEventListener('click', () => lightboxModal.classList.remove('active'));
     if (lightboxModal) {
         lightboxModal.addEventListener('click', (e) => {
-            if (e.target === lightboxModal) closeLightbox();
+            if (e.target === lightboxModal) lightboxModal.classList.remove('active');
         });
     }
 
-    // 8. Wish Wall Form Handler
+    // 6. Wish Form
     const wishForm = document.getElementById('wishForm');
     const wishesFeed = document.getElementById('wishesFeed');
 
-    if (wishForm && wishesFeed) {
+    if (wishForm) {
         wishForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const sender = document.getElementById('wishSender').value.trim();
-            const message = document.getElementById('wishMessage').value.trim();
-
+            const sender = document.getElementById('wishSender').value;
+            const message = document.getElementById('wishMessage').value;
             if (sender && message) {
-                const newCard = document.createElement('div');
-                newCard.className = 'wish-card';
-                newCard.innerHTML = `
-                    <div class="wish-header">
-                        <span class="wish-author">${sender}</span>
-                        <span class="wish-date">Baru saja</span>
+                const card = document.createElement('div');
+                card.className = 'wish-card';
+                card.innerHTML = `
+                    <div style="display:flex; justify-content:space-between; margin-bottom:8px;">
+                        <strong>${sender}</strong>
+                        <small style="color:#888;">Baru saja</small>
                     </div>
-                    <p class="wish-text">"${message}"</p>
+                    <p style="font-style:italic; font-size:0.9rem;">"${message}"</p>
                 `;
-
-                wishesFeed.prepend(newCard);
+                wishesFeed.prepend(card);
                 wishForm.reset();
             }
         });
     }
 
-    // 9. Floating Background Music Player
+    // 7. Music Player
     const musicBtn = document.getElementById('musicBtn');
     const bgAudio = document.getElementById('bgAudio');
     let isPlaying = false;
@@ -301,12 +200,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 musicBtn.classList.remove('playing');
                 isPlaying = false;
             } else {
-                bgAudio.play().then(() => {
-                    musicBtn.classList.add('playing');
-                    isPlaying = true;
-                }).catch(err => {
-                    console.log("Audio playback blocked by browser:", err);
-                });
+                bgAudio.play();
+                musicBtn.classList.add('playing');
+                isPlaying = true;
             }
         });
     }
