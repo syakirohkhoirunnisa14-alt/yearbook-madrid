@@ -1,0 +1,290 @@
+{
+  "class_info": {
+    "title": "Painted Memories",
+    "subtitle": "Yearbook Class of Madrid",
+    "history": "X Sofia (2023-2024) ➔ XI Latvia (2024-2025) ➔ XII Madrid (2025-2026)",
+    "teachers": [
+      {
+        "name": "Zah Eed",
+        "role": "Wali Kelas X Sofia & XI Latvia",
+        "photo": "https://lh3.googleusercontent.com/d/1N3IU7XweiOMZdMOdUb5sXIEG5hwPPrPx"
+      },
+      {
+        "name": "Zah Iput",
+        "role": "Wali Kelas XII Madrid",
+        "photo": "https://lh3.googleusercontent.com/d/1y7VytDPBSTpzg5Mk6EWFKZ9G_WjS2A4E"
+      }
+    ]
+  },
+  "members": [
+    {
+      "id": 1,
+      "name": "Zah Eed",
+      "role": "Wali Kelas (X Sofia & XI Latvia)",
+      "photo": "https://lh3.googleusercontent.com/d/1N3IU7XweiOMZdMOdUb5sXIEG5hwPPrPx",
+      "quote": "Teruslah melangkah dan jadilah terang di mana pun kalian berada.",
+      "harapan": "Semoga kalian menjadi angkatan yang sukses dan selalu saling merangkul."
+    },
+    {
+      "id": 2,
+      "name": "Zah Iput",
+      "role": "Wali Kelas (XII Madrid)",
+      "photo": "https://lh3.googleusercontent.com/d/1y7VytDPBSTpzg5Mk6EWFKZ9G_WjS2A4E",
+      "quote": "Masa depan milik mereka yang percaya pada keindahan mimpi-mimpinya.",
+      "harapan": "Semoga kelas Madrid sukses di jenjang berikutnya dan tetap solid!"
+    },
+    {
+      "id": 3,
+      "name": "Ipeh",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/19Y9lBacQ6RtmZCthTwgE5CfilE4OqWuX",
+      "quote": "Painted memories will last forever.",
+      "harapan": "Jangan saling lupa ya kalau udah sukses nanti!"
+    },
+    {
+      "id": 4,
+      "name": "ATM",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1h54Cp1mvpoxSOegRFVaxihnNq9GoXNAa",
+      "quote": "Proses tidak pernah mengkhianati hasil.",
+      "harapan": "Semoga semua cita-cita teman-teman Madrid tercapai."
+    },
+    {
+      "id": 5,
+      "name": "Icaza",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1hokFI5q9yLpOFJ5Z5R0eg5p5Trp3bpLa",
+      "quote": "Hari ini adalah kenangan untuk masa depan.",
+      "harapan": "Tetap jadi diri sendiri dan makin sukses!"
+    },
+    {
+      "id": 6,
+      "name": "Malik",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1Ja-7JHbS94bntby-I9vG32rnWasQYyuV",
+      "quote": "Tetap santai tapi selesai.",
+      "harapan": "Semoga kita semua bisa reuni dalam keadaan sukses."
+    },
+    {
+      "id": 7,
+      "name": "Amal",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1vhAx1X45-5xzKv12wVjfkwBnNihEOEwj",
+      "quote": "Bikin cerita indah di setiap kesempatan.",
+      "harapan": "Semoga kenangan 3 tahun ini selalu membakar semangat kita."
+    },
+    {
+      "id": 8,
+      "name": "Qomah",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1vJJWSJ5CZFMwvCSKCS5DS58p37WGUXcT",
+      "quote": "Lakukan yang terbaik hari ini.",
+      "harapan": "Semoga Madrid angkatan terbaik selamanya."
+    },
+    {
+      "id": 9,
+      "name": "Amoy",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1FjS8WRWJo5lDyssn2ZQiV1nrDRZ4_PIw",
+      "quote": "Tertawa adalah obat terbaik saat sekolah.",
+      "harapan": "Tetap saling kontak dan jangan sombong-sombong ya!"
+    },
+    {
+      "id": 10,
+      "name": "Celis",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1gPjtqQXDqTCaJkHMTOyD7H0_i4HbRZlt",
+      "quote": "Selesai satu bab, lanjut ke bab berikutnya.",
+      "harapan": "Sukses di kampus dan karier prapilihan masing-masing!"
+    },
+    {
+      "id": 11,
+      "name": "Kolok",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1B9xR8HaQNds3PpiFWMsummJMe2D8J2a0",
+      "quote": "Jalani hidup dengan penuh warna pastel.",
+      "harapan": "Semoga kenangan Madrid selalu hangat."
+    },
+    {
+      "id": 12,
+      "name": "Diana",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1hMRaZEDEzoCbGlGoPcLgpTvt5_6o7PP2",
+      "quote": "Terima kasih untuk 3 tahun yang luar biasa.",
+      "harapan": "Semoga persahabatan kita abadi."
+    },
+    {
+      "id": 13,
+      "name": "Ara",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1OkNfwvT46P55Rf58kCqD5roAmT9N5jeR",
+      "quote": "Setiap detik bersama kalian berharga.",
+      "harapan": "Semoga impian kita semua dikabulkan."
+    },
+    {
+      "id": 14,
+      "name": "Aza",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1rwrD_3riFMpoulBjFb9hpkahE2yRZBYt",
+      "quote": "Keep shining like a star.",
+      "harapan": "Semoga kelak kita dipertemukan kembali di puncak sukses."
+    },
+    {
+      "id": 15,
+      "name": "Haura",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1LBiENtKgSzhAX1jedlQQT90-Y050YYpp",
+      "quote": "Semua momen ini bakal dirindukan.",
+      "harapan": "Sehat dan bahagia selalu untuk teman-teman Madrid!"
+    },
+    {
+      "id": 16,
+      "name": "BJ",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1bAL_hfN4N0prjgeQy6QQbhpVKKhLyfh2",
+      "quote": "Work hard, play hard.",
+      "harapan": "Semoga Madrid makin kompak walau udah pisah jalan."
+    },
+    {
+      "id": 17,
+      "name": "Nadhira",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1xlLFeT1oH0aR2EzKiscpAD2fguvrV7Ok",
+      "quote": "Kenangan manis tidak pernah pudar.",
+      "harapan": "Semoga impian terbesar kita segera terwujud."
+    },
+    {
+      "id": 18,
+      "name": "Picah",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1bzrwl-k4YVLBQo5mUt8ijvmYxfXhH6ch",
+      "quote": "Belajar dari kemarin, hidup untuk hari ini.",
+      "harapan": "Semoga kita jadi orang berguna di mana pun berada."
+    },
+    {
+      "id": 19,
+      "name": "Nasywa",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1pGUSwqy-Obs6jPe8E_Oju_mIYu9mur3U",
+      "quote": "Masa sekolah adalah cerita terbaik.",
+      "harapan": "Semoga tali silaturahmi kita tidak terputus."
+    },
+    {
+      "id": 20,
+      "name": "k’Nau",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1y8XH7bmw62GllWo2fR5Th5KUysxyll-6",
+      "quote": "Jadilah lukisan terindah di hidupmu.",
+      "harapan": "Sukses terus kawan-kawan kelas Madrid!"
+    },
+    {
+      "id": 21,
+      "name": "Nazu",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1C81Aj2TNx9FY-dFEHIf_949N02mRg7Ty",
+      "quote": "Nikmati tiap prosesnya.",
+      "harapan": "Semoga semua harapan di form kemarin bisa terwujud."
+    },
+    {
+      "id": 22,
+      "name": "Nila",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1HZ5W-rtpxmBCDrYixoiEjQPyulX0ykHf",
+      "quote": "Senyum adalah kunci menghadapi hari.",
+      "harapan": "Semoga kelas Madrid selalu ada di hati."
+    },
+    {
+      "id": 23,
+      "name": "Fifi",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1SIO8UHAzFItzpnWhKhXgRzsW4G7FGET5",
+      "quote": "Tersenyumlah, masa depan itu cerah.",
+      "harapan": "Semoga dimudahkan jalan menuju cita-cita."
+    },
+    {
+      "id": 24,
+      "name": "Ajonk",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1lHTqPpYE3h-j1QhbGktRD5NpLwlR2HbI",
+      "quote": "Karakter dibentuk dari ujian dan tawa.",
+      "harapan": "Makin sukses, makin solid!"
+    },
+    {
+      "id": 25,
+      "name": "Nuna",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1JZLYbLAUZSTqWOrtsJiQUMlRfYNC3V2Z",
+      "quote": "Every day is a fresh start.",
+      "harapan": "Semoga kenangan dari Sofia sampai Madrid tetap abadi."
+    },
+    {
+      "id": 26,
+      "name": "Reva",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1Qxr_AgKvuV1rujYDPOGzGTnikN4lqqUx",
+      "quote": "Persahabatan ini tidak ada duanya.",
+      "harapan": "Semoga kita semua bahagia selalu."
+    },
+    {
+      "id": 27,
+      "name": "Ipak",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1yo1CZhIo_VCQCiOcvXq7xHUQbhpC8Eqb",
+      "quote": "Terus melangkah walau perlahan.",
+      "harapan": "Semoga impian kecil maupun besar kita terwujud."
+    },
+    {
+      "id": 28,
+      "name": "Bita",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1Ix-92lpt2hwnSmDUP5QSzGBcrSJUOTEw",
+      "quote": "Kisah ini bakal jadi favoritku selamanya.",
+      "harapan": "Semoga kelas Madrid jadi kenangan terindah."
+    },
+    {
+      "id": 29,
+      "name": "Isyah",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1kbNjUiEexj1FYeDDVCKiitWqK2buIvhC",
+      "quote": "Painted memories, colored by love.",
+      "harapan": "Semoga kita tetap saling dukung dalam kondisi apa pun."
+    },
+    {
+      "id": 30,
+      "name": "Syakiroh",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1eVPsMZzPtulOXBZMvHlRWFazdhtrlkSa",
+      "quote": "Bersyukur pernah jadi bagian dari kelas ini.",
+      "harapan": "Semoga dilancarkan ke jenjang berikutnya."
+    },
+    {
+      "id": 31,
+      "name": "Kiaa",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1VYsDAHgC5xH3JLHgcDEn9GW1wzbvv0bQ",
+      "quote": "Don't count the days, make the days count.",
+      "harapan": "Semoga sukses besar menyertai kita semua!"
+    },
+    {
+      "id": 32,
+      "name": "Berbi",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/13-uRhJJJLWXLBhBIZ59Fkv_wQIzpvH3J",
+      "quote": "Ingatlah tawa kita, lupakan duka kita.",
+      "harapan": "Semoga kita bisa kumpul lagi dengan senyuman lebar."
+    },
+    {
+      "id": 33,
+      "name": "Zizi",
+      "role": "Siswa",
+      "photo": "https://lh3.googleusercontent.com/d/1SdeW0aKxjBJa20bwFqg5Q_GTVM9qbEeI",
+      "quote": "Ini akhir dari satu bab, tapi awal cerita besar.",
+      "harapan": "Semoga angkatan Madrid jadi kebanggaan semua orang."
+    }
+  ],
+  "youtube_videos": [
+    "o3f4lJ96aM0",
+    "4vaRWogBwVo",
+    "lYPWcfJohT0"
+  ]
+}
