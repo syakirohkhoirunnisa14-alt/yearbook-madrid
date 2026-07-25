@@ -11,6 +11,7 @@
 </head>
 <body>
 
+  <!-- Navbar Navigation -->
   <nav class="navbar">
     <div class="logo">🎨 Painted Memories</div>
     <ul class="nav-links">
@@ -25,6 +26,7 @@
     </ul>
   </nav>
 
+  <!-- Hero / Home Screen -->
   <section id="home" class="hero-section">
     <div class="hero-overlay"></div>
     <div class="hero-content">
@@ -35,6 +37,7 @@
     </div>
   </section>
 
+  <!-- Section Profil Anggota -->
   <section id="profil" class="profile-section">
     <span class="sub-title">KITA SEMUA</span>
     <h2 class="main-title">Profil Anggota</h2>
@@ -48,6 +51,7 @@
     <div class="scroll-hint">↔ SCROLL KE SAMPING UNTUK LIHAT ANGGOTA LAIN</div>
   </section>
 
+  <!-- Section Galeri Sofia Memories -->
   <section id="sofia" class="gallery-section">
     <div class="section-header">
       <span class="badge badge-mint">2023–2024</span>
@@ -56,10 +60,12 @@
     </div>
     <div class="carousel-container">
       <div class="carousel-track" id="sofiaGallery">
-        </div>
+        <!-- Photo cards injected dynamically -->
+      </div>
     </div>
   </section>
 
+  <!-- Section Galeri Latvia Memories -->
   <section id="latvia" class="gallery-section alt-bg">
     <div class="section-header">
       <span class="badge badge-purple">2024–2025</span>
@@ -68,10 +74,12 @@
     </div>
     <div class="carousel-container">
       <div class="carousel-track" id="latviaGallery">
-        </div>
+        <!-- Photo cards injected dynamically -->
+      </div>
     </div>
   </section>
 
+  <!-- Section Galeri Madrid Memories -->
   <section id="madrid" class="gallery-section">
     <div class="section-header">
       <span class="badge badge-pink">2025–2026</span>
@@ -80,10 +88,12 @@
     </div>
     <div class="carousel-container">
       <div class="carousel-track" id="madridGallery">
-        </div>
+        <!-- Photo cards injected dynamically -->
+      </div>
     </div>
   </section>
 
+  <!-- Section Timeline 3 Tahun -->
   <section id="timeline" class="timeline-section">
     <h2 class="section-title">Timeline 3 Tahun</h2>
     <div class="timeline-container">
@@ -108,6 +118,7 @@
     </div>
   </section>
 
+  <!-- Section Video Kompilasi -->
   <section id="video" class="video-section">
     <h2 class="section-title">Video Kenangan</h2>
     <div class="video-grid">
@@ -123,11 +134,13 @@
     </div>
   </section>
 
+  <!-- Section Harapan Anggota -->
   <section id="harapan" class="wishes-section">
     <h2 class="section-title">Harapan Untuk Madrid</h2>
     <div class="wishes-grid" id="wishesContainer"></div>
   </section>
 
+  <!-- Modal Detail Profil Anggota -->
   <div id="profileModal" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -135,12 +148,16 @@
     </div>
   </div>
 
-  <div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
-    <span class="lightbox-close">&times;</span>
+  <!-- Lightbox Fullscreen Foto Galeri (Update Bagian Ini) -->
+  <div id="lightboxModal" class="lightbox">
+    <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
+    <button class="lightbox-prev" onclick="changeImage(-1)" title="Foto Sebelumnya">&#10094;</button>
     <img id="lightboxImg" src="" alt="Fullscreen View">
+    <button class="lightbox-next" onclick="changeImage(1)" title="Foto Berikutnya">&#10095;</button>
     <div id="lightboxCaption" class="lightbox-caption"></div>
   </div>
 
+  <!-- Floating Audio Player Button -->
   <div class="floating-music" onclick="toggleMusic()" title="Putar Musik Instrumental">
     <span id="musicIcon">🎵</span>
   </div>
