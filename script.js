@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (loadingScreen) {
                 loadingScreen.classList.add('fade-out');
             }
-        }, 1200); // Gives time for watercolor brush effect
+        }, 1200);
     });
 
     // 2. Hero Parallax Effect
@@ -97,4 +97,96 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+
+    // 6. Render People Grid & Search Filter
+    const peopleGrid = document.getElementById('peopleGrid');
+    const searchInput = document.getElementById('searchStudent');
+    const modalOverlay = document.getElementById('profileModal');
+    const modalBody = document.getElementById('modalBody');
+    const modalClose = document.getElementById('modalClose');
+
+    function renderPeople(data) {
+        if (!peopleGrid) return;
+        peopleGrid.innerHTML = '';
+
+        if (data.length === 0) {
+            peopleGrid.innerHTML = `<p style="grid-column: 1/-1; text-align: center; color: var(--text-muted);">Nama tidak ditemukan...</p>`;
+            return;
+        }
+
+        data.forEach(person => {
+            const card = document.createElement('div');
+            card.className = 'person-card';
+            card.innerHTML = `
+                <div class="avatar-wrapper">
+                    <img src="${person.photo}" alt="${person.name}" class="avatar-img" loading="lazy">
+                </div>
+                <h3 class="person-name">${person.name}</h3>
+                <span class="person-nickname">"${person.nickname}"</span>
+            `;
+
+            card.addEventListener('click', () => openModal(person));
+            peopleGrid.appendChild(card);
+        });
+    }
+
+    if (typeof studentsData !== 'undefined') {
+        renderPeople(studentsData);
+    }
+
+    if (searchInput && typeof studentsData !== 'undefined') {
+        searchInput.addEventListener('input', (e) => {
+            const keyword = e.target.value.toLowerCase();
+            const filtered = studentsData.filter(student => 
+                student.name.toLowerCase().includes(keyword) || 
+                student.nickname.toLowerCase().includes(keyword)
+            );
+            renderPeople(filtered);
+        });
+    }
+
+    function openModal(person) {
+        if (!modalOverlay || !modalBody) return;
+
+        modalBody.innerHTML = `
+            <div class="modal-header-profile">
+                <div class="modal-avatar-wrapper">
+                    <img src="${person.photo}" alt="${person.name}" class="modal-avatar-img">
+                </div>
+                <h2 class="modal-name">${person.name}</h2>
+                <p class="modal-quote">"${person.quote || 'No quote provided.'}"</p>
+            </div>
+            <div class="modal-details">
+                <div class="detail-item">
+                    <span class="detail-label">Tempat, Tanggal Lahir</span>
+                    <span class="detail-val">${person.ttl || '-'}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Hobi</span>
+                    <span class="detail-val">${person.hobi || '-'}</span>
+                </div>
+                <div class="detail-item">
+                    <span class="detail-label">Pesan & Kesan</span>
+                    <span class="detail-val">${person.pesan || '-'}</span>
+                </div>
+            </div>
+        `;
+
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        if (modalOverlay) {
+            modalOverlay.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    }
+
+    if (modalClose) modalClose.addEventListener('click', closeModal);
+    if (modalOverlay) {
+        modalOverlay.addEventListener('click', (e) => {
+            if (e.target === modalOverlay) closeModal();
+        });
+    }
 });
