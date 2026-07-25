@@ -54,7 +54,10 @@
       <nav class="nav-menu" id="nav-menu">
         <ul class="nav-list">
           <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#members" class="nav-link">Members</a></li>
           <li><a href="#timeline" class="nav-link">Timeline</a></li>
+          <li><a href="#gallery" class="nav-link">Gallery</a></li>
+          <li><a href="#videos" class="nav-link">Videos</a></li>
           <li><a href="#wishwall" class="nav-link">Wish Wall</a></li>
         </ul>
       </nav>
@@ -76,7 +79,19 @@
     </div>
   </section>
 
-  <!-- 4. TIMELINE SECTION -->
+  <!-- 4. MEMBERS SECTION (LAMA + RETRIEVED) -->
+  <section class="section members-section" id="members">
+    <div class="section-header-center">
+      <h2 class="section-title">Class Members</h2>
+      <p class="section-subtitle">The faces and hearts behind our story.</p>
+    </div>
+    
+    <div class="members-grid" id="members-grid">
+      <!-- Member Cards Will Be Rendered Dynamically -->
+    </div>
+  </section>
+
+  <!-- 5. TIMELINE SECTION -->
   <section class="section timeline-section" id="timeline">
     <div class="section-header-center">
       <h2 class="section-title">The Journey</h2>
@@ -149,7 +164,51 @@
     </div>
   </section>
 
-  <!-- 5. WISH WALL SECTION -->
+  <!-- 6. GALLERY SECTION (LAMA + RETRIEVED) -->
+  <section class="section gallery-section" id="gallery">
+    <div class="section-header-center">
+      <h2 class="section-title">Photo Gallery</h2>
+      <p class="section-subtitle">Captured moments frozen in time.</p>
+    </div>
+
+    <div class="gallery-grid" id="gallery-grid">
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=800&q=80" alt="Memory 1" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?auto=format&fit=crop&w=800&q=80" alt="Memory 2" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=800&q=80" alt="Memory 3" loading="lazy">
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&q=80" alt="Memory 4" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. VIDEOS SECTION (LAMA + RETRIEVED) -->
+  <section class="section videos-section" id="videos">
+    <div class="section-header-center">
+      <h2 class="section-title">Video Archives</h2>
+      <p class="section-subtitle">Moving pictures of our shared adventures.</p>
+    </div>
+
+    <div class="videos-grid">
+      <div class="video-card">
+        <div class="video-thumb-wrapper">
+          <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=800&q=80" alt="Class Video" loading="lazy">
+          <button class="play-btn-overlay" aria-label="Play Video">▶</button>
+        </div>
+        <div class="video-info">
+          <h3>Class Journey Aftermovie</h3>
+          <p>A compilation of our highlights from start to finish.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. WISH WALL SECTION -->
   <section class="section wishwall-section" id="wishwall">
     <div class="section-header-center">
       <h2 class="section-title">Wish Wall</h2>
@@ -164,6 +223,17 @@
       </div>
     </div>
   </section>
+
+  <!-- MEMBER DETAIL MODAL (LAMA + RETRIEVED) -->
+  <div class="member-modal" id="member-modal" aria-hidden="true">
+    <div class="member-modal-backdrop" id="member-modal-backdrop"></div>
+    <div class="member-modal-card">
+      <button class="modal-close-btn" id="member-modal-close" aria-label="Close">&times;</button>
+      <div class="member-modal-body" id="member-modal-body">
+        <!-- Populated dynamically via script -->
+      </div>
+    </div>
+  </div>
 
   <!-- WISH EXPAND MODAL -->
   <div class="wish-modal" id="wish-modal" aria-hidden="true">
@@ -184,7 +254,7 @@
     </div>
   </div>
 
-  <!-- 6. FLOATING MUSIC BUTTON -->
+  <!-- 9. FLOATING MUSIC BUTTON -->
   <div class="music-player-widget">
     <iframe 
       id="spotify-player"
