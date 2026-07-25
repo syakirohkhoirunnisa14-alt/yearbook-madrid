@@ -64,7 +64,98 @@
             <span>Scroll Down</span>
         </div>
     </section>
+<!-- NAVBAR -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">Painted Memories</a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#timeline" class="nav-link">Timeline</a></li>
+                <li><a href="#people" class="nav-link">People</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#videos" class="nav-link">Videos</a></li>
+                <li><a href="#wishwall" class="nav-link">Wish Wall</a></li>
+            </ul>
 
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MEMORY COUNTER SECTION -->
+    <section id="counter" class="counter-section">
+        <div class="container counter-grid">
+            <div class="counter-item">
+                <span class="counter-number" data-target="33">0</span>
+                <span class="counter-label">People</span>
+            </div>
+            <div class="counter-divider"></div>
+            <div class="counter-item">
+                <span class="counter-number" data-target="3">0</span>
+                <span class="counter-label">Years Journey</span>
+            </div>
+            <div class="counter-divider"></div>
+            <div class="counter-item">
+                <span class="counter-number" data-target="3">0</span>
+                <span class="counter-label">Class Names</span>
+            </div>
+            <div class="counter-divider"></div>
+            <div class="counter-item">
+                <span class="counter-number-symbol">∞</span>
+                <span class="counter-label">Unforgettable Memories</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- TIMELINE SECTION -->
+    <section id="timeline" class="timeline-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Our Evolution</span>
+                <h2 class="section-title">Three Years, Three Chapters</h2>
+            </div>
+
+            <div class="timeline-wrapper">
+                <div class="timeline-line">
+                    <div class="timeline-progress" id="timelineProgress"></div>
+                </div>
+
+                <!-- Chapter 1: SOFIA -->
+                <div class="timeline-card" data-chapter="sofia">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2023 – 2024</span>
+                        <h3 class="timeline-class">Class X — SOFIA</h3>
+                        <p class="timeline-desc">Awal mula perjalanan di mana warna-warna pertama mulai tergores. Dari perkenalan, tinggal bersama di asrama, hingga membentuk kenangan indah pertama kita.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 2: LATVIA -->
+                <div class="timeline-card" data-chapter="latvia">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2024 – 2025</span>
+                        <h3 class="timeline-class">Class XI — LATVIA</h3>
+                        <p class="timeline-desc">Tahun pertengahan yang dipenuhi dengan canda tawa, berbagai project bersama, kekompakan yang semakin erat, dan perjuangan bersama di setiap suka dan duka.</p>
+                    </div>
+                </div>
+
+                <!-- Chapter 3: MADRID -->
+                <div class="timeline-card" data-chapter="madrid">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-year">2025 – 2026</span>
+                        <h3 class="timeline-class">Class XII — MADRID</h3>
+                        <p class="timeline-desc">Puncak dari karya indah ini. Kebersamaan di penghujung masa SMA, saling menguatkan demi impian masa depan, dan mengukir nama Madrid di hati selamanya.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Main JavaScript -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
