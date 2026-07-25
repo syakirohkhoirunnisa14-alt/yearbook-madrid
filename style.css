@@ -611,3 +611,233 @@ body {
     .timeline-card:nth-child(even) .timeline-dot,
     .timeline-card:nth-child(odd) .timeline-dot { left: 12px; }
 }
+/* ==========================================================================
+   PEOPLE SECTION & PROFILE CARDS
+   ========================================================================== */
+.people-section {
+    padding: 100px 0;
+    background: linear-gradient(180deg, var(--bg-cream) 0%, #FFFFFF 100%);
+}
+
+.section-desc {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+}
+
+.people-controls {
+    max-width: 400px;
+    margin: 0 auto 40px auto;
+}
+
+.search-input {
+    width: 100%;
+    padding: 12px 24px;
+    border-radius: 30px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    outline: none;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-soft);
+}
+
+.search-input:focus {
+    border-color: var(--coral);
+    box-shadow: 0 4px 15px rgba(255, 182, 166, 0.3);
+}
+
+.people-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.person-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 24px;
+    padding: 24px 16px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.person-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.avatar-wrapper {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 16px auto;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--sky-blue), var(--peach), var(--lavender));
+}
+
+.avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    background: #FFF;
+}
+
+.person-name {
+    font-family: var(--font-subheading);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+}
+
+.person-nickname {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+/* ==========================================================================
+   PROFILE MODAL (iOS Style Glassmorphism)
+   ========================================================================== */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s var(--transition-smooth);
+    padding: 20px;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-card {
+    background: rgba(255, 253, 248, 0.92);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 32px;
+    width: 100%;
+    max-width: 550px;
+    max-height: 85vh;
+    overflow-y: auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    transform: scale(0.9) translateY(20px);
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.modal-overlay.active .modal-card {
+    transform: scale(1) translateY(0);
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.06);
+    border: none;
+    font-size: 1.5rem;
+    line-height: 1;
+    color: var(--text-primary);
+    cursor: pointer;
+    z-index: 10;
+    transition: background 0.2s;
+}
+
+.modal-close:hover {
+    background: rgba(0, 0, 0, 0.12);
+}
+
+.modal-header-profile {
+    text-align: center;
+    padding: 32px 24px 20px 24px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.modal-avatar-wrapper {
+    width: 130px;
+    height: 130px;
+    margin: 0 auto 16px auto;
+    border-radius: 50%;
+    padding: 4px;
+    background: linear-gradient(135deg, var(--peach), var(--butter-yellow), var(--sky-blue));
+}
+
+.modal-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.modal-name {
+    font-family: var(--font-heading);
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.modal-quote {
+    font-family: var(--font-subheading);
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-top: 8px;
+    padding: 0 10px;
+}
+
+.modal-details {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.detail-item {
+    background: rgba(255, 255, 255, 0.6);
+    padding: 14px 18px;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+.detail-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+    display: block;
+}
+
+.detail-val {
+    font-size: 0.95rem;
+    color: var(--text-primary);
+    font-weight: 500;
+}
