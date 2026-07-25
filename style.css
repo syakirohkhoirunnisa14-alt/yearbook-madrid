@@ -296,84 +296,318 @@ body {
     0% { opacity: 1; top: 6px; }
     100% { opacity: 0; top: 20px; }
 }
-// 3. Navbar Scroll & Blur Effect
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+/* ==========================================================================
+   NAVBAR
+   ========================================================================== */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 20px 0;
+    transition: all 0.4s var(--transition-smooth);
+}
 
-    // Mobile Menu Toggle
-    const hamburger = document.getElementById('hamburger');
-    const navMenu = document.getElementById('navMenu');
-    if (hamburger && navMenu) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
+.navbar.scrolled {
+    padding: 12px 0;
+    background: rgba(255, 253, 248, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo {
+    font-family: var(--font-heading);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #FFFFFF;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .nav-logo {
+    color: var(--text-primary);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    position: relative;
+    padding: 4px 0;
+    transition: color 0.3s;
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--text-primary);
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--coral);
+    border-radius: 2px;
+    transition: width 0.3s var(--transition-smooth);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+/* Mobile Hamburger */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 100%;
+    height: 2px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.navbar.scrolled .hamburger span {
+    background: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+    .hamburger { display: flex; }
+    .nav-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        max-width: 300px;
+        height: 100vh;
+        background: rgba(255, 253, 248, 0.95);
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        transition: right 0.4s var(--transition-smooth);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.05);
     }
 
-    // 4. Memory Counter Animation
-    const counters = document.querySelectorAll('.counter-number');
-    let animated = false;
+    .nav-menu.active { right: 0; }
+    .nav-link { color: var(--text-primary); font-size: 1.1rem; }
+}
 
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const target = +counter.getAttribute('data-target');
-            let count = 0;
-            const speed = target / 30; // speed control
+/* ==========================================================================
+   MEMORY COUNTER SECTION
+   ========================================================================== */
+.counter-section {
+    padding: 60px 0;
+    background: #FFFFFF;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
 
-            const updateCount = () => {
-                count += speed;
-                if (count < target) {
-                    counter.innerText = Math.ceil(count);
-                    setTimeout(updateCount, 40);
-                } else {
-                    counter.innerText = target;
-                }
-            };
-            updateCount();
-        });
-    };
+.counter-grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 
-    // Trigger Counter when scrolled into view
-    const counterSection = document.getElementById('counter');
-    window.addEventListener('scroll', () => {
-        if (!counterSection) return;
-        const sectionTop = counterSection.getBoundingClientRect().top;
-        if (sectionTop < window.innerHeight - 100 && !animated) {
-            animated = true;
-            animateCounters();
-        }
-    });
+.counter-item {
+    text-align: center;
+    flex: 1;
+    min-width: 150px;
+}
 
-    // 5. Timeline Scroll Progress & Active Chapter
-    const timelineProgress = document.getElementById('timelineProgress');
-    const timelineCards = document.querySelectorAll('.timeline-card');
+.counter-number, .counter-number-symbol {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: clamp(2.5rem, 4vw, 3.8rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1;
+    margin-bottom: 8px;
+}
 
-    window.addEventListener('scroll', () => {
-        const timelineSection = document.getElementById('timeline');
-        if (!timelineSection) return;
+.counter-label {
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
 
-        const rect = timelineSection.getBoundingClientRect();
-        const sectionHeight = rect.height;
-        const visibleHeight = window.innerHeight - rect.top;
+.counter-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.08);
+}
 
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-            let percentage = (visibleHeight / (sectionHeight + window.innerHeight)) * 100;
-            percentage = Math.max(0, Math.min(100, percentage));
-            if (timelineProgress) timelineProgress.style.height = `${percentage}%`;
-        }
+@media (max-width: 768px) {
+    .counter-divider { display: none; }
+}
 
-        // Highlight Active Cards
-        timelineCards.forEach(card => {
-            const cardTop = card.getBoundingClientRect().top;
-            if (cardTop < window.innerHeight * 0.75) {
-                card.classList.add('active');
-            } else {
-                card.classList.remove('active');
-            }
-        });
-    });
+/* ==========================================================================
+   TIMELINE SECTION
+   ========================================================================== */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.timeline-section {
+    padding: 120px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-subtitle {
+    font-size: 0.85rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    display: block;
+    margin-bottom: 8px;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.timeline-wrapper {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.06);
+    transform: translateX(-50%);
+}
+
+.timeline-progress {
+    width: 100%;
+    height: 0%;
+    background: linear-gradient(180deg, var(--sky-blue), var(--peach), var(--lavender));
+    transition: height 0.2s ease-out;
+}
+
+.timeline-card {
+    position: relative;
+    width: 50%;
+    padding: 20px 40px;
+    margin-bottom: 40px;
+}
+
+.timeline-card:nth-child(even) { left: 0; text-align: right; }
+.timeline-card:nth-child(odd) { left: 50%; text-align: left; }
+
+.timeline-dot {
+    position: absolute;
+    top: 28px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: var(--bg-cream);
+    border: 3px solid var(--peach);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.timeline-card:nth-child(even) .timeline-dot { right: -8px; }
+.timeline-card:nth-child(odd) .timeline-dot { left: -8px; }
+
+.timeline-card.active .timeline-dot {
+    background: var(--coral);
+    border-color: var(--bg-cream);
+    box-shadow: 0 0 0 6px rgba(255, 182, 166, 0.3);
+}
+
+.timeline-content {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 28px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    box-shadow: var(--shadow-soft);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.timeline-card:hover .timeline-content {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-hover);
+}
+
+.timeline-year {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+}
+
+.timeline-class {
+    font-family: var(--font-subheading);
+    font-size: 1.4rem;
+    color: var(--text-primary);
+    margin: 6px 0 12px 0;
+}
+
+.timeline-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .timeline-line { left: 20px; }
+    .timeline-card { width: 100%; padding-left: 50px; padding-right: 0; text-align: left !important; }
+    .timeline-card:nth-child(odd) { left: 0; }
+    .timeline-card:nth-child(even) .timeline-dot,
+    .timeline-card:nth-child(odd) .timeline-dot { left: 12px; }
+}
