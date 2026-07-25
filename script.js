@@ -1,8 +1,11 @@
 // Sample Data Foto Kenangan (Ganti src dengan foto asli kalian)
 const sofiaPhotos = [
-  { src: "madrid1.jpeg", caption: "Awal perjumpaan di X Sofia bersama Zah Eed 🎈" },
-  { src: "https://via.placeholder.com/400x300/FFB7B2/ffffff?text=Sofia+Class", caption: "Momen kebersamaan & belajar bareng" },
-  { src: "https://via.placeholder.com/400x300/E2F0CB/ffffff?text=Sofia+Memories", caption: "Makan bersama dan seru-seruan" }
+  { src: "sofia1.jpeg", caption: "Hari pertama sekilah guyss🥰" },
+  { src: "sofia6.jpeg", caption: "Ini pas projek pertama ga sih??" },
+  { src: "sofia3.jpeg", caption: "Ini foto-foto gabut" }
+  { src: "sofia5.jpeg", caption: "Kunjed pertama kitaa😍" }
+  { src: "sofia2.jpeg", caption: "Gw lupa ini kapan🙄" }
+  { src: "sofia4.jpeg", caption: "Sama zah Aya😭" }
 ];
 
 const latviaPhotos = [
