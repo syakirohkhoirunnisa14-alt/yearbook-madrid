@@ -3,87 +3,93 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sakura Memories — Yearbook Madrid</title>
+  <title>Painted Memories — Yearbook Madrid</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
   <!-- Navbar Navigation -->
   <nav class="navbar">
-    <div class="logo">🌸 Sakura</div>
+    <div class="logo">🎨 Painted Memories</div>
     <ul class="nav-links">
-      <li><a href="#home">Home</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#profil" class="active">Profil</a></li>
+      <li><a href="#home" class="active">Home</a></li>
+      <li><a href="#profil">Profil</a></li>
       <li><a href="#sofia">Sofia</a></li>
       <li><a href="#latvia">Latvia</a></li>
       <li><a href="#madrid">Madrid</a></li>
+      <li><a href="#timeline">Timeline</a></li>
       <li><a href="#video">Video</a></li>
       <li><a href="#harapan">Harapan</a></li>
     </ul>
   </nav>
 
-  <!-- Section Header Profil -->
+  <!-- Hero / Home Screen -->
+  <section id="home" class="hero-section">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">WELCOME TO OUR YEARBOOK</span>
+      <h1 class="hero-title">MADRID</h1>
+      <p class="hero-subtitle">our Putih abu-abu era</p>
+      <a href="#profil" class="btn-explore">Jelajahi Kenangan ✨</a>
+    </div>
+  </section>
+
+  <!-- Section Profil Anggota -->
   <section id="profil" class="profile-section">
     <span class="sub-title">KITA SEMUA</span>
-    <h1 class="main-title">Profil Anggota</h1>
+    <h2 class="main-title">Profil Anggota</h2>
     <div class="title-line"></div>
 
-    <!-- Search Input -->
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="Cari nama anggota..." onkeyup="searchMember()">
+      <input type="text" id="searchInput" placeholder="🔍 Cari nama atau panggilan anggota..." onkeyup="searchMember()">
     </div>
 
-    <!-- Scrollable 33 Member Profiles -->
-    <div class="members-scroll" id="membersContainer">
-      <!-- Member Profiles will be injected by script.js -->
-    </div>
-    <div class="scroll-hint">↔ SCROLL KE SAMPING</div>
+    <div class="members-scroll" id="membersContainer"></div>
+    <div class="scroll-hint">↔ SCROLL KE SAMPING UNTUK LIHAT ANGGOTA LAIN</div>
   </section>
 
-  <!-- Section Galeri Kelas X Sofia -->
+  <!-- Section Galeri Sofia Memories -->
   <section id="sofia" class="gallery-section">
-    <h2 class="section-title">Kelas X Sofia (2023–2024)</h2>
-    <p class="section-desc">Awal Mula Perjalanan bersama Zah Eed</p>
-    <div class="photo-scroll">
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/FFD1DC/8C7373?text=Sofia+Memory+1" alt="Sofia 1"><p>Momen Awal Masuk Sofia</p></div>
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/E6E6FA/8C7373?text=Sofia+Memory+2" alt="Sofia 2"><p>Belajar & Canda Tawa</p></div>
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/FFF0F5/8C7373?text=Sofia+Memory+3" alt="Sofia 3"><p>Kebersamaan di DH</p></div>
+    <div class="section-header">
+      <span class="badge badge-mint">2023–2024</span>
+      <h2 class="section-title">Sofia Memories</h2>
+      <p class="section-desc">Awal mula cerita putih abu-abu bersama Zah Eed</p>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel-track" id="sofiaGallery">
+        <!-- Photo cards injected dynamically -->
+      </div>
     </div>
   </section>
 
-  <!-- Section Galeri Kelas XI Latvia -->
-  <section id="latvia" class="gallery-section">
-    <h2 class="section-title">Kelas XI Latvia (2024–2025)</h2>
-    <p class="section-desc">Tumbuh Bersama & Semakin Kompak</p>
-    <div class="photo-scroll">
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/E6E6FA/8C7373?text=Latvia+Memory+1" alt="Latvia 1"><p>Kegiatan Kunjed & Rihlah</p></div>
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/FFD1DC/8C7373?text=Latvia+Memory+2" alt="Latvia 2"><p>Ulang Tahun Zah Eed</p></div>
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/FFF0F5/8C7373?text=Latvia+Memory+3" alt="Latvia 3"><p>Masa-masa Ujian Bersama</p></div>
+  <!-- Section Galeri Latvia Memories -->
+  <section id="latvia" class="gallery-section alt-bg">
+    <div class="section-header">
+      <span class="badge badge-purple">2024–2025</span>
+      <h2 class="section-title">Latvia Memories</h2>
+      <p class="section-desc">Masa-masa penuh canda, perjuangan, dan kebersamaan</p>
+    </div>
+    <div class="carousel-container">
+      <div class="carousel-track" id="latviaGallery">
+        <!-- Photo cards injected dynamically -->
+      </div>
     </div>
   </section>
 
-  <!-- Section Galeri Kelas XII Madrid -->
+  <!-- Section Galeri Madrid Memories -->
   <section id="madrid" class="gallery-section">
-    <h2 class="section-title">Kelas XII Madrid (2025–2026)</h2>
-    <p class="section-desc">Puncak Perjuangan Bersama Zah Iput</p>
-    <div class="photo-scroll">
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/FFF0F5/8C7373?text=Madrid+Memory+1" alt="Madrid 1"><p>Surprise untuk Zah Iput</p></div>
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/FFD1DC/8C7373?text=Madrid+Memory+2" alt="Madrid 2"><p>Nobar Sembunyi-Sembunyi</p></div>
-      <div class="photo-card"><img src="https://via.placeholder.com/300x200/E6E6FA/8C7373?text=Madrid+Memory+3" alt="Madrid 3"><p>Momen Wisroh & Syukuran</p></div>
+    <div class="section-header">
+      <span class="badge badge-pink">2025–2026</span>
+      <h2 class="section-title">Madrid Memories</h2>
+      <p class="section-desc">Puncak masa SMA penuh kenangan tak terupakan bersama Zah Iput</p>
     </div>
-  </section>
-
-  <!-- Section Video Kompilasi -->
-  <section id="video" class="video-section">
-    <h2 class="section-title">Video Kenangan</h2>
-    <div class="video-grid">
-      <iframe src="https://www.youtube.com/embed/o3f4lJ96aM0" title="Video 1" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/4vaRWogBwVo" title="Video 2" allowfullscreen></iframe>
-      <iframe src="https://www.youtube.com/embed/lYPWcfJohT0" title="Video 3" allowfullscreen></iframe>
+    <div class="carousel-container">
+      <div class="carousel-track" id="madridGallery">
+        <!-- Photo cards injected dynamically -->
+      </div>
     </div>
   </section>
 
@@ -91,20 +97,39 @@
   <section id="timeline" class="timeline-section">
     <h2 class="section-title">Timeline 3 Tahun</h2>
     <div class="timeline-container">
-      <div class="timeline-item">
-        <h3>2023–2024</h3>
-        <h4>X Sofia (Wali Kelas: Zah Eed)</h4>
-        <p>Awal terbentuknya persahabatan, adaptasi, dan masa kenalan pertama di asrama/sekolah.</p>
+      <div class="timeline-item card-pink">
+        <span class="year">2023–2024</span>
+        <h3>X Sofia</h3>
+        <p><strong>Wali Kelas: Zah Eed</strong></p>
+        <p>Awal perjumpaan, penyesuaian diri, dan pembentukan persahabatan baru di kelas Sofia.</p>
       </div>
-      <div class="timeline-item">
-        <h3>2024–2025</h3>
-        <h4>XI Latvia (Wali Kelas: Zah Eed)</h4>
-        <p>Masa-masa makin kompak, jalan-jalan, masak bareng, dan ikatan kekeluargaan yang makin erat.</p>
+      <div class="timeline-item card-purple">
+        <span class="year">2024–2025</span>
+        <h3>XI Latvia</h3>
+        <p><strong>Wali Kelas: Zah Eed</strong></p>
+        <p>Momen makin kompak, seru-seruan, rihlah bersama, dan momen kebersamaan yang makin hangat.</p>
       </div>
-      <div class="timeline-item">
-        <h3>2025–2026</h3>
-        <h4>XII Madrid (Wali Kelas: Zah Iput)</h4>
-        <p>Tahun kelulusan, fokus ujian & PTN, surprise untuk Zah Iput, dan momen wisuda penuh haru.</p>
+      <div class="timeline-item card-peach">
+        <span class="year">2025–2026</span>
+        <h3>XII Madrid</h3>
+        <p><strong>Wali Kelas: Zah Iput</strong></p>
+        <p>Tahun kelulusan penuh perjuangan, surprise ultah walas, nonton bareng, hingga momen perpisahan manis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Video Kompilasi -->
+  <section id="video" class="video-section">
+    <h2 class="section-title">Video Kenangan</h2>
+    <div class="video-grid">
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/o3f4lJ96aM0" title="Video 1" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/4vaRWogBwVo" title="Video 2" allowfullscreen></iframe>
+      </div>
+      <div class="video-card">
+        <iframe src="https://www.youtube.com/embed/lYPWcfJohT0" title="Video 3" allowfullscreen></iframe>
       </div>
     </div>
   </section>
@@ -112,9 +137,7 @@
   <!-- Section Harapan Anggota -->
   <section id="harapan" class="wishes-section">
     <h2 class="section-title">Harapan Untuk Madrid</h2>
-    <div class="wishes-grid" id="wishesContainer">
-      <!-- Wishes will be injected by script.js -->
-    </div>
+    <div class="wishes-grid" id="wishesContainer"></div>
   </section>
 
   <!-- Modal Detail Profil Anggota -->
@@ -125,8 +148,15 @@
     </div>
   </div>
 
+  <!-- Lightbox Fullscreen Foto Galeri -->
+  <div id="lightboxModal" class="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close">&times;</span>
+    <img id="lightboxImg" src="" alt="Fullscreen View">
+    <div id="lightboxCaption" class="lightbox-caption"></div>
+  </div>
+
   <!-- Floating Audio Player Button -->
-  <div class="floating-music" onclick="toggleMusic()">
+  <div class="floating-music" onclick="toggleMusic()" title="Putar Musik Instrumental">
     <span id="musicIcon">🎵</span>
   </div>
   <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
