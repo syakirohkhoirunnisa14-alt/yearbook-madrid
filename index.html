@@ -259,6 +259,64 @@
             <p id="lightboxCaption" class="lightbox-caption"></p>
         </div>
     </div>
+    <!-- VIDEO SHOWCASE SECTION -->
+    <section id="video" class="video-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Cinematic Memory</span>
+                <h2 class="section-title">The Motion Picture</h2>
+                <p class="section-desc">Rangkaian kisah perjalanan kita dalam sebuah karya audio visual.</p>
+            </div>
+
+            <div class="video-wrapper">
+                <!-- Ganti ID YouTube di bawah (misal: dQw4w9WgXcQ) dengan ID video YouTube kelas kamu -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Yearbook Video Madrid" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- WISH WALL SECTION -->
+    <section id="wishes" class="wishes-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Messages for the Future</span>
+                <h2 class="section-title">Wish & Memory Wall</h2>
+                <p class="section-desc">Tinggalkan jejak kata, harapan, atau doa untuk seluruh keluarga Madrid.</p>
+            </div>
+
+            <!-- Wish Form -->
+            <form id="wishForm" class="wish-form">
+                <div class="form-group-inline">
+                    <input type="text" id="wishSender" placeholder="Nama Kamu..." required class="wish-input">
+                </div>
+                <div class="form-group">
+                    <textarea id="wishMessage" placeholder="Tuliskan pesan atau kenangan terindahmu di sini..." rows="4" required class="wish-input"></textarea>
+                </div>
+                <button type="submit" class="wish-submit-btn">Kirim Pesan ✨</button>
+            </form>
+
+            <!-- Wish Cards Feed -->
+            <div class="wishes-feed" id="wishesFeed">
+                <!-- Default Wish Cards -->
+                <div class="wish-card">
+                    <div class="wish-header">
+                        <span class="wish-author">Admin Madrid</span>
+                        <span class="wish-date">Hari Ini</span>
+                    </div>
+                    <p class="wish-text">"Semoga ke manapun langkah kita membawa, ikatan keluarga Madrid akan selalu tersimpan erat di hati. Sukses untuk kita semua!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FLOATING MUSIC PLAYER CONTROLLER -->
+    <div class="music-floating-btn" id="musicBtn" title="Play/Pause Backsound">
+        <div class="music-icon-wrapper">
+            <span class="music-icon">🎵</span>
+        </div>
+        <!-- Ganti 'audio.mp3' dengan file lagu kamu, misal lagu 'Laskar Pelangi' / 'Kembali' dsb -->
+        <audio id="bgAudio" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+    </div>
     <!-- Main JavaScript -->
     <script src="js/data.js"></script>
     <script src="js/main.js"></script>
