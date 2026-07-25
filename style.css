@@ -1,138 +1,298 @@
-/* Palette Warna Pastel Madrid */
+/* ==========================================================================
+   DESIGN TOKENS & VARIABLES
+   ========================================================================== */
 :root {
-  --color-peach: #FFD6C9;
-  --color-butter-yellow: #FFF1B8;
-  --color-baby-blue: #D6ECFF;
-  --color-mint: #D8F3DC;
-  --color-lavender: #E8D9FF;
-  --color-soft-coral: #F8C8C8;
-  --color-cream: #FFFDF8;
+    /* Color Palette */
+    --bg-cream: #FFFDF8;
+    --sky-blue: #CFE8FF;
+    --sage: #DCEFD7;
+    --lavender: #E8DEFF;
+    --peach: #FFD8C8;
+    --butter-yellow: #FFF3C2;
+    --coral: #FFB6A6;
+    --text-primary: #3D3D3D;
+    --text-muted: #717171;
+    --white-glass: rgba(255, 255, 255, 0.45);
+    --white-glass-border: rgba(255, 255, 255, 0.65);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.04);
+    --shadow-hover: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+    /* Typography */
+    --font-heading: 'Cormorant Garamond', Georgia, serif;
+    --font-subheading: 'Playfair Display', Georgia, serif;
+    --font-body: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+
+    /* Transitions */
+    --transition-smooth: cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* ==========================================================================
+   BASE RESET
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
 
 body {
-  background-color: var(--color-cream);
+    background-color: var(--bg-cream);
+    color: var(--text-primary);
+    font-family: var(--font-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
 
-/* Container Horizontal Carousel */
-.members-carousel-wrapper {
-  width: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  padding: 40px 20px;
-  display: flex;
-  gap: 24px;
-  cursor: grab;
-  user-select: none;
-  -webkit-overflow-scrolling: touch;
+/* ==========================================================================
+   LOADING SCREEN
+   ========================================================================== */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--bg-cream);
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.8s var(--transition-smooth), visibility 0.8s;
 }
 
-.members-carousel-wrapper:active {
-  cursor: grabbing;
+.loading-screen.fade-out {
+    opacity: 0;
+    visibility: hidden;
 }
 
-/* Card Profil Member */
-.member-card {
-  flex: 0 0 280px;
-  scroll-snap-align: center;
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 24px;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), 
-              box-shadow 0.3s ease;
-  cursor: pointer;
+.brush-container {
+    position: relative;
+    width: 180px;
+    height: 60px;
+    margin-bottom: 24px;
 }
 
-/* Foto Profil Ring Lingkaran Gradasi */
-.profile-ring {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  margin: 0 auto 16px;
-  padding: 5px; /* Tebal ring gradasi */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: transform 0.3s ease, filter 0.3s ease;
+.brush-stroke {
+    position: absolute;
+    height: 12px;
+    border-radius: 20px;
+    animation: brushAnim 2s infinite ease-in-out;
 }
 
-/* Lingkaran Foto Profil */
-.profile-ring img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  background-color: #fff;
-  border: 2px solid #fff;
+.stroke-1 {
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--sky-blue);
+    animation-delay: 0s;
 }
 
-/* Kombinasi Ring Gradasi Pastel Unik per Anggota */
-.grad-1 { background: linear-gradient(135deg, var(--color-baby-blue), var(--color-lavender)); }
-.grad-2 { background: linear-gradient(135deg, var(--color-peach), var(--color-butter-yellow)); }
-.grad-3 { background: linear-gradient(135deg, var(--color-mint), var(--color-baby-blue)); }
-.grad-4 { background: linear-gradient(135deg, var(--color-lavender), var(--color-peach)); }
-.grad-5 { background: linear-gradient(135deg, var(--color-butter-yellow), var(--color-soft-coral)); }
-.grad-6 { background: linear-gradient(135deg, var(--color-soft-coral), var(--color-mint)); }
-
-/* Efek Hover Pada Card */
-.member-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
+.stroke-2 {
+    top: 20px;
+    left: 15%;
+    width: 85%;
+    background: var(--peach);
+    animation-delay: 0.2s;
 }
 
-.member-card:hover .profile-ring {
-  transform: scale(1.05);
-  filter: drop-shadow(0 0 8px rgba(232, 217, 255, 0.8));
+.stroke-3 {
+    top: 40px;
+    left: 5%;
+    width: 90%;
+    background: var(--lavender);
+    animation-delay: 0.4s;
 }
 
-/* Center Highlight Card (Dikelola via JavaScript Scroll Event) */
-.member-card.is-center {
-  transform: scale(1.08);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+@keyframes brushAnim {
+    0%, 100% { transform: scaleX(0.2); transform-origin: left; opacity: 0.3; }
+    50% { transform: scaleX(1); transform-origin: left; opacity: 0.9; }
 }
 
-.member-card.is-center:hover {
-  transform: translateY(-6px) scale(1.08);
+.loading-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    color: var(--text-primary);
 }
 
-/* Styling Modal Popup Profil */
-.modal-overlay {
-  position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.5);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.3s ease;
-  z-index: 1000;
+.loading-subtitle {
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
 }
 
-.modal-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+.hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    min-height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
 }
 
-.modal-content {
-  background: var(--color-cream);
-  padding: 30px;
-  border-radius: 20px;
-  max-width: 500px;
-  width: 90%;
-  max-height: 80vh;
-  overflow-y: auto;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  position: relative;
+.hero-bg-parallax {
+    position: absolute;
+    top: -10%;
+    left: -10%;
+    width: 120%;
+    height: 120%;
+    background-image: url('https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1920&auto=format&fit=crop'); /* Fallback image */
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.1s ease-out;
+    z-index: 1;
 }
 
-.close-btn {
-  position: absolute;
-  top: 15px; right: 20px;
-  font-size: 24px;
-  cursor: pointer;
-  border: none;
-  background: none;
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(255, 253, 248, 0.4) 0%, rgba(61, 61, 61, 0.55) 60%, rgba(61, 61, 61, 0.85) 100%);
+    z-index: 2;
+}
+
+.hero-container {
+    position: relative;
+    z-index: 3;
+    max-width: 900px;
+    padding: 0 24px;
+    color: #FFFFFF;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 6px 18px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.hero-title {
+    font-family: var(--font-heading);
+    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-weight: 700;
+    letter-spacing: 4px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.hero-chapters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: var(--font-subheading);
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+    margin-bottom: 24px;
+    opacity: 0.95;
+}
+
+.chapter-arrow {
+    opacity: 0.6;
+    transform: rotate(-90deg);
+}
+
+.hero-tagline {
+    font-family: var(--font-body);
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 36px auto;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.btn-glass {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 32px;
+    background: var(--white-glass);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--white-glass-border);
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.4s var(--transition-smooth);
+}
+
+.btn-glass:hover {
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--text-primary);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-hover);
+}
+
+/* Scroll Indicator */
+.scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.8;
+}
+
+.scroll-indicator span {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+.mouse {
+    width: 22px;
+    height: 36px;
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+    position: relative;
+}
+
+.wheel {
+    width: 4px;
+    height: 8px;
+    background: #FFFFFF;
+    border-radius: 2px;
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 1.8s infinite ease-in-out;
+}
+
+@keyframes scrollWheel {
+    0% { opacity: 1; top: 6px; }
+    100% { opacity: 0; top: 20px; }
 }
