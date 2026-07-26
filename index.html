@@ -14,15 +14,20 @@
   <!-- Navbar Navigation -->
   <nav class="navbar">
     <div class="logo">🎨 Painted Memories</div>
-    <ul class="nav-links">
-      <li><a href="#home" class="active">Home</a></li>
-      <li><a href="#profil">Profil</a></li>
-      <li><a href="#sofia">Sofia</a></li>
-      <li><a href="#latvia">Latvia</a></li>
-      <li><a href="#madrid">Madrid</a></li>
-      <li><a href="#timeline">Timeline</a></li>
-      <li><a href="#video">Video</a></li>
-      <li><a href="#harapan">Harapan</a></li>
+    <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#home" class="active" onclick="closeMenu()">Home</a></li>
+      <li><a href="#profil" onclick="closeMenu()">Profil</a></li>
+      <li><a href="#sofia" onclick="closeMenu()">Sofia</a></li>
+      <li><a href="#latvia" onclick="closeMenu()">Latvia</a></li>
+      <li><a href="#madrid" onclick="closeMenu()">Madrid</a></li>
+      <li><a href="#timeline" onclick="closeMenu()">Timeline</a></li>
+      <li><a href="#video" onclick="closeMenu()">Video</a></li>
+      <li><a href="#harapan" onclick="closeMenu()">Harapan</a></li>
     </ul>
   </nav>
 
@@ -44,7 +49,7 @@
     <div class="title-line"></div>
 
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="🔍 Cari nama atau panggilan anggota..." onkeyup="searchMember()">
+      <input type="text" id="searchInput" placeholder="🔍 Cari nama atau panggilan..." onkeyup="searchMember()">
     </div>
 
     <div class="members-scroll" id="membersContainer"></div>
@@ -59,9 +64,7 @@
       <p class="section-desc">Awal mula cerita putih abu-abu bersama Zah Eed</p>
     </div>
     <div class="carousel-container">
-      <div class="carousel-track" id="sofiaGallery">
-        <!-- Photo cards injected dynamically -->
-      </div>
+      <div class="carousel-track" id="sofiaGallery"></div>
     </div>
   </section>
 
@@ -73,9 +76,7 @@
       <p class="section-desc">Masa-masa penuh canda, perjuangan, dan kebersamaan</p>
     </div>
     <div class="carousel-container">
-      <div class="carousel-track" id="latviaGallery">
-        <!-- Photo cards injected dynamically -->
-      </div>
+      <div class="carousel-track" id="latviaGallery"></div>
     </div>
   </section>
 
@@ -84,16 +85,14 @@
     <div class="section-header">
       <span class="badge badge-pink">2025–2026</span>
       <h2 class="section-title">Madrid Memories</h2>
-      <p class="section-desc">Puncak masa SMA penuh kenangan tak terupakan bersama Zah Iput</p>
+      <p class="section-desc">Puncak masa SMA penuh kenangan bersama Zah Iput</p>
     </div>
     <div class="carousel-container">
-      <div class="carousel-track" id="madridGallery">
-        <!-- Photo cards injected dynamically -->
-      </div>
+      <div class="carousel-track" id="madridGallery"></div>
     </div>
   </section>
 
-  <!-- Section Timeline 3 Tahun -->
+  <!-- Section Timeline -->
   <section id="timeline" class="timeline-section">
     <h2 class="section-title">Timeline 3 Tahun</h2>
     <div class="timeline-container">
@@ -101,24 +100,24 @@
         <span class="year">2023–2024</span>
         <h3>X Sofia</h3>
         <p><strong>Wali Kelas: Zah Eed</strong></p>
-        <p>Awal perjumpaan, penyesuaian diri, dan pembentukan persahabatan baru di kelas Sofia.</p>
+        <p>Awal perjumpaan dan pembentukan persahabatan baru di kelas Sofia.</p>
       </div>
       <div class="timeline-item card-purple">
         <span class="year">2024–2025</span>
         <h3>XI Latvia</h3>
         <p><strong>Wali Kelas: Zah Eed</strong></p>
-        <p>Momen makin kompak, seru-seruan, rihlah bersama, dan momen kebersamaan yang makin hangat.</p>
+        <p>Momen makin kompak, rihlah bersama, dan makin hangat.</p>
       </div>
       <div class="timeline-item card-peach">
         <span class="year">2025–2026</span>
         <h3>XII Madrid</h3>
         <p><strong>Wali Kelas: Zah Iput</strong></p>
-        <p>Tahun kelulusan penuh perjuangan, surprise ultah walas, nonton bareng, hingga momen perpisahan manis.</p>
+        <p>Tahun kelulusan penuh perjuangan dan momen perpisahan manis.</p>
       </div>
     </div>
   </section>
 
-  <!-- Section Video Kompilasi -->
+  <!-- Section Video -->
   <section id="video" class="video-section">
     <h2 class="section-title">Video Kenangan</h2>
     <div class="video-grid">
@@ -128,19 +127,16 @@
       <div class="video-card">
         <iframe src="https://www.youtube.com/embed/4vaRWogBwVo" title="Video 2" allowfullscreen></iframe>
       </div>
-      <div class="video-card">
-        <iframe src="https://www.youtube.com/embed/lYPWcfJohT0" title="Video 3" allowfullscreen></iframe>
-      </div>
     </div>
   </section>
 
-  <!-- Section Harapan Anggota -->
+  <!-- Section Harapan -->
   <section id="harapan" class="wishes-section">
     <h2 class="section-title">Harapan Untuk Madrid</h2>
     <div class="wishes-grid" id="wishesContainer"></div>
   </section>
 
-  <!-- Modal Detail Profil Anggota -->
+  <!-- Modal Profile -->
   <div id="profileModal" class="modal">
     <div class="modal-content">
       <span class="close-btn" onclick="closeModal()">&times;</span>
@@ -148,17 +144,17 @@
     </div>
   </div>
 
-  <!-- Lightbox Fullscreen Foto Galeri (Update Bagian Ini) -->
+  <!-- Lightbox Fullscreen Foto -->
   <div id="lightboxModal" class="lightbox">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
-    <button class="lightbox-prev" onclick="changeImage(-1)" title="Foto Sebelumnya">&#10094;</button>
+    <button class="lightbox-prev" onclick="changeImage(-1)">&#10094;</button>
     <img id="lightboxImg" src="" alt="Fullscreen View">
-    <button class="lightbox-next" onclick="changeImage(1)" title="Foto Berikutnya">&#10095;</button>
+    <button class="lightbox-next" onclick="changeImage(1)">&#10095;</button>
     <div id="lightboxCaption" class="lightbox-caption"></div>
   </div>
 
-  <!-- Floating Audio Player Button -->
-  <div class="floating-music" onclick="toggleMusic()" title="Putar Musik Instrumental">
+  <!-- Floating Audio Player -->
+  <div class="floating-music" onclick="toggleMusic()" title="Putar Musik">
     <span id="musicIcon">🎵</span>
   </div>
   <audio id="bgMusic" loop src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
