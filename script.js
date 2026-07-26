@@ -1,4 +1,4 @@
-// Variabel Global untuk Galeri (Penting!)
+// Data Foto Contoh
 const sofiaPhotos = [
    { src: "sofia1.jpeg", caption: "Hari pertama sekilah guyss🥰" },
    { src: "sofia6.jpeg", caption: "Ini pas projek pertama ga sih??" },
@@ -11,30 +11,35 @@ const sofiaPhotos = [
 const latviaPhotos = [
     { src: "https://via.placeholder.com/400x300/D7BCE8/ffffff?text=Latvia+1", caption: "Masa-masa XI Latvia yang makin kompak" },
     { src: "https://via.placeholder.com/400x300/FFDAC1/ffffff?text=Latvia+2", caption: "Kunjed & Rihlah kelas" },
-    { src: "https://via.placeholder.com/400x300/FFF5BA/ffffff?text=Latvia+3", caption: "Ulang tahun bersama Zah Eed" },
-    // Tambahkan foto latvia lain disini
 ];
 
 const madridPhotos = [
     { src: "madrid1.jpeg", caption: "Foto bersama Zah Iput & kejutan ultah di kelas Madrid! 🎉" },
-    { src: "https://via.placeholder.com/400x300/B5EAD7/ffffff?text=Madrid+2", caption: "Nonton bareng sembunyi-sembunyi" },
-    { src: "https://via.placeholder.com/400x300/FFB7B2/ffffff?text=Madrid+3", caption: "Momen wisuda & perpisahan hangat" },
-    // Tambahkan foto madrid lain disini
 ];
 
-// Variabel untuk melacak status Lightbox
-let currentImageSet = []; // Menyimpan kumpulan foto mana yang sedang dibuka (sofia/latvia/madrid)
-let currentImageIndex = 0; // Menyimpan indeks foto yang sedang ditampilkan
+let currentImageSet = [];
+let currentImageIndex = 0;
 
-// Render Carousel Galeri (Updated to support indexing)
+// Fungsi Menu Mobile (Hamburger)
+function toggleMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+}
+
+function closeMenu() {
+    const navLinks = document.getElementById("navLinks");
+    navLinks.classList.remove("active");
+}
+
+// Render Carousel Galeri
 function renderGallery(photos, containerId, imageSetName) {
     const container = document.getElementById(containerId);
+    if (!container) return;
     container.innerHTML = "";
 
     photos.forEach((photo, index) => {
         const card = document.createElement("div");
         card.className = "photo-card";
-        // Ubah onclick untuk merekam kumpulan foto dan indeksnya
         card.onclick = () => openLightbox(imageSetName, index);
 
         card.innerHTML = `
@@ -43,87 +48,60 @@ function renderGallery(photos, containerId, imageSetName) {
       </div>
       <div class="photo-caption">${photo.caption}</div>
     `;
-
         container.appendChild(card);
     });
 }
 
-// Lightbox Fullscreen Modal (Updated for Sliding)
+// Lightbox Fullscreen Modal
 function openLightbox(imageSetName, index) {
     const lightbox = document.getElementById("lightboxModal");
     
-    // Tentukan kumpulan foto mana yang akan digunakan
-    if (imageSetName === 'sofia') {
-        currentImageSet = sofiaPhotos;
-    } else if (imageSetName === 'latvia') {
-        currentImageSet = latviaPhotos;
-    } else if (imageSetName === 'madrid') {
-        currentImageSet = madridPhotos;
-    }
+    if (imageSetName === 'sofia') currentImageSet = sofiaPhotos;
+    else if (imageSetName === 'latvia') currentImageSet = latviaPhotos;
+    else if (imageSetName === 'madrid') currentImageSet = madridPhotos;
     
-    currentImageIndex = index; // Atur indeks foto pertama yang dibuka
-    updateLightboxImage(); // Tampilkan gambar sesuai indeks
-    
+    currentImageIndex = index;
+    updateLightboxImage();
     lightbox.style.display = "flex";
-    
-    // Tambahkan event listener untuk keyboard (panah kiri/kanan, esc)
     document.addEventListener('keydown', handleKeydown);
 }
 
-// Update Konten Di Dalam Lightbox
 function updateLightboxImage() {
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxCaption = document.getElementById("lightboxCaption");
     
-    // Matikan opacity untuk transisi
     lightboxImg.style.opacity = 0;
-    
-    // Set sumber gambar dan caption baru setelah transisi
     setTimeout(() => {
         lightboxImg.src = currentImageSet[currentImageIndex].src;
         lightboxCaption.textContent = currentImageSet[currentImageIndex].caption;
-        // Hidupkan opacity kembali
         lightboxImg.style.opacity = 1;
-    }, 50); // Delay kecil untuk efek transisi halus
+    }, 50);
 }
 
-// Ganti Gambar (Prev/Next)
 function changeImage(direction) {
     currentImageIndex += direction;
-    
-    // Logika berputar (jika sampai ujung, kembali ke awal/akhir)
-    if (currentImageIndex >= currentImageSet.length) {
-        currentImageIndex = 0; // Kembali ke foto pertama
-    } else if (currentImageIndex < 0) {
-        currentImageIndex = currentImageSet.length - 1; // Kembali ke foto terakhir
-    }
-    
+    if (currentImageIndex >= currentImageSet.length) currentImageIndex = 0;
+    else if (currentImageIndex < 0) currentImageIndex = currentImageSet.length - 1;
     updateLightboxImage();
 }
 
-// Tutup Lightbox
 function closeLightbox() {
     document.getElementById("lightboxModal").style.display = "none";
-    // Hapus event listener keyboard agar tidak bentrok
     document.removeEventListener('keydown', handleKeydown);
 }
 
-// Menangani navigasi keyboard (gester dengan tombol panah)
 function handleKeydown(e) {
     if (document.getElementById("lightboxModal").style.display === "flex") {
-        if (e.key === "ArrowLeft") {
-            changeImage(-1); // Panah kiri: sebelumnya
-        } else if (e.key === "ArrowRight") {
-            changeImage(1); // Panah kanan: berikutnya
-        } else if (e.key === "Escape") {
-            closeLightbox(); // ESC: tutup
-        }
+        if (e.key === "ArrowLeft") changeImage(-1);
+        else if (e.key === "ArrowRight") changeImage(1);
+        else if (e.key === "Escape") closeLightbox();
     }
 }
 
-// Render Profiles (Tetap)
+// Render Profiles
 function renderProfiles(data) {
     const container = document.getElementById("membersContainer");
+    if (!container) return;
     container.innerHTML = "";
 
     data.forEach((member) => {
@@ -137,14 +115,14 @@ function renderProfiles(data) {
       </div>
       <span class="member-name">${member.nickname}</span>
     `;
-
         container.appendChild(card);
     });
 }
 
-// Render Wishes Grid (Tetap)
+// Render Wishes
 function renderWishes(data) {
     const container = document.getElementById("wishesContainer");
+    if (!container) return;
     container.innerHTML = "";
 
     data.forEach((member) => {
@@ -158,7 +136,7 @@ function renderWishes(data) {
     });
 }
 
-// Search Filter (Tetap)
+// Search Filter
 function searchMember() {
     const input = document.getElementById("searchInput").value.toLowerCase();
     const filtered = studentsData.filter(m =>
@@ -168,26 +146,24 @@ function searchMember() {
     renderProfiles(filtered);
 }
 
-// Profile Modal (Tetap)
+// Modal Detail Profile
 function openModal(member) {
     const modal = document.getElementById("profileModal");
     const body = document.getElementById("modalBody");
 
     body.innerHTML = `
-    <div style="text-align: center; margin-bottom: 20px;">
-      <img src="${member.image}" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 4px solid #FFB7B2;" onerror="this.src='https://via.placeholder.com/150/FFB7B2/ffffff?text=${member.nickname}'">
-      <h2 style="color: #5A4A42; font-family: 'Playfair Display', serif; margin-top: 10px;">${member.name}</h2>
-      <p style="color: #FF7B89; font-weight: 600; font-size: 13px;">"${member.nickname}" — ${member.role || 'Siswi Madrid'}</p>
+    <div style="text-align: center; margin-bottom: 15px;">
+      <img src="${member.image}" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #FFB7B2;" onerror="this.src='https://via.placeholder.com/150/FFB7B2/ffffff?text=${member.nickname}'">
+      <h3 style="color: #5A4A42; font-family: 'Playfair Display', serif; margin-top: 8px;">${member.name}</h3>
+      <p style="color: #FF7B89; font-weight: 600; font-size: 12px;">"${member.nickname}" — ${member.role || 'Siswi Madrid'}</p>
     </div>
-    <div style="font-size: 12px; line-height: 1.6; color: #555;">
+    <div style="font-size: 11px; line-height: 1.5; color: #555;">
       <p><strong>Ciri Khas:</strong> ${member.traits ? member.traits.join(", ") : '-'}</p>
       <p><strong>Hobi:</strong> ${member.hobby || '-'}</p>
-      <p><strong>Makanan Favorit:</strong> ${member.favFood || '-'}</p>
       <p><strong>Lagu Favorit:</strong> ${member.favSong || '-'}</p>
-      <p style="margin-top: 6px;"><strong>Quote:</strong> <em>"${member.quote || '-'}"</em></p>
-      <hr style="margin: 12px 0; border: none; border-top: 1px solid #E2F0CB;">
-      <p><strong>Kesan 3 Tahun:</strong> ${member.impression || '-'}</p>
-      <p style="margin-top: 4px;"><strong>Pesan untuk Kelas:</strong> ${member.messageForClass || '-'}</p>
+      <p style="margin-top: 4px;"><strong>Quote:</strong> <em>"${member.quote || '-'}"</em></p>
+      <hr style="margin: 10px 0; border: none; border-top: 1px solid #E2F0CB;">
+      <p><strong>Pesan untuk Kelas:</strong> ${member.messageForClass || '-'}</p>
       <p style="margin-top: 4px;"><strong>Harapan Masa Depan:</strong> ${member.futureHope || '-'}</p>
     </div>
   `;
@@ -199,7 +175,7 @@ function closeModal() {
     document.getElementById("profileModal").style.display = "none";
 }
 
-// Toggle Audio (Tetap)
+// Toggle Audio
 let isPlaying = false;
 function toggleMusic() {
     const audio = document.getElementById("bgMusic");
@@ -215,14 +191,13 @@ function toggleMusic() {
     isPlaying = !isPlaying;
 }
 
-// Event Init (Update untuk support indexing)
+// Init
 document.addEventListener("DOMContentLoaded", () => {
-    renderProfiles(studentsData);
-    
-    // Tentukan kumpulan mana yang sedang ditampilkan
+    if (typeof studentsData !== 'undefined') {
+        renderProfiles(studentsData);
+        renderWishes(studentsData);
+    }
     renderGallery(sofiaPhotos, "sofiaGallery", 'sofia');
     renderGallery(latviaPhotos, "latviaGallery", 'latvia');
     renderGallery(madridPhotos, "madridGallery", 'madrid');
-    
-    renderWishes(studentsData);
 });
