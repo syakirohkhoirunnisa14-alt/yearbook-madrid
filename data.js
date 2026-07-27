@@ -336,7 +336,7 @@ const studentsData = [
     name: "Nur Alifia Akhira",
     nickname: "Fifi",
     type: "student",
-    image: "https://lh3.googleusercontent.com/d/1SIO8UHAzFItzpnWhKhXgRzsW4G7FGET5",
+    image: "https://lh3.googleusercontent.com/d/1NgxjFNAHc19nkeE1SqOoTcl-gbZic73x",
     traits: ["Cerewet", "Manja", "Suara cempreng"],
     hobby: "Membaca, masak",
     favFood: "Serba chiki",
