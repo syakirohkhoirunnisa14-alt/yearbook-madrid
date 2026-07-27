@@ -11,9 +11,9 @@ const studentsData = [
     favFood: "-",
     favSong: "-",
     quote: "-",
-    impression: "Menjadi saksi tumbuh kembang anak-anak yang luar biasa selama di Sofia dan Latvia.",
-    messageForClass: "Tetap istiqomah dan junjung tinggi akhlak di mana pun berada.",
-    futureHope: "Semoga seluruh ananda sukses di dunia dan akhirat."
+    impression: "-",
+    messageForClass: "-",
+    futureHope: "-"
   },
   {
     id: 2,
