@@ -1,2 +1,2 @@
 # yearbook-madrid
-website kelas dibantu gemini
+website spesial buat kelas madrid
