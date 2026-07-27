@@ -319,3 +319,23 @@ body {
   .hero-subtitle { font-size: 15px; }
   .btn-explore { padding: 8px 20px; font-size: 12px; }
 }
+
+/* Styling Footer */
+.site-footer {
+  background-color: #fffdf9; /* Warna background cream lembut (bisa disesuaikan) */
+  color: #5a4a42;            /* Warna teks cokelat gelap/pastel */
+  text-align: center;
+  padding: 25px 20px;
+  margin-top: 50px;
+  border-top: 1px solid #f0e6df; /* Garis pembatas tipis di atas footer */
+  font-size: 0.9rem;
+}
+
+.footer-content p {
+  margin: 5px 0;
+  line-height: 1.5;
+}
+
+.footer-content strong {
+  color: #9e4b47; /* Aksen warna terracotta/pink pastel */
+}
