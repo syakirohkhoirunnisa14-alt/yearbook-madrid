@@ -442,13 +442,13 @@ const studentsData = [
     nickname: "Syakiroh",
     type: "student",
     image: "https://lh3.googleusercontent.com/d/1eVPsMZzPtulOXBZMvHlRWFazdhtrlkSa",
-    traits: ["Kurus", "Suka menggambar", "Tegas"],
+    traits: ["Kurus", "Suka menggambar", "archiable"],
     hobby: "Belajar hal baru",
     favFood: "Es krim, siomay, bakso bakar",
-    favSong: "Ceritanya Jatuh Cinta",
+    favSong: "Ceritanya Jatuh Cinta - Aku Jeje",
     quote: "Study first, love will find you later.",
-    impression: "Madrid tu kelasnya hangat banget.",
-    messageForClass: "Jaga diri baik-baik ya semuanya.",
+    impression: "Madrid tu kelasnya hangat banget🥰.",
+    messageForClass: "Jaga diri baik-baik ya semuanya😘. Selalu sertakan Allah di setiap jalan kalian. jadilah manusia yg bermanfaat bagi makhluk lain🪽.",
     futureHope: "Semoga semuanya sukses dan dipermudah karirnya, aamiin."
   },
   {
