@@ -41,7 +41,7 @@ const madridPhotos = [
     { src: "madrid11.jpeg", caption: "😋" },
     { src: "madrid12.jpeg", caption: "Anomali kelas🧟" },
     { src: "madrid9.jpeg", caption: "Dah kenyangg" },
-    { src: "madrid15.jpeg", caption: "Ini section TKA ya ges yaa🤯" },
+    { src: "madrid15.jpg", caption: "Ini section TKA ya ges yaa🤯" },
     { src: "madrid14.jpeg", caption: "Kembir lagi serius bgt nichh😆😘" },
     { src: "madrid16.jpeg", caption: "Wrawrr🧟" },
     { src: "madrid18.jpeg", caption: "Harus bgt TKA?!😤" },
