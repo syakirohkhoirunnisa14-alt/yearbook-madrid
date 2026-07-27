@@ -9,8 +9,26 @@ const sofiaPhotos = [
 ];
 
 const latviaPhotos = [
-    { src: "https://via.placeholder.com/400x300/D7BCE8/ffffff?text=Latvia+1", caption: "Masa-masa XI Latvia yang makin kompak" },
-    { src: "https://via.placeholder.com/400x300/FFDAC1/ffffff?text=Latvia+2", caption: "Kunjed & Rihlah kelas" },
+    { src: "latvia1.jpeg", caption: "Hari batik🥳" },
+    { src: "latvia2.jpeg", caption: "😘" },
+    { src: "latvia3.jpeg", caption: "Ini firs time kita pakai basiba😍" },
+    { src: "latvia4.jpeg", caption: "Makan bajamba🍲" },
+    { src: "latvia5.jpeg", caption: "Waroeng Teteh Latvia💕" },
+    { src: "latvia6.jpeg", caption: "Jualann🥰" },
+    { src: "latvia7.jpeg", caption: "Mango sticky rice,cireng,es kul-kul dll" },
+    { src: "latvia8.jpeg", caption: "Es kelapa jeruk🤩" },
+    { src: "latvia11.jpeg", caption: "Literasi hari sabtu" },
+    { src: "latvia9.jpeg", caption: "😘" },
+    { src: "latvia10.jpeg", caption: "Tebak ini kapan?" },
+    { src: "latvia12.jpeg", caption: "Ini projek bikin sabunn" },
+    { src: "latvia13.jpeg", caption: "🥰" },
+    { src: "latvia14.jpeg", caption: "🤟🤙" },
+    { src: "latvia15.jpeg", caption: "✌" },
+    { src: "latvia16.jpeg", caption: "Ini kls 11 atau 12😨" },
+    { src: "latvia17.jpeg", caption: "Knitting project🧶" },
+    { src: "latvia20.jpeg", caption: "Kunjed di BPS💗" },
+    { src: "latvia19.jpeg", caption: "Pensi kak Akhtara🤍" },
+    { src: "latvia18.jpeg", caption: "🪽🌷" },
 ];
 
 const madridPhotos = [
