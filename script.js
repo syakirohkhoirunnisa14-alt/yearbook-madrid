@@ -104,7 +104,7 @@ const madridPhotos = [
     { src: "madrid60.jpg", caption: "Dazling🪽" },
     { src: "madrid59.jpg", caption: "Ipak and Bejeww" },
     { src: "madrid75.jpeg", caption: "🌷🌷🌷" },
-    { src: "madrid54.jpg", caption: "Universal🌐" },
+    { src: "madrid54.jpeg", caption: "Universal🌐" },
     { src: "madrid57.jpg", caption: "Disini kangkungnya enak bgt asli✌" },
     { src: "madrid53.jpg", caption: "Melaka🇲🇾" },
 ];
