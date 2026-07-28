@@ -261,9 +261,6 @@ function openModal(member) {
 </div>
 `;
 
-  modal.style.display = "flex";
-}
-
     modal.style.display = "flex";
 }
 
