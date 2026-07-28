@@ -622,12 +622,12 @@ let currentImageIndex = 0;
 // Fungsi Menu Mobile (Hamburger)
 function toggleMenu() {
     const navLinks = document.getElementById("navLinks");
-    navLinks.classList.toggle("active");
+    if (navLinks) navLinks.classList.toggle("active");
 }
 
 function closeMenu() {
     const navLinks = document.getElementById("navLinks");
-    navLinks.classList.remove("active");
+    if (navLinks) navLinks.classList.remove("active");
 }
 
 // Render Carousel Galeri
@@ -643,7 +643,7 @@ function renderGallery(photos, containerId, imageSetName) {
 
         card.innerHTML = `
       <div class="img-wrapper">
-        <img src="${photo.src}" alt="${photo.caption}">
+        <img src="${photo.src}" alt="${photo.caption}" loading="lazy">
       </div>
       <div class="photo-caption">${photo.caption}</div>
     `;
@@ -654,30 +654,37 @@ function renderGallery(photos, containerId, imageSetName) {
 // Lightbox Fullscreen Modal
 function openLightbox(imageSetName, index) {
     const lightbox = document.getElementById("lightboxModal");
-    
+    if (!lightbox) return;
+
     if (imageSetName === 'sofia') currentImageSet = sofiaPhotos;
     else if (imageSetName === 'latvia') currentImageSet = latviaPhotos;
     else if (imageSetName === 'madrid') currentImageSet = madridPhotos;
-    
+
     currentImageIndex = index;
     updateLightboxImage();
     lightbox.style.display = "flex";
+
+    // Mencegah duplikasi event listener
+    document.removeEventListener('keydown', handleKeydown);
     document.addEventListener('keydown', handleKeydown);
 }
 
 function updateLightboxImage() {
     const lightboxImg = document.getElementById("lightboxImg");
     const lightboxCaption = document.getElementById("lightboxCaption");
-    
-    lightboxImg.style.opacity = 0;
-    setTimeout(() => {
-        lightboxImg.src = currentImageSet[currentImageIndex].src;
-        lightboxCaption.textContent = currentImageSet[currentImageIndex].caption;
-        lightboxImg.style.opacity = 1;
-    }, 50);
+    if (!lightboxImg || !lightboxCaption || !currentImageSet[currentImageIndex]) return;
+
+    lightboxImg.style.opacity = '0';
+    lightboxImg.src = currentImageSet[currentImageIndex].src;
+    lightboxCaption.textContent = currentImageSet[currentImageIndex].caption;
+
+    lightboxImg.onload = () => {
+        lightboxImg.style.opacity = '1';
+    };
 }
 
 function changeImage(direction) {
+    if (!currentImageSet.length) return;
     currentImageIndex += direction;
     if (currentImageIndex >= currentImageSet.length) currentImageIndex = 0;
     else if (currentImageIndex < 0) currentImageIndex = currentImageSet.length - 1;
@@ -685,12 +692,14 @@ function changeImage(direction) {
 }
 
 function closeLightbox() {
-    document.getElementById("lightboxModal").style.display = "none";
+    const lightbox = document.getElementById("lightboxModal");
+    if (lightbox) lightbox.style.display = "none";
     document.removeEventListener('keydown', handleKeydown);
 }
 
 function handleKeydown(e) {
-    if (document.getElementById("lightboxModal").style.display === "flex") {
+    const lightbox = document.getElementById("lightboxModal");
+    if (lightbox && lightbox.style.display === "flex") {
         if (e.key === "ArrowLeft") changeImage(-1);
         else if (e.key === "ArrowRight") changeImage(1);
         else if (e.key === "Escape") closeLightbox();
@@ -710,7 +719,7 @@ function renderProfiles(data) {
 
         card.innerHTML = `
       <div class="img-container">
-        <img src="${member.image}" alt="${member.nickname}" onerror="this.src='https://via.placeholder.com/150/FFB7B2/ffffff?text=${member.nickname}'">
+        <img src="${member.image}" alt="${member.nickname}" onerror="this.src='https://via.placeholder.com/150/FFB7B2/ffffff?text=${encodeURIComponent(member.nickname)}'">
       </div>
       <span class="member-name">${member.nickname}</span>
     `;
@@ -737,8 +746,10 @@ function renderWishes(data) {
 
 // Search Filter
 function searchMember() {
-    const input = document.getElementById("searchInput").value.toLowerCase();
-    
+    const inputElement = document.getElementById("searchInput");
+    if (!inputElement) return;
+    const input = inputElement.value.toLowerCase();
+
     const filtered = madridData.filter(m =>
         m.name.toLowerCase().includes(input) ||
         m.nickname.toLowerCase().includes(input)
@@ -750,10 +761,11 @@ function searchMember() {
 function openModal(member) {
     const modal = document.getElementById("profileModal");
     const body = document.getElementById("modalBody");
+    if (!modal || !body) return;
 
     body.innerHTML = `
 <div style="text-align: center; margin-bottom: 15px;">
-  <img src="${member.image}" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #FFB7B2;">
+  <img src="${member.image}" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #FFB7B2;" onerror="this.src='https://via.placeholder.com/150/FFB7B2/ffffff?text=${encodeURIComponent(member.nickname)}'">
   <h3 style="color: #5A4A42; font-family: 'Playfair Display', serif; margin-top: 8px;">${member.name}</h3>
   <p style="color: #FF7B89; font-weight: 600; font-size: 12px;">"${member.nickname}" – ${member.role || 'Siswi Madrid'}</p>
 </div>
@@ -774,30 +786,40 @@ function openModal(member) {
 }
 
 function closeModal() {
-    document.getElementById("profileModal").style.display = "none";
+    const modal = document.getElementById("profileModal");
+    if (modal) modal.style.display = "none";
 }
 
 // Toggle Audio
-let isPlaying = false;
 function toggleMusic() {
     const audio = document.getElementById("bgMusic");
     const icon = document.getElementById("musicIcon");
+    if (!audio || !icon) return;
 
-    if (isPlaying) {
+    if (audio.paused) {
+        audio.play().then(() => {
+            icon.textContent = "🎶";
+        }).catch(err => console.log("Autoplay ditolak oleh browser:", err));
+    } else {
         audio.pause();
         icon.textContent = "🎵";
-    } else {
-        audio.play();
-        icon.textContent = "🎶";
     }
-    isPlaying = !isPlaying;
 }
 
-// Inisialisasi Website
+// Inisialisasi Website & Event Outside Click
 document.addEventListener("DOMContentLoaded", () => {
     renderProfiles(madridData);
     renderWishes(madridData);
     renderGallery(sofiaPhotos, "sofiaGallery", 'sofia');
     renderGallery(latviaPhotos, "latviaGallery", 'latvia');
     renderGallery(madridPhotos, "madridGallery", 'madrid');
+
+    // Tutup Modal jika area luar Modal/Lightbox diklik
+    window.addEventListener("click", (e) => {
+        const profileModal = document.getElementById("profileModal");
+        const lightboxModal = document.getElementById("lightboxModal");
+
+        if (e.target === profileModal) closeModal();
+        if (e.target === lightboxModal) closeLightbox();
+    });
 });
