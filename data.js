@@ -40,9 +40,9 @@ const madridData = [
     favoriteFood: "Ayam 🍗",
     favoriteSong: "Risk It All 🎶",
     quote: "Fall seven times, stand up eight. 💪🏻✨",
-    messageToFriends: "Semoga kita sukses selalu ya di kemudian harii dan jangan tinggal sholatnya yaaa. 🤲🏻🤍",
-    hopeForClass: "Sukses selalu madrid dunia dan akhiratnyaa. 🌟💖",
-    messageToSelf: "Semoga kamu bisa lebih sukses dan bisa banggain orang-orang di sekitar kamu. 🥺🎓"
+    messageToFriends: "hai teman semua nya se mandrid cintaa semoga kita sukses selalu ya di kemudian harii dan juga semoga kita selalu mengingat satu sama lainn aku ngga ngingatin tentang istiqomah atau apapun itu tapi semoga kita bisa sadar sama tanggung jawab kita masing masing dan yang paling penting jangan tinggal sholat nya yaaa itu ajaa. 🤲🏻🤍",
+    hopeForClass: "Sukses selalu madrid dunia dan akhiratnyaa semoga kita bisa jadi kebanggaan bagi diri kita sendiri dan orang lain. 🌟💖",
+    messageToSelf: "hai aku dimasa depan semoga kamu bisa lebih sukses dan bisa banggain orng² disekitar kamu dan kamu bisa jdi yang lebih baik lagi dari diri kamu yang dulu,jangan lupa segala ibadah yang udah jadi landasan dan pondasi kamu sehingga kamu jadi orang yang seperti ini.🥺🎓"
   },
   {
     id: 4,
@@ -55,9 +55,9 @@ const madridData = [
     favoriteFood: "Soto ayam 🥣, prata 🫓, ayam geprek 🍗",
     favoriteSong: "Wavin Flag 🚩, Kita Usahakan Rumah Itu 🏠, Avicii - The Nights 🎧",
     quote: "Loving yourself is giving yourself what you want someone else to. 💌",
-    messageToFriends: "Jangan asing satu sama lain yaa, nikmati aja prosesnya. 🥺🫂",
-    hopeForClass: "Sukses selalu ya madrid, jangan asing satu sama lain yaa. 💖💫",
-    messageToSelf: "Terima kasih ke diri sendiri karena udah berjuang sekeras ini sampai saat ini. 🥺👏🏻"
+    messageToFriends: "Aku seneng banget dapet orang orang madrid, karena dari walas yang support sampai kawan yang selalu ada, nonton sama sama, kena marah sama sama, asrama kelas 1 terpisah, tp itu yang bikin seru sama madrid, selalu dijalanin sama kerandomannya.🥺🫂",
+    hopeForClass: "sukses selalu ya madrid, jangan asing satu sama lain yaa, nikmati aja prosesnya kalau susah berhenti sebentar boleh kok tp jangan lama lama, lanjutkan lagi. 💖💫",
+    messageToSelf: "1. Untk aku, Terima kasih ke diri sendiri karena udah berjuang sekeras ini sampai saat ini. 2. Untuk aku, usaha mu selama ini gak dia sia kok. 3. Untuk aku, apa yang kamu perjuangin selama ini, itu yang diinginkan kamu 15 tahun yang lalu . 4. Untuk aku, Aku gak nuntut kamu langsung sukses, nikmati aja prosesnya.🥺👏🏻"
   },
   {
     id: 5,
@@ -70,9 +70,9 @@ const madridData = [
     favoriteFood: "Cokelat yang manis-manis 🍫",
     favoriteSong: "Dash Uchiha 🎶",
     quote: "Kalo gabisa jadi orang baik, setidaknya jangan jadi orang jahat. 🕊️✨",
-    messageToFriends: "Sejauh apapun besok dunia luar membawa kita, jgn pernah lupa kalo kita pernah sedekat itu. 🥺💖",
-    hopeForClass: "Semoga kita semua bisa jadi orang baik, jadi orang sukses, dan ga pernah melupakan satu sama lain. 🫂🌟",
-    messageToSelf: "Harus tetap jadi orang baik, ingat dulu di PIAR selalu diajarin, dan jgn pernah tinggalin Allah. 🤲🏻🤍"
+    messageToFriends: "pesan aku buat temen2 adalah sejauh apapun besok dunia luar membawa kita, jgn pernah lupa kalo kita prnah sedekat itu sama allah😆pas lagi susah kita pergi ke allah, pokoknya jgn trlalu jauh dehh😞💔 dan kita hrs tetap saling mengingatkan yaa😆🤤🫰🏻🥺💖",
+    hopeForClass: "semoga kita semua bisa jadi orang baik, jadi orang sukses, dan smoga kita ga pernah melupakan satu sama lainnnn juga saling mmbantuu😆🫰🏻💗🫂🌟",
+    messageToSelf: "10 tahun lagi aku udah jadi orang sukses AMIN,    hrs tetap jdi org baik, ingat dulu di piar selalu diajarin, harus membantu yg kesusahan, ingat temen2 yg selalu bantuin, dan jgn prnah tinggalin allah😋😆🫰🏻🤲🏻🤍"
   },
   {
     id: 6,
@@ -85,9 +85,9 @@ const madridData = [
     favoriteFood: "Sesuai mood tapi sangat suka mie 🍜",
     favoriteSong: "Banyak 🎵",
     quote: "Tetaplah menjadi dirimu, dan hargai orang yang menghargaimu. ✨🤍",
-    messageToFriends: "Semoga kita tak akan pernah lupa satu sama yang lain ya madrid, sukses untuk kita semua. 🥹🤝🏻",
-    hopeForClass: "Semoga kita menjadi manusia hebat dimasa depan nanti. 🌟👑",
-    messageToSelf: "Tetap berjuang untuk masa depan, jalani segala takdir yang diberikan. 🤲🏻🤍"
+    messageToFriends: "Bagaimanapun dan dimanapun nanti kita berada semoga kita tak akan pernah lupa satu sama yang lain ya madridd, suksess untuk kita semua semoga kita sll dimudhkan jalan pintu kesuksesan ituu,semngaat madrid🫶🏻🫶🏻🥺🥺🥹🤝🏻",
+    hopeForClass: "Senangg bgt udh jdi bagian dri madrid,karna madrid udh sperti rumah dan keluarga kedua aku,pokokknyaa segala momen sama madrid takkan terlupakann,suksess utk madrid🫶🏻🫶🏻. Semogaa kita menjadi manusia hebat dimasa depann nnti🌟👑",
+    messageToSelf: "Tetap berjuang untuk masa depan,jalani segala takdir yg diberikan krna itu psti takdir terbaik yg disusun oleh tuhan, semngaat akuntan hebat🫶🏻🫵🏻🤲🏻🤍"
   },
   {
     id: 7,
@@ -100,7 +100,7 @@ const madridData = [
     favoriteFood: "Cheesecake 🍰",
     favoriteSong: "Drop Dead / Wish List 🎶",
     quote: "Our future is up to us - Enola Holmes 🕵🏻‍♀️✨",
-    messageToFriends: "Madrid keren banget, semoga kita bisa ketemu lagi di best version kita yah! 🥹💖",
+    messageToFriends: "“segala hal ttg madrid berkesan bgttt💗,,aku ga pandai berkata-kata tp madrid se membekas itu di hati akuuu😖😵‍💫,,tiga tahun plg berharga selama 17 taun aku hidupp,,aku ga nyesel bgtt ngabisin masa sma aku bareng madridd,,gaada hal yg ngga berkesan klo itu ttg madrid🥺sayang madrid banyak banyakk😘💗😖pokoknya madrid kerennn bgtt,,semoga kita bisa ketemu lagi di best version kita yahh🥹💖",
     hopeForClass: "I hope madrid sukses dan tercapai semua wish listnya. 🌟📜",
     messageToSelf: "Thank you for never giving up even when things got tough. 🫂🤍"
   },
@@ -114,10 +114,10 @@ const madridData = [
     hobbies: "Basket 🏀, sepedaan 🚲",
     favoriteFood: "Mie ayam 🍜",
     favoriteSong: "They Said Only A Dignified Life 🎶",
-    quote: "Allah bersamaku, Allah melihatku, Allah menyaksikanku 🤲🏻🤍",
-    messageToFriends: "Madrid sebelum melakukan apapun perbaiki niat kalian ya. 💡✨",
+    quote: "اللَّهُ مَعِي، اللَّهُ يَرَانِي، اللَّهُ شَاهِدِي Allah bersamaku, Allah melihatku, Allah menyaksikanku 🤲🏻🤍",
+    messageToFriends: "Madrid sebelum melakukan apapun perbaiki niat kalian ya jangan sampai itu yang membuat kita jauh saat di akhirat dan semoga  kita berjumpa di surga nantiii. 💡✨",
     hopeForClass: "Semoga kita jadi orang sukses (versi masing-masing). 🎓🌟",
-    messageToSelf: "Kamu harus bisa banggain orang-orang yang kamu sayang, hajiin ibu dan ayah. 🥺🕋🤍"
+    messageToSelf: "Qoom kamu sekarang udah ada perubahan kamu harus bisa banggain orang orang yang kamu sayang jangan lupa semua  hasil kamu saat ini nggak luput pemberian dari allah jangn sampai kamu terlena oleh pencapaian kamu saat ini jadi aku berharap kamu bisaaa buat rumah hajiin ibu dan ayah dan bisa menjadi pemudi yang berguna bagi semua orang. 🥺🕋🤍"
   },
   {
     id: 9,
@@ -130,8 +130,8 @@ const madridData = [
     favoriteFood: "Bakso 🥣, kuaci 🌻",
     favoriteSong: "Bayangkan Jika Kita Tidak Menyerah - Hindia 🎧",
     quote: "Be happy not because everything is good but you can see good in everything. 🌈✨",
-    messageToFriends: "Let us strive to be the best versions of our selves. 💖🚀",
-    hopeForClass: "Semoga suatu saat kita bisa bertemu dan cerita kalo mimpi kita semua udah terwujud. 🥺🥂✨",
+    messageToFriends: "Untuk Madrid semoga suatu saat ketika kita bisa bertemu lagi, let's strive to be the best versions of our selves. 💖🚀",
+    hopeForClass: "Madrid itu isinya orang orang yg punya mimpi mimpi besar dan mau memperjuangkan mimpi besar itu dan aku sangat bersyukur di kelilingi orang seperti itu. Semoga suatu saat kita bisa bertemu dan cerita kalo mimpi kita semua udah terwujud. 🥺🥂✨",
     messageToSelf: "Aku harap bisa menjadi versi terbaik dari diriku saat ini. 🌱🤍"
   },
   {
@@ -146,7 +146,7 @@ const madridData = [
     favoriteSong: "Dandelions 🌼",
     quote: "Al-Insyirah 5-6 📖🤍",
     messageToFriends: "Semoga bisa menempuh masa depan yang diimpikan. 🎓🌟",
-    hopeForClass: "Semoga madrid gak asing ya. 🥹🤝🏻",
+    hopeForClass: "Asik bgt serius kek sksksk sangat amat kompak, anak2nya baik kerja sama mantap😖🫰🏻Semoga madrid gak asing ya. 🥹🤝🏻",
     messageToSelf: "Semoga jadi orang yang membanggakan. 🥺👑"
   },
   {
@@ -160,9 +160,9 @@ const madridData = [
     favoriteFood: "Basreng 🧆, dendeng lambok 🥩",
     favoriteSong: "Tarot 🃏, End of Beginning 🎶",
     quote: "Abandon thoughts that make you weak, and hold on to thoughts that give you strength. 💪🏻✨",
-    messageToFriends: "Walaupun kita udah pada pisah/jauh tetapi tetap jangan asing ya guys. 🥺🫂",
+    messageToFriends: "•ak bangga puny tmn kls kyk madrid,karna pas dikala ak lagi down kemaren mereka selalu support ak🫶🏻 •hebohny madrid dikls sampe kita sering diblng “ini ank ips ato ank ipa” •kangen project dan keseruannyaWalaupun kita udah pada pisah/jauh tetapi tetap jangan asing ya guys. 🥺🫂",
     hopeForClass: "Mudah-mudahan kita sukses selalu di masa depan dan gak asing. 🌟💖",
-    messageToSelf: "Mendapatkan pekerjaan yang bagus untuk bisa banggain kedua orang tua. 💼🎓"
+    messageToSelf: "Mendapatkan pekerjaan yg bagus utk bisa banggain kedua ortu ak..dan mendapatkan suami yg baik,soleh,pokony the best la. 💼🎓"
   },
   {
     id: 12,
