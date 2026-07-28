@@ -190,7 +190,7 @@ function handleKeydown(e) {
     }
 }
 
-// Render Profiles
+// Render Profiles (Diperbaiki agar sesuai dengan data.js)
 function renderProfiles(data) {
     const container = document.getElementById("membersContainer");
     if (!container) return;
@@ -211,7 +211,7 @@ function renderProfiles(data) {
     });
 }
 
-// Render Wishes
+// Render Wishes (Diperbaiki agar sesuai dengan data.js)
 function renderWishes(data) {
     const container = document.getElementById("wishesContainer");
     if (!container) return;
@@ -222,23 +222,25 @@ function renderWishes(data) {
         card.className = "wish-card";
         card.innerHTML = `
       <h4>${member.name} (${member.nickname})</h4>
-      <p>"${member.futureHope || member.messageForClass}"</p>
+      <p>"${member.hopeForClass || '-'}"</p>
     `;
         container.appendChild(card);
     });
 }
 
-// Search Filter
+// Search Filter (Diperbaiki agar mencari madridData)
 function searchMember() {
     const input = document.getElementById("searchInput").value.toLowerCase();
-    const filtered = studentsData.filter(m =>
+    if (typeof madridData === 'undefined') return;
+    
+    const filtered = madridData.filter(m =>
         m.name.toLowerCase().includes(input) ||
         m.nickname.toLowerCase().includes(input)
     );
     renderProfiles(filtered);
 }
 
-// Modal Detail Profile
+// Modal Detail Profile (Diperbaiki agar sesuai properti data.js)
 function openModal(member) {
     const modal = document.getElementById("profileModal");
     const body = document.getElementById("modalBody");
@@ -251,13 +253,14 @@ function openModal(member) {
 </div>
 <div style="font-size: 11px; line-height: 1.5; color: #555;">
   <p><strong>Ciri Khas:</strong> ${member.traits ? member.traits.join(", ") : '-'}</p>
-  <p><strong>Hobi:</strong> ${member.hobby || '-'}</p>
-  <p><strong>Lagu Favorit:</strong> ${member.favSong || '-'}</p>
+  <p><strong>Hobi:</strong> ${member.hobbies || '-'}</p>
+  <p><strong>Makanan Favorit:</strong> ${member.favoriteFood || '-'}</p>
+  <p><strong>Lagu Favorit:</strong> ${member.favoriteSong || '-'}</p>
   <p style="margin-top: 4px;"><strong>Quote:</strong> <em>"${member.quote || '-'}"</em></p>
   <hr style="margin: 10px 0; border: none; border-top: 1px solid #E2F0CB;">
-  <p><strong>Pesan untuk Kelas:</strong> ${member.messageForClass || '-'}</p>
-  <p style="margin-top: 4px;"><strong>Harapan Masa Depan:</strong> ${member.futureHope || '-'}</p>
-  <p style="margin-top: 4px;"><strong>Pesan untuk Diriku di Masa Depan:</strong> ${member.futureSelfMessage || '-'}</p>
+  <p><strong>Pesan untuk Teman:</strong> ${member.messageToFriends || '-'}</p>
+  <p style="margin-top: 4px;"><strong>Harapan untuk Kelas:</strong> ${member.hopeForClass || '-'}</p>
+  <p style="margin-top: 4px;"><strong>Pesan untuk Diri Sendiri:</strong> ${member.messageToSelf || '-'}</p>
 </div>
 `;
 
@@ -284,11 +287,11 @@ function toggleMusic() {
     isPlaying = !isPlaying;
 }
 
-// Init
+// Init (Diubah menggunakan madridData)
 document.addEventListener("DOMContentLoaded", () => {
-    if (typeof studentsData !== 'undefined') {
-        renderProfiles(studentsData);
-        renderWishes(studentsData);
+    if (typeof madridData !== 'undefined') {
+        renderProfiles(madridData);
+        renderWishes(madridData);
     }
     renderGallery(sofiaPhotos, "sofiaGallery", 'sofia');
     renderGallery(latviaPhotos, "latviaGallery", 'latvia');
