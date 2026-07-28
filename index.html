@@ -4,7 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Painted Memories — Yearbook Madrid</title>
+  
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -14,7 +17,7 @@
   <!-- Navbar Navigation -->
   <nav class="navbar">
     <div class="logo">XII IPA Madrid</div>
-    <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()">
+    <div class="menu-toggle" id="mobile-menu" onclick="toggleMenu()" aria-label="Toggle Navigation">
       <span></span>
       <span></span>
       <span></span>
@@ -154,7 +157,7 @@
       <p>Made with ❤️ by <strong>XII IPA Madrid</strong></p>
     </div>
   </footer>
-  
+
   <!-- Lightbox Fullscreen Foto -->
   <div id="lightboxModal" class="lightbox">
     <span class="lightbox-close" onclick="closeLightbox()">&times;</span>
@@ -170,6 +173,7 @@
   </div>
   <audio id="bgMusic" loop src="intro (end of the world) (extended instrumental).mp3"></audio>
 
+  <!-- External Scripts -->
   <script src="data.js"></script>
   <script src="script.js"></script>
 </body>
