@@ -259,15 +259,15 @@ const madridData = [
     name: "Nafisah Faiza Farhani",
     nickname: "Picah",
     role: "Siswi Madrid",
-    image: "18.jpg",
+    image: "pich2.jpeg",
     traits: ["Imut 🤏🏻", "Lucu 🌸", "Menggemaskan 🥺"],
     hobbies: "Edit-edit video/foto 🎬, membaca 📖",
     favoriteFood: "Mochi! 🍡",
-    favoriteSong: "Intro (End of the World) - Ariana Grande 🎧",
+    favoriteSong: "Past Life - Ariana Grande 🎧",
     quote: "Jangan pernah berprasangka buruk sama Allah SWT. 🤲🏻🤍",
     messageToFriends: "Semoga madridd suksess truss kedepannya semakin mantapp truss tetap istiqomah dluar sanaa yh🥰✨🤲🏻",
-    hopeForClass: "Semoga kita tetap terjaga tali silaturahminya yaa. 🫂🤍",
-    messageToSelf: "Hay aku 👋🏻 kamu hebat kamu kuat kamu cantik imut dan kamu bisa jdi kebanggaan ortu kamu pokoknya kamu keren bgt 🤩🥹👑"
+    hopeForClass: "Semoga kita tetap terjaga tali silaturahminya yaa. ayoo ketemuu lagi dengan versi kita yg lebih baikk lagi🫂🥰🤍",
+    messageToSelf: "Pesan buat aku : HAY HAY AKU 👋🏻 gimanaa nihh keadaan nya sekarangg?? Ingatt ya perjuangan kmu selama ini ga asal asalan tetap terima takdir Nya dan selalu bersyukur yah mungkin ini tempat yang terbaik buat kamu selalu semangatt yah aku😚 kamu kuat kamu hebat kamu bisa lewatin smuanyaa 🥰🥰 dan kamu bisa jdi kebanggaan ortu kamu pokoknya kamu keren bgt 🤩🥹👑"
   },
   {
     id: 19,
@@ -436,7 +436,7 @@ const madridData = [
   },
   {
     id: 30,
-    name: "Ar. Syakiroh Khoitunnisa, S.Ars., M.Ars., Ph.D",
+    name: "Ar. Syakiroh Khoirunnisa, S.Ars, M.Ars, Ph.D",
     nickname: "Syitoh",
     role: "Siswi Madrid",
     image: "30.jpg",
