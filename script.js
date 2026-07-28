@@ -244,21 +244,25 @@ function openModal(member) {
     const body = document.getElementById("modalBody");
 
     body.innerHTML = `
-    <div style="text-align: center; margin-bottom: 15px;">
-      <img src="${member.image}" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #FFB7B2;" onerror="this.src='https://via.placeholder.com/150/FFB7B2/ffffff?text=${member.nickname}'">
-      <h3 style="color: #5A4A42; font-family: 'Playfair Display', serif; margin-top: 8px;">${member.name}</h3>
-      <p style="color: #FF7B89; font-weight: 600; font-size: 12px;">"${member.nickname}" — ${member.role || 'Siswi Madrid'}</p>
-    </div>
-    <div style="font-size: 11px; line-height: 1.5; color: #555;">
-      <p><strong>Ciri Khas:</strong> ${member.traits ? member.traits.join(", ") : '-'}</p>
-      <p><strong>Hobi:</strong> ${member.hobby || '-'}</p>
-      <p><strong>Lagu Favorit:</strong> ${member.favSong || '-'}</p>
-      <p style="margin-top: 4px;"><strong>Quote:</strong> <em>"${member.quote || '-'}"</em></p>
-      <hr style="margin: 10px 0; border: none; border-top: 1px solid #E2F0CB;">
-      <p><strong>Pesan untuk Kelas:</strong> ${member.messageForClass || '-'}</p>
-      <p style="margin-top: 4px;"><strong>Harapan Masa Depan:</strong> ${member.futureHope || '-'}</p>
-    </div>
-  `;
+<div style="text-align: center; margin-bottom: 15px;">
+  <img src="${member.image}" style="width: 90px; height: 90px; border-radius: 50%; object-fit: cover; border: 3px solid #FFB7B2;">
+  <h3 style="color: #5A4A42; font-family: 'Playfair Display', serif; margin-top: 8px;">${member.name}</h3>
+  <p style="color: #FF7B89; font-weight: 600; font-size: 12px;">"${member.nickname}" – ${member.role || 'Siswi Madrid'}</p>
+</div>
+<div style="font-size: 11px; line-height: 1.5; color: #555;">
+  <p><strong>Ciri Khas:</strong> ${member.traits ? member.traits.join(", ") : '-'}</p>
+  <p><strong>Hobi:</strong> ${member.hobby || '-'}</p>
+  <p><strong>Lagu Favorit:</strong> ${member.favSong || '-'}</p>
+  <p style="margin-top: 4px;"><strong>Quote:</strong> <em>"${member.quote || '-'}"</em></p>
+  <hr style="margin: 10px 0; border: none; border-top: 1px solid #E2F0CB;">
+  <p><strong>Pesan untuk Kelas:</strong> ${member.messageForClass || '-'}</p>
+  <p style="margin-top: 4px;"><strong>Harapan Masa Depan:</strong> ${member.futureHope || '-'}</p>
+  <p style="margin-top: 4px;"><strong>Pesan untuk Diriku di Masa Depan:</strong> ${member.futureSelfMessage || '-'}</p>
+</div>
+`;
+
+  modal.style.display = "flex";
+}
 
     modal.style.display = "flex";
 }
