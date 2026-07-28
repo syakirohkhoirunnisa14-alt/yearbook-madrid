@@ -293,12 +293,13 @@ const studentsData = [
     type: "student",
     image: "https://lh3.googleusercontent.com/d/1y8XH7bmw62GllWo2fR5Th5KUysxyll-6",
     traits: ["Pemalu", "Soft spoken", "Lucu"],
-    hobby: "Membaca & menggambar",
-    favFood: "Keju, manis-manis",
+    hobby: "banyak pokoknya",
+    favFood: "Keju, manis-manis dan gak pedes",
     favSong: "Banyak",
     quote: "Be kind, be grateful, and trust Allah's timing.",
-    impression: "Semua keseruan dan cerita di Madrid, apalagi sifat random kalian.",
-    messageForClass: "Terima kasih sudah menjadi bagian dari perjalanan ini. Jangan lupakan kenangan kita.",
+    impression: "Pokoknya Semua keseruan dan cerita di madrid apa lagi liat  sifat random kalian.",
+    messageForClass: "Terima kasih untuk semua teman-teman  yang sudah menjadi bagian dari perjalanan ini. Semoga kita semua diberikan kesehatan, kebahagiaan, dan kesuksesan dalam meraih cita-cita. Jangan lupakan  kenangan yang telah kita buat bersama ya, Semoga persahabatan dan silaturahmi kita tetap terjaga walaupun nanti berada di tempat yang berbeda. Sukses selalu untuk kita semua!
+",
     futureHope: "Semoga kita bisa bertemu dengan versi terbaik kita masing-masing."
   },
   {
