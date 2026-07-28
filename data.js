@@ -114,7 +114,7 @@ const madridData = [
     hobbies: "Basket 🏀, sepedaan 🚲",
     favoriteFood: "Mie ayam 🍜",
     favoriteSong: "They Said Only A Dignified Life 🎶",
-    quote: "اللَّهُ مَعِي، اللَّهُ يَرَانِي، اللَّهُ شَاهِدي (Allah bersamaku, Allah melihatku, Allah menyaksikanku) 🤲🏻🤍",
+    quote: "Allah bersamaku, Allah melihatku, Allah menyaksikanku 🤲🏻🤍",
     messageToFriends: "Madrid sebelum melakukan apapun perbaiki niat kalian ya. 💡✨",
     hopeForClass: "Semoga kita jadi orang sukses (versi masing-masing). 🎓🌟",
     messageToSelf: "Kamu harus bisa banggain orang-orang yang kamu sayang, hajiin ibu dan ayah. 🥺🕋🤍"
@@ -130,7 +130,7 @@ const madridData = [
     favoriteFood: "Bakso 🥣, kuaci 🌻",
     favoriteSong: "Bayangkan Jika Kita Tidak Menyerah - Hindia 🎧",
     quote: "Be happy not because everything is good but you can see good in everything. 🌈✨",
-    messageToFriends: "Let's strive to be the best versions of our selves. 💖🚀",
+    messageToFriends: "Let us strive to be the best versions of our selves. 💖🚀",
     hopeForClass: "Semoga suatu saat kita bisa bertemu dan cerita kalo mimpi kita semua udah terwujud. 🥺🥂✨",
     messageToSelf: "Aku harap bisa menjadi versi terbaik dari diriku saat ini. 🌱🤍"
   },
@@ -174,7 +174,7 @@ const madridData = [
     hobbies: "Main game 🎮, masak 🍳",
     favoriteFood: "Martabak manis coklat keju 🍫🧀, bolu pisang 🍌",
     favoriteSong: "Jatuh Suka, Lantas - Juicy Luicy 🎵",
-    quote: "Life is what happens to you while you're busy making other plans. 🍃",
+    quote: "Life is what happens to you while you are busy making other plans. 🍃",
     messageToFriends: "Semoga kalian selalu bahagia dengan apapun pencapaian yang kalian raih. 💖🎉",
     hopeForClass: "Sukses selalu madridku! 🚀🥳",
     messageToSelf: "Jangan pernah kecewa dengan takdir yang kamu terima. Tetap rendah hati. 🤲🏻🤍"
@@ -204,7 +204,7 @@ const madridData = [
     hobbies: "Seni (menggambar 🎨, musik 🎶), refleksi diri 🧘🏻‍♀️, manhwa 📖",
     favoriteFood: "Peraci-acian 🍡, soup 🥣, chicken katsu 🍛, cheesecake 🍰",
     favoriteSong: "The Cutest Pair 🎶, Bunga Abadi 🌸, Bubble Gum - NewJeans 🫧",
-    quote: "I survived every day I thought I couldn't. Maybe I'm not there yet, but I'm closer than I was yesterday. 🌱✨",
+    quote: "I survived every day I thought I could not. Maybe I am not there yet, but I am closer than I was yesterday. 🌱✨",
     messageToFriends: "Makasih buat 3 tahun yang penuh cerita. Jangan lupa jaga diri dan tetap istiqomah. 🥹🤲🏻",
     hopeForClass: "Jangan pernah lupa kalau kita pernah berada di masa perjuangan yang sama. See you in a better place! 🫂💖",
     messageToSelf: "Za, u finally survived! No matter what happened, I hope u never lost ur way. 🤍🫂"
@@ -220,7 +220,7 @@ const madridData = [
     favoriteFood: "Suka semuanya 😋",
     favoriteSong: "Saving All My Love for You 🎶, Officially Missing You 🎸",
     quote: "See beauty in everything, lessons in every hardship. 🌸✨",
-    messageToFriends: "Aku ga bakal anggap kalian sbg orang asing di hidup aku. Love u all with all Haura's heart! 🥹💖",
+    messageToFriends: "Aku ga bakal anggap kalian sbg orang asing di hidup aku. Love u all with all Haura heart! 🥹💖",
     hopeForClass: "Semoga kita bisa bersyukur dan bangga sama capaian kita yang udah diusahakan. 🌟🥂",
     messageToSelf: "Selalu ingat Allah dan jangan lupa kamu harus berhasil menyebarkan cinta ke dunia. 🤲🏻🤍"
   },
@@ -233,7 +233,7 @@ const madridData = [
     traits: ["Senyum 😊", "Cermin 🪞", "Ramah 🤗"],
     hobbies: "Masak 🍳, nyanyi 🎶",
     favoriteFood: "Nasi goreng 🍳, semua makanan pedas 🌶️",
-    favoriteSong: "It's You (Holic) 🎧",
+    favoriteSong: "It is You (Holic) 🎧",
     quote: "Try to be better than before. 🌱✨",
     messageToFriends: "Makasih udah buat hari-hari aku berwarna banget selama di PIAR. I miss u all! 🥺💖",
     hopeForClass: "Bahagia terus yaa, jaga kesehatan, jangan lupa kalo kita pernah sedekat itu. 🫂💫",
@@ -294,7 +294,7 @@ const madridData = [
     hobbies: "Banyak 🎨",
     favoriteFood: "Keju 🧀, manis-manis 🧁, tidak pedas 🙅🏻‍♀️",
     favoriteSong: "Banyak 🎧",
-    quote: "Be kind, be grateful, and trust Allah's timing. 🤲🏻✨",
+    quote: "Be kind, be grateful, and trust Allah timing. 🤲🏻✨",
     messageToFriends: "Terima kasih sudah menjadi bagian dari perjalanan ini. Semoga persahabatan kita tetap terjaga. 🥹🫂",
     hopeForClass: "Semoga kita bisa bertemu dengan versi terbaik kita masing-masing. 🌟🤍",
     messageToSelf: "Semoga kamu bahagia, sehat dan menjadi pribadi yang lebih baik dari hari ini. 🥺💖"
