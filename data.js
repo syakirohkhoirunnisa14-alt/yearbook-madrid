@@ -175,9 +175,9 @@ const madridData = [
     favoriteFood: "Martabak manis coklat keju 🍫🧀, bolu pisang 🍌",
     favoriteSong: "Jatuh Suka, Lantas - Juicy Luicy 🎵",
     quote: "Life is what happens to you while you are busy making other plans. 🍃",
-    messageToFriends: "Semoga kalian selalu bahagia dengan apapun pencapaian yang kalian raih. 💖🎉",
+    messageToFriends: "aku happy jadi bagian madrid selama 3 tahun ini. hehe makasi buat semuanya yang udah baaik bangeet. ih gatau semuanya berkesan sekarang aku kangen banget ngumpul bareng....paling kangen pas kelas 1 kita di DH sumpah demi apapun aku kangen kita main mafia kangen nonton di kelas HAHAHAHA apalagi pas kita rela ga pulang ke asrama demi nonton the glory yang sampai sekaranh filmnya ga pernah tamat..🫪🫪 kangen di DH pokonya sebelum kita di pisah'💔💔😣 buat teman' madrid aku yakin seyakin yakinnya kalau kita bakalan sukses di masa depan dengan jalan kita masing'🥺 semoga kalian selalu bahagia dengan apapun pencapaian yang kalian raih🫰🏻😘 semoga allah mengabulkan apapun doa yang kalian langitkan untuk kesuksesan kita semua🥺🥺💖🎉",
     hopeForClass: "Sukses selalu madridku! 🚀🥳",
-    messageToSelf: "Jangan pernah kecewa dengan takdir yang kamu terima. Tetap rendah hati. 🤲🏻🤍"
+    messageToSelf: "untuk aku di masa depan aku yakin banget kalau aku bisa sukses jadi apa yang aku impiin dari dulu, jadi apapun kmu nantinya jangan pernah kecewa dengan takdir yang kamu terima karna bahkan sejak sebelum kmu lahirpun hari itu sudah tertulis🫰🏻jangan pernah jadi  sombong yaaa kalau suatu saat kamu jadi orang besar tetap rendah hati 😘🫰🏻🤲🏻🤍"
   },
   {
     id: 13,
@@ -190,9 +190,9 @@ const madridData = [
     favoriteFood: "Desserts 🍰, perkuah kacang-kacangan (ketoprak, siomay) 🍲",
     favoriteSong: "Lagu-lagu SO7 & Armada 🎸",
     quote: "You cry, you pray, you wait. 🥺🤲🏻",
-    messageToFriends: "Tolong ingat Ara yang baiknya aja ya teman-teman, Ara beruntung kenal kalian. 🥺🤍",
-    hopeForClass: "Semoga kalian diberikan kebahagiaan, kesuksesan, dan hal baik lainnya. 🌟🌈",
-    messageToSelf: "Semoga kamu sudah bekerja menjadi seorang yang hebat yang membanggakan orang tua. 🎓💼"
+    messageToFriends: "semua yang terjadi dari kelas sofia sampai madrid ga ada yang ga berkesan,karna sama mereka semuanya jadi berkesan walaupun itu hanya display kelas,makan bareng,nonton bareng,main remi,piket,belajar,nyanyi bareng,ujian,ke perpus,main game di perpus seakan akan perpus jadi warnet,haha, banyak lagi deh dan pas cya pindah sekolah di detik detik kami mau naik kelas 3,cya terakhir sekamar sama ara jadi itu juga momen ga akan ara lupa,soalnya ara pikir kami bakal 32 sampai tamat ternyata engga,tapi apapun itu cya tetep jadi teman kelas kami sampai akhir. menurut aku tuh hal yang paling ga bisa dilupain tu pas awal awal ma si,pas kami sofia masi satu asrama di dh banyak banget kenangannya,nguping pembicaraan kaka kaka di lantai bawah,menghibah di satu kamar,fajri&samira,sendal kami ngapung di teras dh karna banjir,hujan banjir tetep ke talhah,serangan tawon vs syitoh dengan sapunya,qomah tidur berjalan,cya kesengat tawon,cindokur yang main tembak aja pipisnya ke dinding triplek kami,kateng,display dh,banyak lagi deh. Tolong ingat Ara yang baiknya aja ya teman-teman, Ara beruntung kenal kalian. 🥺🤍",
+    hopeForClass: "untuk teman teman madrid semua semoga kalian diberikan kebahagian,kesuksesan,dan hal baik lainnya yang dimana itu baik untuk agama,akhirat dan dunia,tolong ingat ara yang baiknya aja ya teman teman,ara beruntung kenal sama kalian,love u guys💕🌟🌈",
+    messageToSelf: "untuk ara di umur 23-28 tahun semoga kamu sudah bekerja menjadi seorang yang hebat yang membanggakan orang tua dan orang sekitar,semoga kamu tetap istiqomah di jalan Allah swt,semoga kamu udah menikah dengan laki laki yang masyaallah akhlak,rupa,harta,hafalan,agama,dan hal baik lainnya🎓💼"
   },
   {
     id: 14,
@@ -205,9 +205,9 @@ const madridData = [
     favoriteFood: "Peraci-acian 🍡, soup 🥣, chicken katsu 🍛, cheesecake 🍰",
     favoriteSong: "The Cutest Pair 🎶, Bunga Abadi 🌸, Bubble Gum - NewJeans 🫧",
     quote: "I survived every day I thought I could not. Maybe I am not there yet, but I am closer than I was yesterday. 🌱✨",
-    messageToFriends: "Makasih buat 3 tahun yang penuh cerita. Jangan lupa jaga diri dan tetap istiqomah. 🥹🤲🏻",
-    hopeForClass: "Jangan pernah lupa kalau kita pernah berada di masa perjuangan yang sama. See you in a better place! 🫂💖",
-    messageToSelf: "Za, u finally survived! No matter what happened, I hope u never lost ur way. 🤍🫂"
+    messageToFriends: "Kalau Aza nggak pernah jadi bagian dari Madrid, kayaknya aku nggak bakal tahu kalau satu kelas bisa seseru ini. Madrid tuh isinya orang-orang yang rame, kreatif, unik, dan punya vibes masing-masing. Kadang berisik banget, kadang bikin pusing, tapi justru itu yang bikin ngangenin. Selama 3 tahun ini banyak banget cerita, ketawa, project, jamkos, sampai momen random yang sekarang kalau diingat bikin senyum sendiri. Pokoknya seneng banget pernah jadi bagian dari Madrid. Madrid, makasih yaa buat 3 tahun yang penuh cerita. Makasih udah jadi bagian dari masa SMA yang bakal selalu aku kenang. Dari yang bikin stres, ketawa sampai sakit perut, project, jamkos, sampai momen random lainnya, semuanya bakal jadi kenangan yang berharga~ Setelah ini kita bakal punya jalan masing-masing, tapi Aza harap kita semua bisa meraih impian kita dan menjadi versi terbaik dari diri kita. Jangan lupa jaga diri, tetap istiqomah, dan semoga Allah selalu memudahkan langkah kita ke depannya. See you when we make it!!✧⁠◝⁠(⁠⁰⁠▿⁠⁰⁠)⁠◜⁠✧ 🥹🤲🏻",
+    hopeForClass: "Jangan pernah lupa kalau kita pernah berada di masa perjuangan yang sama. Tiga tahun bersama tentu bukan waktu yang sebentar. Kita sudah melewati banyak hal, baik suka maupun duka, bersama-sama. I really hope we've become a better version of ourselves by now. Don't forget to stay istiqomah and keep Allah at the center of your life, okay? And one more thing, I hope we're not only chasing happiness in this dunya, but also in the akhirah. See you in a better place, insyaa Allah. 🤍🌷",
+    messageToSelf: "Za, u finally survived! I'm so proud of u~  Hey, how are yahh? I hope u're doing okay. The me writing this right now is dreaming of so many things, and I hope you didn't let her down. (⁠╥⁠﹏⁠╥⁠) No matter what happened, I hope u never lost ur way. Remember, whenever things get hard, stay close to Allah. He's always been there for us. And hey, thank u for making it this far. I'm proud of u. (⁠≧⁠▽⁠≦⁠)🪷"
   },
   {
     id: 15,
@@ -220,9 +220,9 @@ const madridData = [
     favoriteFood: "Suka semuanya 😋",
     favoriteSong: "Saving All My Love for You 🎶, Officially Missing You 🎸",
     quote: "See beauty in everything, lessons in every hardship. 🌸✨",
-    messageToFriends: "Aku ga bakal anggap kalian sbg orang asing di hidup aku. Love u all with all Haura heart! 🥹💖",
-    hopeForClass: "Semoga kita bisa bersyukur dan bangga sama capaian kita yang udah diusahakan. 🌟🥂",
-    messageToSelf: "Selalu ingat Allah dan jangan lupa kamu harus berhasil menyebarkan cinta ke dunia. 🤲🏻🤍"
+    messageToFriends: "IIIII aku ga bakal lupa yg udah kita laluuiin😠semuanya bakal aku ingettt ‼️tapii aku suka kita sering nonton di kelas hmm bagi” takjil jugakk truss dimana kita minta maaf dan saling nyemangatin klo mau ujiaan atau apaa🩷🩷. pengalamannya hmm banyakk dari yang menyanangkan ataupun kurang mengenakkan as friendship could be😵🩷dan aku lucky ktmuu awll of yuw,jd tau seneng🥳kecewa😔percayaa😤i’ll take them all as my lessons. buat semuwah tmn madrid akuu makasii buat semua kenangan dan pelajarannya😯aku ga bakal anggap kalian sbg orang asing di hidup aku and i hope you guys feel the same way😴🩷im soowrie buat all of my mistakes dan klo misalnya ada yg blm terbayarkan apapun itu BILANG AKU YAAH aku beruntung bgt pernah jd bagian dr kitaa😡⭐️aku bakal selalu berdoa kita ada di jalur terbaik yg udh disiapkan buat kita,see yuu on the besst top temen temenquu looovvyuuwh all with all haura’s heart🫆🩷🥹💖",
+    hopeForClass: "semogaa kita bisa bersyukur dan bangga sama capaian kita yg udah kita usahakan sehat selalu let go of the negative and embrace the positive🌸⭐️🩷sehatt selalu ya semuaa🌟🥂",
+    messageToSelf: "hiii hauraa di masa depan kamu gimana ok gaa apa ok bgttt?semoga yang kedua yeah.kamu masih cantik,happy,dan sehat kan?😯dari aku yang ada di juni 2026 aku berharap kamu bersyukur buat apa yg kamu capai yaaa🩷🩷aku harap kita berhasil ningkatin apa yg belum aku capai di 26 inii.semoga kamu semakin istiqomah yaa,aku harap kamu udah punya prinsip yang kuat yakin sama yg kamu mau dan seneng akan hal ituu.jaga kesehatan yaa sayangg🥳🩷selalu inget Allah dan jangan lupa kamu harus berhasil buat menyebarkan cinta ke duniaa dan di cintaii yeah😠🙄jangan ngulangin hal yang salah yg udah aku lakuin yah jadiin itu pelajaran jgn malah di lupain🥱🫵🏻    hmm jadii kamu udh ktmu the missing piece of your puzzle beluum?🤭🧐aku berharap si🫣udh tapii klo blm Allah always knows best🤍baikk baiik yah hauu selalu jd diri yg terbaik,bersyukur dan bangga ya sm kitaa yaa.trust Allah’s timing⏱️ Allah always knows best,ok?🩷🩷love yuu foreevaaa⭐️👋🏻🤲🏻🤍"
   },
   {
     id: 16,
@@ -235,9 +235,9 @@ const madridData = [
     favoriteFood: "Nasi goreng 🍳, semua makanan pedas 🌶️",
     favoriteSong: "It is You (Holic) 🎧",
     quote: "Try to be better than before. 🌱✨",
-    messageToFriends: "Makasih udah buat hari-hari aku berwarna banget selama di PIAR. I miss u all! 🥺💖",
-    hopeForClass: "Bahagia terus yaa, jaga kesehatan, jangan lupa kalo kita pernah sedekat itu. 🫂💫",
-    messageToSelf: "Bismillah bisa jadi jaksa/hakim, tamat cumlaude, bahagiain orang tua. ⚖️🎓✨"
+    messageToFriends: "allowww temen2 madridku tersayang,makasih banyak ya buat 3 tahunnya kemarinn,makasih udah buat hari2 aku berwarna banget selama di PIAR,jujur....aku kangen banget sama kalian semuaaa🥹pengen banget kita bisa ketawa sama2 dikelas,diasrama,di talhah,dikantin....hmmm maafin banget ya kalo aku punya salah sama kalian(harus dimaafin yahh☺️🥹)....semoga kita semua bisa mencapai semua keinginan  yang udah kita impikan yaaa,semoga kalian selalu bahagia dimanapun dan kapanpun ituuu,kalo kalian lagi sedih jangan lupa kalo kita madrid selalu ada buat jadi tempat cerita kalian,LOVE YOU AND MISS YOU ALL❤️ intinya aku merasa beruntung banget bisa jadi bagian dari kelas madridd,kelas kita kompak,suka bercanda sama2,susah senang juga sama2,hmm pokoknya banyaklahh kalo mau diceritainn🤩ngga bisa diungkapin lewat ketikan,aku maunya bisa ketemu full anggota lagiiiiii🥹🫰",
+    hopeForClass: "bahagia terus yaaa,jaga kesehatan jangan sampe sakit pula nanti pas kuliah hehe,jangan lupa ya kalo kita pernah "sedekat" ituuu🥰❤️😘🫂💫",
+    messageToSelf: "-bismillah bisa jadi jaksa atau hakim  -tamat dengan predikat cumlaude...aamiin ya allah  -bahagiain orang tua sama adek2 setiap hari setiap waktu pokoknyaa!!!!  -selalu menebar kebaikan yaaa dimanapun dan kapanpun ituuu  -HARUS  jadi orang suksess!!!!!⚖️🎓✨"
   },
   {
     id: 17,
@@ -250,9 +250,9 @@ const madridData = [
     favoriteFood: "Spaghetti 🍝",
     favoriteSong: "Brooklyn Baby - Lana Del Rey 🎧",
     quote: "We accept the love we think we deserve. 🤍✨",
-    messageToFriends: "Semoga anak madrid bisa sukses di jalan yang udah kalian pilih. See u on top! 🎓🚀",
-    hopeForClass: "Harapannya semoga kalian bisa sukses dan nikmatin kerja keras kalian selama ini. 🥂🌟",
-    messageToSelf: "Kamu pasti udah gapai mimpi mu itu kan? Jangan lupa perjuangan kamu bertahun-tahun lalu. 🥺💖"
+    messageToFriends: "pesan aku, semoga anak madrid bisa sukses di jalan yang udh kalian pilih, walaupun jalan itu gk ada di plan kita but remember again Allah is the best planner🤍. Mungkin dr sana kalian bs berjaya dan balik lagi jadi org yg keren. Semoga kalian gk lupa sm high school era kita yg banyak drama ini, see u on top🚀⭐️ Pokoknya madrid banyak banget ngasih momen yang susah bgt buat dilupain like nonton bareng, buat tugas di asrama bareng”, sampe sorakkin adek” granada krn kita jg mau dikasih wkwk😭🎓🚀",
+    hopeForClass: "harapan nya semoga kalian bs sukses dan nikmatin kerja keras kalian selama ini dan bisa jadi orang” keren kebanggan semua🤩🥂🌟",
+    messageToSelf: "Hai nad? kira” sekarang kmu lagi ngapain ya? Hehe😋 kamu pasti udh gapai mimpi mu itu kan? aku harap kmu senang tanpa mikirin apa pun lagi, trus jangan lupa ya perjuangan kmu bertahun tahun yg lalu🫶🏻 ( btw kmu jd masuk ugm gk? Hehe🤧) klu aku mau di unand dlus😉💪🏻🥺💖"
   },
   {
     id: 18,
@@ -265,9 +265,9 @@ const madridData = [
     favoriteFood: "Mochi! 🍡",
     favoriteSong: "Intro (End of the World) - Ariana Grande 🎧",
     quote: "Jangan pernah berprasangka buruk sama Allah SWT. 🤲🏻🤍",
-    messageToFriends: "Semoga madrid sukses terus kedepannya dan tetap istiqomah di luar sana. ✨🤲🏻",
+    messageToFriends: "Semoga madridd suksess truss kedepannya semakin mantapp truss tetap istiqomah dluar sanaa yh🥰✨🤲🏻",
     hopeForClass: "Semoga kita tetap terjaga tali silaturahminya yaa. 🫂🤍",
-    messageToSelf: "Kamu hebat, kamu kuat, kamu cantik imut dan kamu bisa jadi kebanggaan ortu. 🥹👑"
+    messageToSelf: "Hay aku 👋🏻 kamu hebat kamu kuat kamu cantik imut dan kamu bisa jdi kebanggaan ortu kamu pokoknya kamu keren bgt 🤩🥹👑"
   },
   {
     id: 19,
@@ -280,9 +280,9 @@ const madridData = [
     favoriteFood: "Nasi goreng 🍛, mie ayam PIAR 🍜",
     favoriteSong: "Amin Paling Serius 🎵",
     quote: "Hiduplah untuk dirimu sendiri, wishlistmu, mimpimu dan masa depanmu. 🌟📜",
-    messageToFriends: "Semoga kedepannya kita bisa raih mimpi itu perlahan. Dijaga sholat & pakaiannya ya. 🤲🏻✨",
+    messageToFriends: "SELAMATT BAGI YG UDH LULUS PTN DAN SEMANGATT BAGI YG MASIHH MENCARII PTN🫶🏻, meskipun semuanya diluar yg kalian mau,tapi kita udh usaha kok, mungkin belum rezekinya sekarang, tapi aku berharap semoga semua yg kita usahakan bisa terbalas esok, semangatt semuaa, semoga kedepannya kita bisa raih mimpi itu perlahan🥺🤍, jangan lupa juga murajaah, shalatnya, pakaiannya juga dijaga ya....🤲🏻✨",
     hopeForClass: "Semangat untuk kedepannya, ditunggu kabar suksesnya. See u on top! 🚀🥳",
-    messageToSelf: "Gagal bukan berarti gak sukses, gagal adalah awal dari perjalanan. 💪🏻💖"
+    messageToSelf: "Nasywa gimana hasilnya?? Kita belum lulus PTN impian itu ya???, gpp mungkin dibalik usaha kita ada usaha orang lain yg lebih dari usaha kamu, jangan sedihh yaa..., gagal bukan berarti gak sukses, gagal adalah awal dari perjalanan. Untuk aku dimasa depan, kamu harus tau semua perjuangan nasywa untuk menggapai mimpinya, semua yg kamu rasakan adalah usaha nasywa selama ini yg diperjuangkan selama ini🤍💪🏻💖"
   },
   {
     id: 20,
@@ -310,7 +310,7 @@ const madridData = [
     favoriteFood: "Ramen 🍜 & Pizza 🍕",
     favoriteSong: "Iqro - Raim Laode 🎧",
     quote: "Allah selalu bersama mu. 🤲🏻🤍",
-    messageToFriends: "Jangan lupa sama teman-teman berjuang masa SMA ya. 🥹🤝🏻",
+    messageToFriends: "untuk madrid kalian jangan lupa sama teman teman berjuang masa sma ya trss semoga apa yang kalian perjuangin sekarang ada hasil di masa depan yaakk🥹🤝🏻",
     hopeForClass: "Semoga kalian sehat terus dan jangan menyerah kalau ada masalah. 💪🏻💖",
     messageToSelf: "Jangan pantang menyerah dan terus berjuang berusaha selalu. 🔥✨"
   },
@@ -325,9 +325,9 @@ const madridData = [
     favoriteFood: "Cumi 🦑, pempek 🐟",
     favoriteSong: "Lagu Rizky Febian, Tenxi & Nakyla 🎵",
     quote: "Kebahagiaan bermulai dari kenyamanan. 💖🍃",
-    messageToFriends: "Anggota madrid bukan cuman teman, tapi keluarga yang tak tergantikan. 🥹🫂",
+    messageToFriends: "semuanya kesan yang indah sampai aku lupa rasa sakit yang pernah ada selama masa SMA. nila ingin kembali ke masa itu, nila ingin menjadi seorang anak madrid yang dulu itu. punya teman yang penuh ambisi, yang buat nila juga berambisi. punya teman yang selalu asik, hingga ga bisa waktu terlirik. sampai aku lupa rasa sakit yang ada ketika aku berada di kelas madrid. nila ingin kesana lagi, belajar di madrid dengan penuh kebahagian dan hati yang senang. anggota madrid bukan cuman teman, tapi keluarga yang tak tergantikan. tanpa kalian mungkin nila ga pernah merasakan masa SMA yang penuh dengan tawa. nila harap madrid bisa berkumpul kembali lalu mengenang kenangan indah kita dan membawa cerita kesuksesan kita masing2 amin ya allah. semoga kita bisa berkumpul kembali di surga🥹🫂",
     hopeForClass: "Semoga madrid sukses hingga akhirat. 🤲🏻🌟",
-    messageToSelf: "Kamu hebat loh udah bertahan dan berjuang sejauh ini. 🥺👏🏻"
+    messageToSelf: "hai nila kamu hebat loh udah bertahan dan berjuang sejauh ini, kamu orang hebat nila yang selalu berusaha utk menjadi baik dan berguna bagi orang lain. kamu kuat nila karna sejauh ini kamu masih tetap berusaha lagi dan lagi untuk menggapai semua mimpi kamu. lihatlah nila allah mengabulkan doa mu. dan sekarang kamu sudah menggapai mimpi mu🥺👏🏻"
   },
   {
     id: 23,
@@ -340,9 +340,9 @@ const madridData = [
     favoriteFood: "Serba chiki 🍿",
     favoriteSong: "Bergema Sampai Selamanya 🎶",
     quote: "Ga suka kata-kata, sukanya bukti nyata. 🔥😎",
-    messageToFriends: "Semoga anak madrid sukses terus, sehat terus, jgn lupain kita pernah bareng 3 tahun. 🥺💖",
+    messageToFriends: "Madrid isinya orang spesial semuaa,kerandoman Madrid bikin gamon bgtt ,suka bgtt isengnya reva dikelas,kngen cecel dgn 1000 tingkah dan pertanyaannya,duh bnykk lgi dehhh...pokoknya Madrid bikin gamon beratt😭 semoga anak madrid sukses terus,sehat'terus,jgn lupain kita pernah bareng 3thn melawan kejenuhan di piar🥺💖",
     hopeForClass: "Nanti kedepannya kita dalam perjuangan masing-masing, jangan sampai asing yah. 🤝🏻🥹",
-    messageToSelf: "Semoga aku lebih baik lagi kedepannya, apapun perjuangannya semoga Allah mudahkan. 🤲🏻✨"
+    messageToSelf: "semogaa aku lebih baik lagi kedepannya,apapun perjuangan yg dilakukan semoga allah mudahkan dan semoga ak jdi org baik dan sukses kedepannya🤲🏻✨"
   },
   {
     id: 24,
@@ -355,9 +355,9 @@ const madridData = [
     favoriteFood: "Semua suka yang penting enak 😋",
     favoriteSong: "Slut! - Taylor Swift 🎶",
     quote: "Lelah itu wajar tapi, menyerah bukan pilihan. 💪🏻✨",
-    messageToFriends: "Semoga kita selalu dekat sampai kapan pun, dan sukses mencapai impian masing-masing. 🫂🌟",
+    messageToFriends: "madrid bagi aku benar2 kyk keluarga,kita senang sama²,sedih sama²,berjuang juga sama²,makasih buat 3 tahun nya madrid.. Semoga kita selalu dekat sampai kapan pun,dan juga suksess semuaa,mencapai impiannya masing.🫂🌟",
     hopeForClass: "Harapannya kita jangan ada yang melupakan satu sama lain, dan sukses! 🥹🥂",
-    messageToSelf: "Ingat kembali masa-masa perjuangan ini, semua lelah adalah investasi masa depan. 🎓📜"
+    messageToSelf: "Ingat kembali masa-masa perjuangan ini. Ingatkah kamu saat hari-harimu diisi dengan ambisi besar, menyusun strategi, menghitung target, dan berjuang demi satu kursi masa depan? Semua lelah, keraguan, dan kerja keras yang aku lakukan hari ini adalah investasi agar kamu bisa berdiri tegak di posisi kamu sekarang. Aku harap semua itu sudah terbayar lunas.🎓📜"
   },
   {
     id: 25,
